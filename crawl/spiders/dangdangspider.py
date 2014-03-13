@@ -3,7 +3,7 @@ from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.spider import Spider
 from scrapy.selector import Selector
 from scrapy.contrib.spiders import Rule
-from common.model.book import Book
+from crawl.items import dangdangItem
 from scrapy.http.request import Request
 from scrapy import log
 import string
@@ -17,7 +17,7 @@ class dangdangSpider(Spider):
     url_head = "http://category.dangdang.com"
     def catchitem(self,response):
         selec = Selector(response)
-        item = Book()
+        item = dangdangItem()
         item['url'] = response.url
         tempstr = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[1]/div[1]/text()').extract()
         path = 1

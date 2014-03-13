@@ -16,6 +16,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Compile Include="common\__init__.py" />
+    <Compile Include="crawl\items.py" />
     <Compile Include="crawl\pipelines.py" />
     <Compile Include="crawl\settings.py" />
     <Compile Include="crawl\spiders\dangdangspider.py" />
