@@ -11,8 +11,8 @@ class BookService(object):
             print attr
             yield book_dao.query({attr, keyword})
 
-    def query_by_map(self, map):
-        yield  book_dao.query(map)
+    def query_by_pair(self, pair):
+        yield  book_dao.query(pair)
 
 
     def query_for_period(self, isbn, start_time, end_time):
