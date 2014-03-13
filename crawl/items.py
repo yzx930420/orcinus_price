@@ -10,3 +10,5 @@ class dangdangItem(Item):
     press = Field()
     url = Field()
     instant = Field()
+    img = Field()
+    desc = Field()

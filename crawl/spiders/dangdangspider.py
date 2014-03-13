@@ -23,6 +23,8 @@ class dangdangSpider(Spider):
             path = 1
         else:
             path = 2
+        item['img'] = selec.xpath('//*[@id="move"]/@url').extract()
+        item['desc'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()
         item['instant'] = selec.xpath('//*[@id="originalPriceTag"]').extract()
         item['press'] = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
         item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()

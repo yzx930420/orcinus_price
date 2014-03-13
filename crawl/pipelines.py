@@ -29,6 +29,9 @@ class dangdangPipeline(object):
         newbook.press = item["press"][0]
         newbook.instant_price = item["instant"][0]
         newbook.link = item["url"]
+        newbook.cover = item["img"][0]
+        newbook.desc = item["desc"][0]
+        newbook.platform = "dangdang"
         # if newbook.isbn do not exist in book_info then
         #     insert into bookinfo
         # set newbook.time desc etc..
