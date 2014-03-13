@@ -1,8 +1,5 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#import pymongo
+__author__ = 'Dazdingo'
+
 from common.model.book import Book
 class dangdangPipeline(object):
 	#con = pymongo.Connection("localhost", 27017)
@@ -32,4 +29,8 @@ class dangdangPipeline(object):
         newbook.press = item["press"][0]
         newbook.instant_price = item["instant"][0]
         newbook.link = item["url"]
+        # if newbook.isbn do not exist in book_info then
+        #     insert into bookinfo
+        # set newbook.time desc etc..
+        # insert into bookgoodsinfo
         return item

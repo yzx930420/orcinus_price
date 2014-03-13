@@ -7,9 +7,6 @@ from crawl.items import dangdangItem
 from scrapy.http.request import Request
 from scrapy import log
 import string
-#import sys
-#reload(sys)
-#sys.setdefaultencoding('gbk')
 class dangdangSpider(Spider):
     name = "dangdang"
     allowed_domains = ["dangdang.com"]
@@ -26,17 +23,6 @@ class dangdangSpider(Spider):
             path = 1
         else:
             path = 2
-        #            self.isbn = ''
-        #self.price = 0.0
-        #self.title = ''
-        #self.author = ''
-        #self.press = ''
-        #self.desc = ''
-        #self.cover = ''
-        #self.link = ''
-        #self.platform = ''
-        #self.instant_price = ''
-        #self.time = 0
         item['instant'] = selec.xpath('//*[@id="originalPriceTag"]').extract()
         item['press'] = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
         item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()

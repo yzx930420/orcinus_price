@@ -20,6 +20,7 @@
     <Compile Include="crawl\pipelines.py" />
     <Compile Include="crawl\settings.py" />
     <Compile Include="crawl\spiders\dangdangspider.py" />
+    <Compile Include="crawl\spiders\__init__.py" />
     <Compile Include="crawl\__init__.py" />
     <Compile Include="web\__init__.py" />
     <Compile Include="common\dao\book_dao.py" />

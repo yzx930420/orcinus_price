@@ -1,15 +1,12 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# http://doc.scrapy.org/en/latest/topics/items.html
+__author__ = 'Dazdingo'
 
 from scrapy.item import Item, Field
 
-
 class dangdangItem(Item):
-	price = Field()
-	ISBN = Field()
-	name = Field()
-	author = Field()
-	press = Field()
-	url = Field()
+    price = Field()
+    ISBN = Field()
+    name = Field()
+    author = Field()
+    press = Field()
+    url = Field()
+    instant = Field()
