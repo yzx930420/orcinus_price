@@ -11,3 +11,5 @@ class BookDAO():
 
     def query(self, map, start_time, end_time):
         pass
+
+book_dao = BookDAO();
