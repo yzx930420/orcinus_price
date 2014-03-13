@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{c457aa21-0923-4b55-9d61-07981ded5a59}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Compile Include="common\__init__.py" />
+    <Compile Include="crawl\pipelines.py" />
+    <Compile Include="crawl\settings.py" />
+    <Compile Include="crawl\spiders\dangdangspider.py" />
+    <Compile Include="crawl\__init__.py" />
+    <Compile Include="web\__init__.py" />
+    <Compile Include="common\dao\book_dao.py" />
+    <Compile Include="common\dao\__init__.py" />
+    <Compile Include="common\model\book.py" />
+    <Compile Include="common\model\__init__.py" />
+    <Compile Include="web\service\book_service.py" />
+    <Compile Include="web\service\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="common" />
+    <Folder Include="common\dao" />
+    <Folder Include="common\model" />
+    <Folder Include="crawl" />
+    <Folder Include="crawl\spiders\" />
+    <Folder Include="web" />
+    <Folder Include="web\service" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
