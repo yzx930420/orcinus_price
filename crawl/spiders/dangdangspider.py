@@ -37,6 +37,7 @@ class dangdangSpider(Spider):
         #self.platform = ''
         #self.instant_price = ''
         #self.time = 0
+        item['instant'] = selec.xpath('//*[@id="originalPriceTag"]').extract()
         item['press'] = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
         item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()
         item['author'] = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[' + str(path) + ']/div[2]/a/text()').extract()
