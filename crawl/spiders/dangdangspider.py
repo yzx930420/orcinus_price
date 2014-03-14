@@ -23,14 +23,14 @@ class dangdangSpider(Spider):
             path = 1
         else:
             path = 2
-        item['img'] = selec.xpath('//*[@id="largePic"]/@src').extract()
-        item['desc'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()
+        item['img'] = selec.xpath('//img[@id="largePic"]/@wsrc').extract()
+        #item['desc'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()   bug
         item['instant'] = selec.xpath('//*[@id="originalPriceTag"]').extract()
         item['press'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
         item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()
         item['author'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path) + ']/div[2]/a/text()').extract()
         item['ISBN'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 3) + ']/div[2]/text()').extract()
-        item['name'] = selec.xpath('//div[@class="head"]/text()').extract()
+        item['name'] = selec.xpath('//div[@class="head"]/h1/text()').extract()
         tempstr = "".join(item['name'])
         print tempstr
         return item
