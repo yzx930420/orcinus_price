@@ -38,7 +38,25 @@ class BookDAO():
         bookpo.price = book.price
         return (goods, bookpo)
 
+    def __parse_po_to_book(self, bookpo, goodspo):
+        book = Book()
 
+        # bookpo->book
+        book['isbn'] = bookpo['isbn']
+        book['price'] = bookpo['price']
+        book['title'] = bookpo['title']
+        book['author'] = bookpo['author']
+        book['press'] = bookpo['press']
+        book['description'] = bookpo['description']
+        book['cover'] = bookpo['cover']
+
+        #goodspo->book
+        book['link'] = goodspo['link']
+        book['platform'] = goodspo['platform']
+        book['instant_price'] = goodspo['instant_price']
+        book['crawling_time'] = goodspo['crawling_time']
+
+        return book
 
     def insert(self, book):
         goods,bookpo = BookDAO.__parse_book_to_po(book)
@@ -52,6 +70,7 @@ class BookDAO():
         self.cursor.execute(sql, pair)
         book=Book()
         bookpo_list = self.cursor.fetchall()
+        booklist = []
         for bpo in bookpo_list:
             bookpo = BookPO()
             bookpo['isbn'] = bpo[0]
@@ -61,8 +80,6 @@ class BookDAO():
             bookpo['press'] = bpo[4]
             bookpo['desciption'] = bpo[5]
             bookpo['cover'] = bpo[6]
-
-            booklist = []
 
             sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info where %s=%s'
             self.cursor.execute(sql, ['isbn', bookpo['isbn']])
@@ -74,8 +91,7 @@ class BookDAO():
                 goodspo['platform'] = gpo[2]
                 goodspo['instant_price'] = gpo[3]
                 goodspo['crawling_time'] = gpo[4]
-
-
+                booklist.append(self.__parse_po_to_book(bookpo, goodspo))
 
     def query(self, pair, start_time, end_time):
         pass
