@@ -11,7 +11,10 @@ from common.model.book_info import BookInfo as  BookPO
 
 class BookDAO():
     def __init__(self):
-        self.conn = MySQLdb.connect(MYSQL_URL, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE)
+        self.conn = MySQLdb.connect(common.dao.settings.MYSQL_URL,
+                                    common.dao.settings.MYSQL_USER,
+                                    common.dao.settings.MYSQL_PASSWORD,
+                                    common.dao.settings.MYSQL_DATABASE)
         self.cursor = self.conn.cursor()
 
     def __parse_book_to_po(book_1):
@@ -27,13 +30,14 @@ class BookDAO():
 
         #step2 : book->bookpo
         bookpo = BookPO()
-        bookpo.desc = book.desc
+        bookpo.description = book.description
         bookpo.author = book.author
         bookpo.isbn = book.isbn
         bookpo.press = book.press
         bookpo.title = book.title
         bookpo.price = book.price
         return (goods, bookpo)
+
 
 
     def insert(self, book):
@@ -43,10 +47,37 @@ class BookDAO():
         self.cursor.execute(statement, [goods.isbn,goods.instant_price, goods.link, goods.platform, goods.time])
         self.cursor.commit()
 
-    def query(self, map):
-        pass
+    def query(self, pair):
+        sql = 'select isbn, price, title, author, press, description, cover  from book_goods_info where %s=%s'
+        self.cursor.execute(sql, pair)
+        book=Book()
+        bookpo_list = self.cursor.fetchall()
+        for bpo in bookpo_list:
+            bookpo = BookPO()
+            bookpo['isbn'] = bpo[0]
+            bookpo['price'] = bpo[1]
+            bookpo['title'] = bpo[2]
+            bookpo['author'] = bpo[3]
+            bookpo['press'] = bpo[4]
+            bookpo['desciption'] = bpo[5]
+            bookpo['cover'] = bpo[6]
 
-    def query(self, map, start_time, end_time):
+            booklist = []
+
+            sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info where %s=%s'
+            self.cursor.execute(sql, ['isbn', bookpo['isbn']])
+            goodspo_list = self.cursor.fetchall()
+            for gpo in goodspo_list:
+                goodspo = GoodsPO
+                goodspo['isbn'] = gpo[0]
+                goodspo['link'] = gpo[1]
+                goodspo['platform'] = gpo[2]
+                goodspo['instant_price'] = gpo[3]
+                goodspo['crawling_time'] = gpo[4]
+
+
+
+    def query(self, pair, start_time, end_time):
         pass
 
     def __del__(self):
