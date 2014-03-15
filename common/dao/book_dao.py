@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""这里实现了对MYSQL的简单操作(同步的，阻塞的)."""
+"""这里实现了对MYSQL的简单操作(同步的，阻塞的). """
 __author__ = 'yzx930420'
 
 import MySQLdb
