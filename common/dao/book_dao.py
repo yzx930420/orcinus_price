@@ -37,6 +37,7 @@ class BookDAO():
         bookpo.press = book.press
         bookpo.title = book.title
         bookpo.price = book.price
+        bookpo.cover = book.cover
         return (goods, bookpo)
 
     def __parse_po_to_book(self, bookpo, goodspo):
@@ -61,27 +62,40 @@ class BookDAO():
 
     def insert(self, book):
         goods,bookpo = self.__parse_book_to_po(book)
-        #插入goods(isbn, instant_price, link, platform, crawling_time)
+        # 插入goods(isbn, instant_price, link, platform, crawling_time)
         statement = 'insert into book_goods_info(isbn, instant_price, link, platform,crawling_time) values(%s, %s, %s, %s, %s)'
         self.cursor.execute(statement, [goods.isbn,goods.instant_price, goods.link, goods.platform, goods.crawling_time])
-        statement_book_info = "insert into book_info(isbn, price, title, author, press, description, cover) values(%s,%s,%s,%s,%s,%s,%s)"
-        self.cursor.execute(statement_book_info, [bookpo.isbn,
-                                        bookpo.price,
-                                        bookpo.title,
-                                        bookpo.author,
-                                        bookpo.press,
-                                        bookpo.description,
-                                        bookpo.cover])
+
+        # 判断是否已经存在
+        select_sql = 'select * from book_info where isbn = %s' %(bookpo.isbn)
+        print 'sql = ', select_sql
+        self.cursor.execute(select_sql)
+        len = self.cursor.fetchall().__len__()
+        print 'cover = ', bookpo.cover
+        if  len == 0:
+            statement_book_info = \
+                "insert into book_info(isbn, price, title, author, press, description, cover) values(%s,%s,%s,%s,%s,%s,%s)"
+
+            self.cursor.execute(statement_book_info, [bookpo.isbn,
+                                                      bookpo.price,
+                                                      bookpo.title,
+                                                      bookpo.author,
+                                                      bookpo.press,
+                                                      bookpo.description,
+                                                      bookpo.cover])
+        else:
+            print 'exist'
+
         self.conn.commit()
 
     def query(self, pair):
-        sql = 'select isbn, price, title, author, press, description, cover  from book_goods_info where %s=%s'
-        # self.cursor.execute(sql, [pair[0], pair[1]])
-        self.cursor.execute('select isbn, price, title, author, press, description, cover  from book_info where isbn="123"')
-        self.conn.commit()
+        sql = 'select isbn, price, title, author, press, description, cover  from book_info where %s=%s' %(pair)
+        print 'sql = ', sql
+        self.cursor.execute(sql)
         book=Book()
         bookpo_list = self.cursor.fetchall()
         booklist = []
+        print 'len = ', bookpo_list.__len__()
         print bookpo_list
         for bpo in bookpo_list:
             print 'isbn = ', bpo[0]
@@ -94,14 +108,10 @@ class BookDAO():
             bookpo.desciption = bpo[5]
             bookpo.cover = bpo[6]
 
-            sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info where %s="%s"'
-            #self.cursor.execute(sql, ['isbn', bookpo.isbn])
-            self.cursor.execute('select isbn, link, platform, instant_price, crawling_time from book_goods_info where isbn="123"')
-            print bookpo.isbn
-            self.conn.commit()
+            sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info where isbn="%s"' %(bookpo.isbn)
+            self.cursor.execute(sql)
             goodspo_list = self.cursor.fetchall()
             for gpo in goodspo_list:
-                print 'haha'
                 goodspo = GoodsPO
                 goodspo.isbn = gpo[0]
                 goodspo.link = gpo[1]
@@ -109,6 +119,7 @@ class BookDAO():
                 goodspo.instant_price = gpo[3]
                 goodspo.crawling_time = gpo[4]
                 booklist.append(self.__parse_po_to_book(bookpo, goodspo))
+
 
         return booklist
 
@@ -123,11 +134,23 @@ book_dao = BookDAO();
 #测试
 if __name__=="__main__":
     book = Book()
-    book.isbn = "123"
+    book.isbn = '123'
+    book.price = 1.1
+    book.title = 'title'
+    book.author = 'author'
+    book.press = 'press'
+    book.description = 'description'
+    book.cover = 'cover'
+
+    book.link = 'link'
+    book.platform = 1
+    book.instant_price = '1.1'
+    book.crawling_time = 10000
+
     book_dao.insert(book)
     ad = ("isbn", "123")
-    print ad
     a = book_dao.query(ad)
-    print a
+    for i in a:
+        print i
 
 
