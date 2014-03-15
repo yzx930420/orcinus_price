@@ -22,6 +22,7 @@ build/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+*.pyc
 *_i.c
 *_p.c
 *.ilk
@@ -55,6 +56,8 @@ ipch/
 *.cachefile
 
 # Visual Studio profiler
+*.sln
+*.pyproj
 *.psess
 *.vsp
 *.vspx
