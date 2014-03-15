@@ -5,8 +5,8 @@ from common.dao.book_dao import book_dao
 #import pymongo
 
 class Pipeline(object):
-    con = pymongo.Connection("localhost", 27017)
-    db = con.bestbuyer
+    #con = pymongo.Connection("localhost", 27017)
+    #db = con.bestbuyer
     def process_item(self, item, spider):
         if(len(item['ISBN']) == 0):
             return item

@@ -1,7 +1,7 @@
 __author__ = 'nothi'
 
 class BookInfo:
-    attrs = ["isbn", "price", "title", "author", "press","desc","cover" ]
+    attrs = ["isbn", "price", "title", "author", "press","description","cover" ]
 
     def __init__(self):
         self.isbn = ''
