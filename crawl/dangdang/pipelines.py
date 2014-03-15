@@ -4,7 +4,7 @@ from common.model.book import Book
 from common.dao.book_dao import book_dao
 #import pymongo
 
-class dangdangPipeline(object):
+class Pipeline(object):
     con = pymongo.Connection("localhost", 27017)
     db = con.bestbuyer
     def process_item(self, item, spider):

@@ -27,7 +27,7 @@ class BookDAO():
 
         #step2 : book->bookpo
         bookpo = BookPO()
-        bookpo.desc = book.desc
+        bookpo.description = book.description
         bookpo.author = book.author
         bookpo.isbn = book.isbn
         bookpo.press = book.press
