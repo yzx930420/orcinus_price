@@ -26,7 +26,7 @@ class BookDAO():
         goods.instant_price = book.instant_price
         goods.link = book.instant_price
         goods.platform = book.platform
-        goods.time = book.time
+        goods.crawling_time= book.crawling_time
 
         #step2 : book->bookpo
         bookpo = BookPO()
@@ -60,9 +60,9 @@ class BookDAO():
 
     def insert(self, book):
         goods,bookpo = BookDAO.__parse_book_to_po(book)
-        #插入goods(isbn, instant_price, link, platform, time)
-        statement = 'insert into book_goods_info(isbn, instant_price, link, platform,time) values(%s, %s, %s, %s, %s)'
-        self.cursor.execute(statement, [goods.isbn,goods.instant_price, goods.link, goods.platform, goods.time])
+        #插入goods(isbn, instant_price, link, platform, crawling_time)
+        statement = 'insert into book_goods_info(isbn, instant_price, link, platform,crawling_time) values(%s, %s, %s, %s, %s)'
+        self.cursor.execute(statement, [goods.isbn,goods.instant_price, goods.link, goods.platform, goods.crawling_time])
         self.cursor.commit()
 
     def query(self, pair):
