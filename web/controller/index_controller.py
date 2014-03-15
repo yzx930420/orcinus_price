@@ -1,5 +1,9 @@
 __author__ = 'nothi'
 
-class IndexController:
-    def __init__(self):
+from tornado.web import RequestHandler
+
+class IndexController(RequestHandler):
+    def get(self):
         pass
+
+
