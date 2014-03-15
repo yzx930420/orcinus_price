@@ -7,7 +7,7 @@ class Book(object):
         self.title = ''
         self.author = ''
         self.press = ''
-        self.desc = ''
+        self.description= ''
         self.cover = ''
         self.link = ''
         self.platform = ''
