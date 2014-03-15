@@ -8,54 +8,39 @@ from scrapy.http.request import Request
 from scrapy import log
 import string
 class jingdongSpider(Spider):
-    name = "dangdang"
-    allowed_domains = ["dangdang.com"]
-    start_urls = ["http://category.dangdang.com/cp01.00.00.00.00.00.html"]
-    url_head = "http://category.dangdang.com"
-    def catchitem(self,response):
+    name = "jingdong"
+    allowed_domains = ["jd.com"]
+    start_urls = ["http://www.jd.com/book/booksort.aspx"]
+    def catchitem(self,response):#TODO
         selec = Selector(response)
         item = jingdongItem()
         item['url'] = response.url
-        tempstr = selec.xpath('//div[@class="book_messbox"]/div[1]/div[1]/text()').extract()
-        path = 1
-        hehe = [u'\u4f5c\xa0\xa0\xa0\xa0\xa0\u8005']
-        if(tempstr == hehe):
-            path = 1
-        else:
-            path = 2
-        item['img'] = selec.xpath('//img[@id="largePic"]/@wsrc').extract()
+        item['img'] = selec.xpath('//*[@id="spec-n1"]/img/@src').extract()
         #item['desc'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()   bug
-        item['instant'] = selec.xpath('//*[@id="originalPriceTag"]').extract()
-        item['press'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
-        item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()
-        item['author'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path) + ']/div[2]/a/text()').extract()
-        item['ISBN'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 3) + ']/div[2]/text()').extract()
-        item['name'] = selec.xpath('//div[@class="head"]/h1/text()').extract()
+        item['instant'] = selec.xpath('//*[@id="summary-market"]/div/del/text()').extract()
+        item['press'] = selec.xpath('//*[@id="summary-ph"]/div/a/text()').extract()
+        item['price'] = selec.xpath('//*[@id="summary-price"]/div/strong/text()').extract()
+        item['author'] = selec.xpath('//*[@id="summary-author"]/div/a/text()').extract()
+        item['ISBN'] = selec.xpath('//*[@id="summary-isbn"]/div/text()').extract()
+        item['name'] = selec.xpath('//*[@id="name"]/h1/text()').extract()
         tempstr = "".join(item['name'])
         print tempstr
         return item
     def parse(self, response):
         selec = Selector(response)
-        sites = selec.xpath('//*[@id="leftCate"]/ul/li/a/@href').extract()
-        for site in sites:
-            request = Request(url = self.url_head + site,
-                              callback=self.opencategories)
-            yield request
-    def opencategories(self, response):
-        selec = Selector(response)
-        sites = selec.xpath('//ul/li/div/span/a/@href').extract()
+        sites = selec.xpath('//*[@id="booksort"]/div[@class="mc"]/dl/dd/em/a/@herf').extract()
         for site in sites:
             request = Request(url = self.url_head + site,
                               callback=self.viewpage)
             yield request
     def viewpage(self, response):
         selec = Selector(response)
-        sites = selec.xpath('//ul/li/div/p[1]/a/@href').extract()
+        sites = selec.xpath('//*[@id="plist"]/div/dl/dt/a/@href').extract()
         for site in sites:
             request = Request(url = site,
                               callback=self.catchitem)
             yield request
-        sites = selec.xpath('//*[@id="bd"]/div[3]/div[3]/div[6]/div[2]/div[1]/div[3]/div/a[2]/@href').extract()
+        sites = selec.xpath('//div[@class="pagin pagin-m"]/a/@href').extract()
         if(len(sites) > 0):
             request = Request(url = self.url_head + sites[0],
                               callback=self.viewpage)
