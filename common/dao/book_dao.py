@@ -11,13 +11,11 @@ from common.model.book_info import BookInfo as  BookPO
 
 class BookDAO():
     def __init__(self):
-        print "ok"
         self.conn = MySQLdb.connect(host=common.dao.settings.MYSQL_URL,
                                     user=common.dao.settings.MYSQL_USER,
                                     passwd=common.dao.settings.MYSQL_PASSWORD,
                                     db=common.dao.settings.MYSQL_DATABASE)
         self.cursor = self.conn.cursor()
-        print "你妹"
 
     def __parse_book_to_po(self, book):
         #把Book转化为两个PO实体
@@ -66,7 +64,7 @@ class BookDAO():
         statement = 'insert into book_goods_info(isbn, instant_price, link, platform,crawling_time) values(%s, %s, %s, %s, %s)'
         self.cursor.execute(statement, [goods.isbn,goods.instant_price, goods.link, goods.platform, goods.crawling_time])
 
-        # 判断是否已经存在
+        # 判断book_info中是否已经存在
         select_sql = 'select * from book_info where isbn = %s' %(bookpo.isbn)
         print 'sql = ', select_sql
         self.cursor.execute(select_sql)
@@ -88,11 +86,10 @@ class BookDAO():
 
         self.conn.commit()
 
+    # 对键值对pair进行查询
     def query(self, pair):
         sql = 'select isbn, price, title, author, press, description, cover  from book_info where %s=%s' %(pair)
-        print 'sql = ', sql
         self.cursor.execute(sql)
-        book=Book()
         bookpo_list = self.cursor.fetchall()
         booklist = []
         print 'len = ', bookpo_list.__len__()
