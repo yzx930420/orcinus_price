@@ -1,5 +1,5 @@
 __author__ = 'nothi'
 
-class SearchController:
+class IndexController:
     def __init__(self):
         pass

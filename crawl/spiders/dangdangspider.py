@@ -16,21 +16,21 @@ class dangdangSpider(Spider):
         selec = Selector(response)
         item = dangdangItem()
         item['url'] = response.url
-        tempstr = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[1]/div[1]/text()').extract()
+        tempstr = selec.xpath('//div[@class="book_messbox"]/div[1]/div[1]/text()').extract()
         path = 1
         hehe = [u'\u4f5c\xa0\xa0\xa0\xa0\xa0\u8005']
         if(tempstr == hehe):
             path = 1
         else:
             path = 2
-        item['img'] = selec.xpath('//*[@id="move"]/@url').extract()
-        item['desc'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()
+        item['img'] = selec.xpath('//img[@id="largePic"]/@wsrc').extract()
+        #item['desc'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()   bug
         item['instant'] = selec.xpath('//*[@id="originalPriceTag"]').extract()
-        item['press'] = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
+        item['press'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
         item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()
-        item['author'] = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[' + str(path) + ']/div[2]/a/text()').extract()
-        item['ISBN'] = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[@class="book_messbox"]/div[' + str(path + 3) + ']/div[2]/text()').extract()
-        item['name'] = selec.xpath('//*[@id="main_bd"]/div[2]/div[1]/div/div[2]/div/div[1]/h1/text()').extract()
+        item['author'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path) + ']/div[2]/a/text()').extract()
+        item['ISBN'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 3) + ']/div[2]/text()').extract()
+        item['name'] = selec.xpath('//div[@class="head"]/h1/text()').extract()
         tempstr = "".join(item['name'])
         print tempstr
         return item

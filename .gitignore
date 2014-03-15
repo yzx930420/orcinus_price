@@ -22,7 +22,7 @@ build/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
-*.pyproj
+*.pyc
 *_i.c
 *_p.c
 *.ilk
@@ -56,6 +56,8 @@ ipch/
 *.cachefile
 
 # Visual Studio profiler
+*.sln
+*.pyproj
 *.psess
 *.vsp
 *.vspx
@@ -155,3 +157,6 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+# idea configuration
+.idea/
