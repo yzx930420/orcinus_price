@@ -9,6 +9,6 @@ class BookInfo:
         self.title = ''
         self.author = ''
         self.press = ''
-        self.desc = ''
+        self.description= ''
         self.cover = ''
         self.goods_list = []
