@@ -12,7 +12,7 @@ class ResultSetController(RequestHandler):
 
     def get(self):
         action = self.get_argument("action")
-        keyword = self.get("keyword")
+        keyword = self.get_argument("keyword")
         result = []
         if action == None or action == "any":
            result = self.service.query_by_keyword(keyword)
