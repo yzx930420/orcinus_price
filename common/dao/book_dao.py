@@ -23,7 +23,7 @@ class BookDAO():
         goods = GoodsPO()
         goods.isbn = book.isbn
         goods.instant_price = book.instant_price
-        goods.link = book.instant_price
+        goods.link = book.link
         goods.platform = book.platform
         goods.crawling_time= book.crawling_time
 
@@ -62,6 +62,9 @@ class BookDAO():
         goods,bookpo = self.__parse_book_to_po(book)
         # 插入goods(isbn, instant_price, link, platform, crawling_time)
         statement = 'insert into book_goods_info(isbn, instant_price, link, platform,crawling_time) values(%s, %s, %s, %s, %s)'
+
+        #print statement % (goods.isbn,goods.instant_price, goods.link, goods.platform, goods.crawling_time)
+
         self.cursor.execute(statement, [goods.isbn,goods.instant_price, goods.link, goods.platform, goods.crawling_time])
 
         # 判断book_info中是否已经存在
@@ -88,7 +91,7 @@ class BookDAO():
 
     # 对键值对pair进行查询
     def query(self, pair):
-        sql = 'select isbn, price, title, author, press, description, cover  from book_info where %s=%s' %(pair)
+        sql = 'select isbn, price, title, author, press, description, cover  from book_info where %s="%s"' %(pair)
         self.cursor.execute(sql)
         bookpo_list = self.cursor.fetchall()
         booklist = []
@@ -108,6 +111,7 @@ class BookDAO():
             sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info where isbn="%s"' %(bookpo.isbn)
             self.cursor.execute(sql)
             goodspo_list = self.cursor.fetchall()
+            print 'goodspo_len = ', goodspo_list.__len__()
             for gpo in goodspo_list:
                 goodspo = GoodsPO
                 goodspo.isbn = gpo[0]
@@ -117,6 +121,7 @@ class BookDAO():
                 goodspo.crawling_time = gpo[4]
                 booklist.append(self.__parse_po_to_book(bookpo, goodspo))
 
+        print 'booklist_len = ', booklist.__len__()
 
         return booklist
 
@@ -126,28 +131,35 @@ class BookDAO():
     def __del__(self):
         self.conn.close()
 
-book_dao = BookDAO();
+book_dao = BookDAO()
 
 #测试
+def test_insert():
+    for i in range(1,101):
+        book = Book()
+        index = (i+1) / 2
+        book.isbn = '%05d001'%(index)
+        book.price = (index)*1.0
+        book.title = 'title-%d'%(index)
+        book.author = 'author-%s'%(index)
+        book.press = 'press-%s'%(index / 10)
+        book.description = 'description for book-%d'%(index)
+        book.cover = 'cover-%d'%(index)
+
+        book.link = 'http://www.oricinus_price/book-%d-%d'%(index, i%2)
+        book.platform = i % 2
+        book.instant_price = book.price * 0.8
+        book.crawling_time = 10000
+
+        book_dao.insert(book)
+
+def test_query():
+    pair = ("isbn", '00001001')
+    result = book_dao.query(pair)
+    print 'result_len = ', result.__len__()
+    for book in result:
+        print book.isbn, book.price, book.platform, book.instant_price
+
 if __name__=="__main__":
-    book = Book()
-    book.isbn = '123'
-    book.price = 1.1
-    book.title = 'title'
-    book.author = 'author'
-    book.press = 'press'
-    book.description = 'description'
-    book.cover = 'cover'
-
-    book.link = 'link'
-    book.platform = 1
-    book.instant_price = '1.1'
-    book.crawling_time = 10000
-
-    book_dao.insert(book)
-    ad = ("isbn", "123")
-    a = book_dao.query(ad)
-    for i in a:
-        print i
-
+    test_query()
 
