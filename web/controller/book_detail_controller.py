@@ -1,4 +1,12 @@
+# -*- coding: utf-8 -*-
+
 __author__ = 'nothi'
 
-class BookDetailController:
-    pass
+from tornado.web import RequestHandler
+
+class BookDetailController(RequestHandler):
+    def get(self, isbn):
+        print "This is the book "  , isbn
+
+    def post(self, isbn):
+        print "This is the book " ,isbn
