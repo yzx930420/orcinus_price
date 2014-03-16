@@ -3,7 +3,7 @@ from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.spider import Spider
 from scrapy.selector import Selector
 from scrapy.contrib.spiders import Rule
-from crawl.items import dangdangItem
+from crawl.items import bookItem
 from scrapy.http.request import Request
 from scrapy import log
 import string
@@ -14,7 +14,7 @@ class dangdangSpider(Spider):
     url_head = "http://category.dangdang.com"
     def catchitem(self,response):
         selec = Selector(response)
-        item = dangdangItem()
+        item = bookItem()
         item['url'] = response.url
         tempstr = selec.xpath('//div[@class="book_messbox"]/div[1]/div[1]/text()').extract()
         path = 1
@@ -24,7 +24,7 @@ class dangdangSpider(Spider):
         else:
             path = 2
         item['img'] = selec.xpath('//img[@id="largePic"]/@wsrc').extract()
-        #item['desc'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()   bug
+        item['description'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()
         item['instant'] = selec.xpath('//*[@id="originalPriceTag"]').extract()
         item['press'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
         item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()

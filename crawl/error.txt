@@ -1,0 +1,1413 @@
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076018649.html> (referer: http://list.jd.com/1713-11745-11758-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076018649.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g14/M09/0D/06/rBEhVVLWmZ4IAAAAAAEEs9IHIVIAAIEqgDeqSkAAQTL277.jpg'],
+	 'instant': [],
+	 'name': [u'\u4e1d\u7ef8\u4e66\u9053\u5fb7\u7ecf\u53cc\u8bed\u4e2d\u82f1\u6587\u5bf9\u7167 \u5f69\u8272\u7248\u5e26\u539f\u6587\u8bd1\u6587\u82f1\u8bd1\u6536\u85cf\u8001\u5916\u6700\u7231'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076018649.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076335798.html> (referer: http://list.jd.com/1713-11745-11759-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076335798.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u' \n  ', u' \n '],
+	 'img': [u'http://img13.360buyimg.com/n1/g13/M03/12/0C/rBEhVFLaYjAIAAAAAAD8-98hJgEAAIDbwJKY0AAAP0T907.jpg'],
+	 'instant': [],
+	 'name': [u'\u7b80\u6613\u7ec4\u5408\u8863\u67dc \u5b9c\u5bb6\u5bb6\u5c45\u9632\u5c18\u6298\u53e0\u513f\u7ae5\u5851\u6599\u6302\u8863\u6a71\u6536\u7eb3\u7bb1 \u7279\u4ef7\u5305\u90ae'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076335798.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076555595.html> (referer: http://list.jd.com/1713-11745-11759-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076335741.html> (referer: http://list.jd.com/1713-11745-11759-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076555595.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g15/M06/03/0B/rBEhWVLffOwIAAAAAAUQTVeULWMAAIHYQIAiNUABRBl737.jpg'],
+	 'instant': [],
+	 'name': [u'\u5c0f\u65f6\u5149\u9999\u8349\uff082\u676f\u88c5\xb7\u85b0\u8863\u8349\xb7\u7f57\u52d2\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076555595.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076335741.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M05/12/0C/rBEhVFLaZY8IAAAAAAEejQvhd5gAAIDcQKX-AQAAR6l113.jpg'],
+	 'instant': [],
+	 'name': [u'\u7b80\u6613\u8d85\u8584\u978b\u67dc \u81ea\u7531\u7ec4\u5408\u5f0f\u6536\u7eb3\u67dc \u9632\u5c18\u8d85\u8584\u5b9c\u5bb6\u978b\u67b6 \u7279\u4ef7\u5305\u90ae'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076335741.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1084284466.html> (referer: http://list.jd.com/1713-11745-11759-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1084284466.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M01/16/16/rBEhUlMIO4kIAAAAAAC-sv8DpFIAAI5pwMIe1kAAL7K931.jpg'],
+	 'instant': [],
+	 'name': [u'\u9002\u7f8e\u4f73 \u4e09\u5c42\u65e0\u7eba\u5e03\u53e3\u7f69\u4e00\u6b21\u6027\u53e3\u7f69 \u84dd\u8272\u7537\u5973 \u9632\u6bd2\u9632\u5c18 \u9632\u96fe\u973e \u9632PM2.5\u53e3\u7f69'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1084284466.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076563009.html> (referer: http://list.jd.com/1713-11745-11759-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1050697476.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076563009.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g13/M02/12/17/rBEhU1LebOwIAAAAAAFO_KJw52oAAIH1gHBPiYAAU8U407.jpg'],
+	 'instant': [],
+	 'name': [u'\u521b\u610f\u9b54\u7247\u7ec4\u5408\u5f0f\u5927\u5bb9\u91cf\u7b80\u6613\u8863\u67dc \u5b9c\u5bb6\u7ec4\u88c5\u5851\u6599\u6298\u53e0\u6536\u7eb3\u8863\u6a71\u5305\u90ae LK4*4-10\u683c2\u630216\u95e8'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076563009.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1050697476.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u'\n   \u5185\u5bb9\u63d0\u8981 \n '],
+	 'img': [u'http://img11.360buyimg.com/n1/g14/M06/18/19/rBEhVVJxXYQIAAAAAABcNXvwrJEAAE13wHlBPsAAFxN017.jpg'],
+	 'instant': [],
+	 'name': [u'\u6ee1\u5929\u661f\u5e7c\u513f\u542f\u8499\u82f1\u8bed\u9644\u5149\u76d8\u53ca\u70b9\u8bfb\u7b141\u51713\u518c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1050697476.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1048780563.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1048780563.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g14/M03/17/17/rBEhVVJqWn8IAAAAAACtH0a7LC8AAEopgMUF58AAK03551.jpg'],
+	 'instant': [],
+	 'name': [u'Q\u4e66\u67b6 \u7231\u62fc\u70b9\u8bfb\u7b14'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1048780563.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064496786.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064496786.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g14/M00/06/11/rBEhV1KoK70IAAAAAAIdA61OfHsAAGxMACBttEAAh0b848.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eb2\u5b50\u79cd\u690d\xb7\u542b\u7f9e\u8349'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064496786.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1075746359.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1075746359.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u'\n   \u5185\u5bb9\u63d0\u8981 \n '],
+	 'img': [u'http://img14.360buyimg.com/n1/g15/M03/02/09/rBEhWVLVe8oIAAAAAACcIaAMf3EAAH53AHb2SQAAJw5969.jpg'],
+	 'instant': [],
+	 'name': [u'\u6ee1\u5929\u661f\u5e7c\u513f\u542f\u8499\u82f1\u8bed\u9644\u5149\u76d8\u53ca\u70b9\u8bfb\u7b141\u51713\u518c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1075746359.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071528066.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071528066.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u'\n   \u5185\u5bb9\u63d0\u8981 \n '],
+	 'img': [u'http://img11.360buyimg.com/n1/g14/M07/0A/02/rBEhVlK90qwIAAAAAACcIaAMf3EAAHdnQCKNSAAAJw5518.jpg'],
+	 'instant': [],
+	 'name': [u'\u6ee1\u5929\u661f\u5e7c\u513f\u542f\u8499\u82f1\u8bed\u9644\u5149\u76d8\u53ca\u70b9\u8bfb\u7b141\u51713\u518c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071528066.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071497788.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071497788.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g14/M0A/0A/02/rBEhVVK9xAoIAAAAAADi7ZTYCPAAAHdlgFh_3wAAOMF098.jpg'],
+	 'instant': [],
+	 'name': [u'\u7231\u62fc\u70b9\u8bfb\u7b14-Q\u4e66\u67b6\u7231\u62fc \u7231\u62fc\u76ca\u667a\u4ea7\u54c1\u6559\u80b2\u7814\u53d1\u7ec4'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071497788.html'}
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076208979.html> (referer: http://list.jd.com/1713-11745-11759-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:12+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076208979.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g15/M06/02/17/rBEhWVLY4zIIAAAAAASIFxiWhxAAAH_mgPFgVgABIgv938.jpg'],
+	 'instant': [],
+	 'name': [u'DIY\u9b54\u672f \u978b\u67dc \u4e66\u67dc \u6574\u7406\u67dc \u6536\u7eb3\u7bb1'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076208979.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071679031.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071679031.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M00/0E/1B/rBEhUlK-MxgIAAAAAACFxjreTv0AAHXTAG7nEwAAIXe622.jpg'],
+	 'instant': [],
+	 'name': [u'\u5b89\u59ae\u82b1\u82f1\u8bed\u81ea\u7136\u62fc\u8bfb2\u70b9\u8bfb\u7b14\u5957\u88c5'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071679031.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1066641229.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1066641229.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u'\n   \u5185\u5bb9\u63d0\u8981 \n '],
+	 'img': [u'http://img14.360buyimg.com/n1/g14/M08/07/1A/rBEhVlKwpZcIAAAAAACcIaAMf3EAAHBcwMWugcAAJw5923.jpg'],
+	 'instant': [],
+	 'name': [u'\u6ee1\u5929\u661f\u5e7c\u513f\u542f\u8499\u82f1\u8bed\u9644\u5149\u76d8\u53ca\u70b9\u8bfb\u7b141\u51713\u518c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1066641229.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1065563756.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076022398.html> (referer: http://list.jd.com/1713-11745-11758-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1065563756.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g14/M07/07/09/rBEhVlKtVQYIAAAAAACFDpXDSmoAAG6jwPnKHAAAIUm816.jpg'],
+	 'instant': [],
+	 'name': [u'\u6b63\u7248\u56fe\u4e66 \u5e7c\u8bfb\u5b9d\u70b9\u8bfb\u7b14\u964421\u672c\u6545\u4e8b\u4e66 \u97f3\u4e50/\u667a\u80fd\u73a9\u5177 \u65e9\u6559\u6545\u4e8b\u4e09\u5b57\u7ecf\u7b49'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1065563756.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076022398.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g15/M07/02/0F/rBEhWlLWqwoIAAAAAAG8MmrDo6IAAH8cwMcCXEAAbxK566.jpg'],
+	 'instant': [],
+	 'name': [u'\u4e1d\u7ef8\u4e66\u8bba\u8bed\u53cc\u8bed\u4e2d\u82f1\u6587\u5bf9\u7167\u5f69\u8272\u7248 \u5e26\u539f\u6587\u8bd1\u6587\u82f1\u8bd1\u6536\u90ae\u7968\u8001\u5916\u6700\u7231'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076022398.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064496310.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064496310.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g13/M01/0B/08/rBEhVFKoK1QIAAAAAAHM97ZLqvEAAGqpQDPC3EAAc0P444.jpg'],
+	 'instant': [],
+	 'name': [u'\u5c0f\u65f6\u5149\u9999\u8349\xb7\u67e0\u6aac\u9999\u8702\u8349'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064496310.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076217490.html> (referer: http://list.jd.com/1713-11745-11759-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076217490.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g15/M04/02/18/rBEhWlLY6uUIAAAAAAUkafVPaO4AAH_twHeRKIABSSB957.jpg'],
+	 'instant': [],
+	 'name': [u'\u521b\u610f\u7ec4\u5408\u5f0f\u7b80\u6613\u8863\u67dc \u97e9\u5f0f\u5b9c\u5bb6\u5851\u6599\u52a0\u56fa\u513f\u7ae5\u5a74\u513f\u9632\u5c18 \u6a71 \u978b\u67dc  \u4e66\u67dc \u6536\u7eb3\u67dc'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076217490.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064493111.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064493111.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g15/M06/1B/1A/rBEhWFKoKRYIAAAAAAHi_Pczf0IAAGpGgMcD_gAAeMU514.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eb2\u5b50\u79cd\u690d\xb7\u5b9d\u846b\u82a6'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064493111.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076018351.html> (referer: http://list.jd.com/1713-11745-11758-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076018351.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M03/16/0F/rBEhVFMG-XwIAAAAAAPls5Tw2eAAAI2qAOEEvoAA-XL286.jpg'],
+	 'instant': [],
+	 'name': [u'\u771f\u4e1d\u7ef8\u90ae\u7968\u73cd\u85cf\u7248\u300a\u5b59\u5b50\u5175\u6cd5\u300b  \u4e2d\u82f1\u6587\u5bf9\u7167\u5e26\u8bd1\u6587 \u90ae\u7968\u9001\u793c\u6536\u85cf'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076018351.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1050708986.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1050708986.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u'\n   \u5185\u5bb9\u63d0\u8981 \n '],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M04/14/00/rBEhU1JxZjoIAAAAAABcNXvwrJEAAEzQQOhnnYAAFxN228.jpg'],
+	 'instant': [],
+	 'name': [u'\u6ee1\u5929\u661f\u5e7c\u513f\u542f\u8499\u82f1\u8bed\u9644\u5149\u76d8\u53ca\u70b9\u8bfb\u7b141\u51713\u518c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1050708986.html'}
+2014-03-16 20:30:13+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1066254235.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1066254235.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g14/M00/07/16/rBEhVlKv8r4IAAAAAADNj5KepnoAAG_pAMWwFgAAM2n373.jpg'],
+	 'instant': [],
+	 'name': [u'\u5b89\u59ae\u9c9c\u82b1 \u82f1\u8bed\u81ea\u7136\u62fc\u8bfb1 \u9644\u70b9\u8bfb\u7b14\u5957\u88c5 \u5c11\u513f\u82f1\u8bed\u542f\u8499\u65e9\u6559\u4e66\u7c4d\u5b9d\u5b9d'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1066254235.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1048769817.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1066067684.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1048769817.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g15/M07/11/15/rBEhWVJqU3wIAAAAAAMhGFeDoPIAAElkANe95MAAyEw097.jpg'],
+	 'instant': [],
+	 'name': [u'\u80b2\u6559\u5b9d\u70b9\u8bfb\u7b14\u5e7c\u513f\u65e9\u6559\u7ecf\u5178\u5957\u88c5(JT606)'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1048769817.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1066067684.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g13/M07/0C/0A/rBEhUlKvcBIIAAAAAACFxjreTv0AAG3ywIYOQ0AAIXe898.jpg'],
+	 'instant': [],
+	 'name': [u'\u5b89\u59ae\u82b1\u82f1\u8bed\u81ea\u7136\u62fc\u8bfb\u70b9\u8bfb\u7b14\u5957\u88c5-\u7231\u62fc-2 \u5b89\u59ae\u9c9c\u82b1'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1066067684.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1043565195.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1043565195.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u'\n   \u5185\u5bb9\u63d0\u8981 \n '],
+	 'img': [u'http://img10.360buyimg.com/n1/g14/M0A/15/12/rBEhV1JdJaMIAAAAAABcNXvwrJEAAENnQAAAAAAAFxN103.jpg'],
+	 'instant': [],
+	 'name': [u'\u6ee1\u5929\u661f\u5e7c\u513f\u542f\u8499\u82f1\u8bed\u9644\u5149\u76d8\u53ca\u70b9\u8bfb\u7b141\u51713\u518c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1043565195.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1036563492.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1036563492.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g13/M06/0C/05/rBEhVFI5EyoIAAAAAAN8RwMTfh0AADRVgF1UMsAA3xf361.jpg'],
+	 'instant': [],
+	 'name': [u'\u91d1\u661f\u70b9\u8bfb\u7b14TTP-316A \u91d1\u661f\u6559\u80b2 \u6d2a\u6069\u6559\u80b2\u8054\u5408\u51fa\u54c1 \u5c0f\u5b66\u6559\u6750\u5168\u89e3\u70b9\u8bfb\u7b14 \u9002\u4e8e7~16\u5c81'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1036563492.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064493197.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1040270173.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064493197.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g13/M01/0B/08/rBEhU1KoKVEIAAAAAAHdvJE8Vo4AAGqmwBUzecAAd3U075.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eb2\u5b50\u79cd\u690d\xb7\u5b9d\u77f3\u8349\u8393'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064493197.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064495606.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1040270173.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u'\n   \u5185\u5bb9\u63d0\u8981 \n '],
+	 'img': [u'http://img13.360buyimg.com/n1/g15/M04/0D/10/rBEhWlJNllMIAAAAAABcNXvwrJEAADxXgGPFAMAAFxN804.jpg'],
+	 'instant': [],
+	 'name': [u'\u6ee1\u5929\u661f\u5e7c\u513f\u542f\u8499\u82f1\u8bed\u9644\u5149\u76d8\u53ca\u70b9\u8bfb\u7b141\u51713\u518c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1040270173.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064495606.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g15/M07/1B/1A/rBEhWVKoKuwIAAAAAAG_oj9FLIEAAGpIwBB3DYAAb-6397.jpg'],
+	 'instant': [],
+	 'name': [u'\u5c0f\u65f6\u5149\u9999\u8349\xb7\u6bd4\u8428\u8349'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064495606.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1063914120.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1063914120.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g15/M06/06/10/rBEhWVMEaqQIAAAAAAQrshECOakAAIuigBETFUABCvK877.jpg'],
+	 'instant': [],
+	 'name': [u'\u5305\u90ae \u6b63\u54c1\u65e9\u6559\u70b9\u8bfb\u673a \u4e2d\u82f1\u6587\u7535\u5b50\u4e66 \u5b66\u9f84\u524d\u513f\u7ae5\u4f7f\u7528 \u6bcf\u9875\u90fd\u6709\u6309\u94ae'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1063914120.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064496484.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064496484.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g14/M06/06/11/rBEhVlKoK38IAAAAAAHD1ig4kMAAAGxLgFcTrMAAcPu740.jpg'],
+	 'instant': [],
+	 'name': [u'\u5c0f\u65f6\u5149\u9999\u8349\xb7\u85b0\u8863\u8349'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064496484.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064495784.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1079769287.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064495784.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g13/M09/0B/08/rBEhVFKoKxoIAAAAAAGIwWx_XvAAAGqowCEKQYAAYjZ141.jpg'],
+	 'instant': [],
+	 'name': [u'\u5c0f\u65f6\u5149\u9999\u8349\xb7\u7f57\u52d2'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064495784.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1079769287.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g14/M04/10/01/rBEhVVL9mdAIAAAAAAOPBUxWhOMAAIoIQPpeQ0AA48d534.jpg'],
+	 'instant': [],
+	 'name': [u'\u5305\u90ae \u7231\u76df\u5e7c\u513f\u56ed 10DVD \u513f\u7ae5\u6f5c\u80fd\u91cd\u70b9\u7814\u7a76\u6210\u679c \u5e7c\u513f\u77e5\u8bc6\u5927\u5168'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1079769287.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076022439.html> (referer: http://list.jd.com/1713-11745-11758-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076022439.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g15/M07/02/0F/rBEhWVLWqxMIAAAAAAEjMXPmCUsAAH8cwPTQLYAASNJ724.jpg'],
+	 'instant': [],
+	 'name': [u'\u4e1d\u7ef8\u4e66\u8bba\u8bed\u53cc\u8bed\u4e2d\u82f1\u6587\u5bf9\u7167 \u5e26\u539f\u6587\u8bd1\u6587\u82f1\u8bd1\u6536\u90ae\u7968\u85cf\u8001\u5916\u6700\u7231'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076022439.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1025735199.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1025735199.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g14/M07/03/05/rBEhVlHNNLcIAAAAAABvGmyggbQAAAneQO7QW0AAG8y961.jpg'],
+	 'instant': [],
+	 'name': [u'\u5b89\u59ae\u82b1\u82f1\u8bed\u81ea\u7136\u62fc\u8bfb1\u70b9\u8bfb\u7b14\u5957\u88c5(\u5957\u88c5\u517133\u518c)(\u9644\u8d60\u8d34\u7eb83\u5f20+CD\u5149\u76d82\u5f20+MP3\u5149\u76d83\u5f20'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1025735199.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076049807.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076049807.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g15/M03/02/11/rBEhWFLXYpUIAAAAAAQUSMKsLlIAAH9EAMNcMsABBRg211.png'],
+	 'instant': [],
+	 'name': [u'\u5357\u4eac\u9752\u5965\u5fbd\u5b9d 500\u514b\u548c\u7530\u9752\u767d\u7389 \u9752\u5965\u7389\u73ba \u4f20\u4e16\u7389\u5370'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076049807.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1051262875.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076017470.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1051262875.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g13/M06/14/09/rBEhUlJzJakIAAAAAAOa28hz6YQAAE2-ADmNQAAA5rz020.jpg'],
+	 'instant': [],
+	 'name': [u'\u6b63\u54c1 \u8fea\u58eb\u5c3c\u82f1\u8bed \u591a\u5a92\u4f53 \u70b9\u8bfb\u7b14\uff08\u51687\u518c \u5f69\u8272\u89e6\u5c4f\u70b9\u8bfb\u7b14 8\u5f20\u539f\u97f3CD\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1051262875.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1075031827.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076017470.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g15/M07/02/0F/rBEhWVLWlI8IAAAAAACQAfQMUksAAH8XgHXBlMAAJAZ665.jpg'],
+	 'instant': [],
+	 'name': [u'\u9a8f\u9a6c\u7965\u745e \u751f\u8096\u90ae\u7968\u8336\u7816 \u90012014-1 \u4e09\u8f6e\u751f\u8096\u9a6c\u5927\u7248 \u5c0f\u7248\u5f20\u5954\u9a6c\u56fe\u90ae\u7968\u8336\u7816  \u9a6c\u5e74\u751f\u8096\u90ae'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076017470.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1075029656.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1075031827.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g15/M08/01/17/rBEhWVLQ3JgIAAAAAADcBrt0t_AAAHzIwJjQNwAANwe957.jpg'],
+	 'instant': [],
+	 'name': [u'\u7231\u60c5\u5151\u6362\u5238 \u519b\u88c5\u60c5\u4fa3 \u795d\u798f\u5361\u5fc3\u613f\u5361\u7231\u60c5\u522e\u522e\u5361\u5e26\u5fc3\u5f62\u6d82\u5c42'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1075031827.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1075029656.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g14/M07/0C/0F/rBEhVVLQ1_YIAAAAAACi_cAh114AAH7XQNKm_cAAKMV024.jpg'],
+	 'instant': [],
+	 'name': [u'\u6d6a\u6f2b\u521b\u610f\u7231\u60c5\u8f66\u7968 \u7279\u522b\u65b0\u5947\u65b0\u5e74\u70ed\u5356\u5e74\u8d27\u793c\u7269 \u751f\u65e5\u793c\u54c1\u9001\u5973\u670b\u53cb\u5973\u751f\u7537\u53cb\u60c5\u4fa3\u604b\u4eba'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1075029656.html'}
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071795237.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:14+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071795237.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g13/M00/0E/1D/rBEhUlK-jWcIAAAAAAGSZKc-HwwAAHYPgLyNq0AAZJ8457.jpg'],
+	 'instant': [],
+	 'name': [u'\u5409\u90ae 2012\u5e74\u4e2d\u56fd\u90ae\u7968\u5178\u85cf \u827a\u672f\u6536\u85cf\u9274\u8d4f \u5168\u56fd\u9650\u91cf500\u518c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071795237.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1063594033.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1063594033.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g14/M03/05/18/rBEhV1Kj4xIIAAAAAAKxUA9MU8YAAGnZwP7BUMAArFo805.jpg'],
+	 'instant': [],
+	 'name': [u'2.8\u7c73\u5de8\u5e45\u949e\u5377\u7248\u5f90\u60b2\u9e3f\u5954\u9a6c\u90ae\u7968\u4e2d\u56fd\u90ae\u653f\u7279\u6279\u53d1\u884c \u4e1d\u7ef8\u949e\u5377\u7248'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1063594033.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1051517151.html> (referer: http://list.jd.com/1713-11745-11756.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1051517151.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M01/14/0F/rBEhUlJz7HsIAAAAAAXUI8jarBMAAE5DwBrFMQABdQ7242.jpg'],
+	 'instant': [],
+	 'name': [u'\u6211\u7684\u56fe\u4e66\u4f1a\u8bf4\u8bdd \u70b9\u8bfb\u5b9dBaby Reader \u70b9\u8bfb\u7b14 \u8c6a\u534e\u7cbe\u7f8e\u5957\u88c5\uff08\u70b9\u8bfb\u7b14 \u5149\u76d8 \u56fe\u4e66\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1051517151.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1067863791.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1067863791.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g15/M04/1D/13/rBEhWFKy760IAAAAAAGM64QpE_UAAG_hQGxBV8AAY0D192.jpg'],
+	 'instant': [],
+	 'name': [u'\u5954\u9a6c\u53cc\u7edd\u91d1\u94f6\u5e01\u5927\u5168\u5957 \u9a6c\u5e74\u751f\u8096\u8d3a\u5c81\u9996\u595716\u679a\u56fd\u7cb9 \u8d60\u5341\u4e8c\u751f\u8096\u5927\u5168'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1067863791.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1063033313.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1063033313.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g15/M05/1A/11/rBEhWFKgjxQIAAAAAAOERbkzLqAAAGZOAO4xf4AA4Rd733.jpg'],
+	 'instant': [],
+	 'name': [u'\u5ae6\u5a25\u5954\u6708\u90ae\u7968 \u5ae6\u5a25\u63a2\u6708\u90ae\u7968 \u7eaa\u5ff5\u5c01 \u73cd\u90ae\u7968\u63a2\u6708\u7eaa\u5ff5\u90ae\u7968\u4e2d\u56fd\u90ae\u653f\u6388\u6743\u552f\u4e00\u90ae\u7968\u6570\u91cf\u4e0d\u591a\u9650\u65f6\u62a2\u8d2d'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1063033313.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1063023563.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1063023563.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g13/M07/09/1F/rBEhUlKghPAIAAAAAAjxww0KUhgAAGaqAOFDMoACPHb601.png'],
+	 'instant': [],
+	 'name': [u'\u5f90\u60b2\u9e3f\u5341\u4e8c\u751f\u8096\u753b\u518c\u4e3a\u84dd\u672c\u7684\u5f90\u60b2\u9e3f\xb7\u5341\u4e8c\u751f\u8096\u90ae\u518c\u751f\u8096\u7968\u73cd\u85cf\u90ae\u7968'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1063023563.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1075034051.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1075034051.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M04/11/06/rBEhUlLQ3zcIAAAAAACELo1Za88AAH04gFbj84AAIRG668.jpg'],
+	 'instant': [],
+	 'name': [u'\u641e\u7b11\u8bc1\u4e66 \u521b\u610f\u65b0\u5e74\u70ed\u5356\u5e74\u8d27\u793c\u54c1 \u751f\u65e5\u793c\u7269 \u5c0f\u5c0f\u793c\u54c1\u9001\u5973\u53cb\u5973\u751f\u8001\u5a46\u8001\u516c\u7537\u670b\u53cb \u597d\u8001\u516c\u8bc1'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1075034051.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076005817.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076005817.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g13/M06/11/1D/rBEhVFLWc2EIAAAAAALp2qpM4gQAAH97ANZjDsAAuny659.jpg'],
+	 'instant': [],
+	 'name': [u'\u4e2d\u56fd\u5de5\u827a\u7f8e\u672f\u5927\u5e08\u5415\u5c27\u81e3\u6c5f\u82cf\u7701\u5de5\u827a\u7f8e\u672f\u5927\u5e08\u5415\u4fca\u6770\u8bbe\u8ba1\u7763\u9020\u4f5b\u6d77\u5bb9\u5929\u73cd\u85cf\u7ea7\u7d2b\u7802\u5957\u58f6'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076005817.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1074121746.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1074121746.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g14/M04/0B/1A/rBEhVVLL_SwIAAAAAAFgbE7nkwsAAHzUgIvDzAAAWCE307.jpg'],
+	 'instant': [],
+	 'name': [u'\u6bdb\u6cfd\u4e1c\u8001\u7248\u73cd\u90ae \u6536\u5f55242\u679a\u90ae\u7968\u771f\u54c1\u539f\u7968 \u6bdb\u4e3b\u5e2d\u8bde\u8fb0120\u5468\u5e74\u85cf\u54c1\u9650\u65f6\u7279\u4ef7'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1074121746.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1076005157.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1075616141.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1076005157.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g15/M01/02/0F/rBEhWlLWcPQIAAAAAAB8hcYGIEYAAH8LgOHBEMAAHyd882.jpg'],
+	 'instant': [],
+	 'name': [u'\u56db\u6c0f\u58f6\u738b\u5927\u5e08\u58f6 \u7d2b\u7802\u6cf0\u6597\u987e\u666f\u821f\u5927\u5e08\u4f20\u4eba\u5434\u4e9a\u5e73 \u6c88\u536b\u6587\u97ec\u6b66\u7565\u300a\u56db\u6c0f\u58f6\u738b\u300b'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1076005157.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1075616141.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u' \n  ', u' \n '],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M08/11/16/rBEhU1LVLSUIAAAAAAB5F6-gC_4AAH7MQM3hGAAAHkv326.jpg'],
+	 'instant': [],
+	 'name': [u'\u56fd\u5b9d\u6587\u7269 \u5143\u9752\u82b1\u4e09\u7edd\u7d2b\u7802\u58f6 \u5168\u5957\u5171\u4e09\u76cf\u58f6 \u5143\u9752\u82b1\u4e09\u7edd'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1075616141.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1074255459.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1074255459.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g14/M01/0B/1F/rBEhVlLNELQIAAAAAABpxQHyDXYAAH1HADe8-0AAGnd449.jpg'],
+	 'instant': [],
+	 'name': [u'\u4e1d\u7ef8\u7248\u5f1f\u5b50\u89c4\u4e2d\u82f1\u6587\u5bf9\u7167\u5f69\u8272\u7248\u7ebf\u88c5\u5e26\u4e2d\u82f1\u8bd1\u6587\u793c\u54c1\u5305\u88c5\u6536\u85cf\u56e2\u8d2d'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1074255459.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1074178998.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1074178998.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g15/M02/01/05/rBEhWlLMzs8IAAAAAAC4sm3_ROQAAHr7gN5i3MAALjK035.jpg'],
+	 'instant': [],
+	 'name': [u'\u666f\u6cf0\u84dd\u9a6c\u5230\u6210\u529f \u5de5\u827a\u7f8e\u672f\u5927\u5e08\u6234\u5609\u6797\u674e\u8363\u9b41\u8054\u624b\u529b\u4f5c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1074178998.html'}
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1074117045.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:15+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1074117045.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g13/M07/10/11/rBEhVFLL7zcIAAAAAAFvD14Cp74AAHsswEocicAAW8n934.jpg'],
+	 'instant': [],
+	 'name': [u'\u56fd\u5b9d\u666f\u6cf0\u84dd\u798f\u5bcc\u8363\u82b1\u74f6 \u6234\u5609\u6797\u5927\u5e08\u827a\u672f\u751f\u6daf\u7684\u5dc5\u5cf0\u5de8\u4f5c \u771f\u54c1\u6536\u85cf'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1074117045.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1074225914.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1074225914.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g15/M00/01/07/rBEhWFLM_9AIAAAAAAcleSmfuEwAAHsjwAeRikAByWR662.png'],
+	 'instant': [],
+	 'name': [u'\u5f20\u540c\u7984\u56fd\u5b9d\u666f\u6cf0\u84dd\u300a\u4ed9\u5bff\u5c0a\u300b\u5927\u5e08\u5236\u4f5c\u56fd\u7cb9\u6390\u4e1d\u73d0\u7405\u6446\u4ef6'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1074225914.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064268708.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064268708.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g15/M08/1B/14/rBEhWlKnIkMIAAAAAAU4Lyv3CfQAAGmqgJdINMABThH835.jpg'],
+	 'instant': [],
+	 'name': [u'1\uff1a1\u7b49\u503c\u5151\u6362\u4e2d\u56fd\u6295\u8d44\u6d41\u901a\u7eaa\u5ff5\u5e01 1100\u591a\u679a\u6d41\u901a\u7eaa\u5ff5\u5e01 \u751f\u8096\u7eaa\u5ff5\u5e01 \u9650\u65f6\u7279\u60e0'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064268708.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1068931621.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1068931621.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g15/M06/1E/02/rBEhWlK2SKEIAAAAAAG8N385gboAAHFIwMWEV8AAbxP296.jpg'],
+	 'instant': [],
+	 'name': [u'\u767e\u5e74\u7ecf\u5178\u666f\u821f\u516b\u5f0f\u7d2b\u7802\u58f6 \u987e\u666f\u821f\u4f20\u4eba\u5168\u624b\u5de5\u6253\u9020\u987e\u6c0f\u7d2b\u6ce5'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1068931621.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1065015099.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1065015099.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g15/M01/1C/08/rBEhWlKqtYkIAAAAAAH0ExR-1ZEAAGudwCXGrcAAfQr694.jpg'],
+	 'instant': [],
+	 'name': [u'\u53e4\u4e66  \u957f\u6c99\u836f\u89e3 \u5bb6\u523b\u672c  \u9ec4\u5143\u5fa1 \u65e7\u4e66  \u6536\u85cf\u54c1'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1065015099.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1061836438.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1061836438.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g13/M06/09/00/rBEhVFKcAtAIAAAAAADH96-mxzgAAGOggLODIYAAMgP597.jpg'],
+	 'instant': [],
+	 'name': [u'\u4e2d\u534e\u6587\u7269\u901a\u5b9d\u73cd\u85cf\u5927\u5178 \u4e2d\u534e\u6587\u7269\u901a\u5b9d \u4e2d\u56fd\u6587\u7269\u901a\u5b9d \u4e2d\u534e\u53e4\u94b1\u5e01'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1061836438.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1079114936.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1079114936.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [u' \n  ', u' \n '],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M06/14/0E/rBEhU1L7L4kIAAAAAAIP3uIg29sAAIdaQHibqEAAg_2423.jpg'],
+	 'instant': [],
+	 'name': [u'\u6bdb\u4e3b\u5e2d\u8bde\u8fb0120\u5468\u5e74\u9ad8\u6d6e\u96d5\u7fe1\u7fe0\u96d5\u50cf\u300a\u6bdb\u6cfd\u4e1c\u7fe1\u7fe0\u96d5\u50cf\u300b\u7fe1\u7fe0\u7eaa\u5ff5\u54c1'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1079114936.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1063596060.html> (referer: http://list.jd.com/1713-11745-11757.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1063596060.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g15/M00/1B/01/rBEhWVKj5E0IAAAAAAIZgQoO2W0AAGfaACCTeoAAhmZ528.jpg'],
+	 'instant': [],
+	 'name': [u'\u5f90\u60b2\u9e3f\u5954\u9a6c\u7eaf\u94f6\u90ae\u7968\u5f90\u60b2\u9e3f\u5954\u9a6c\u56db\u65b9\u8fde\u73cd\u90ae\u7eaf\u94f6\u7816\u7eaf\u94f6\u90ae\u7968\u4e2d\u56fd\u90ae\u653f200\u514b\u6536\u85cf\u5c31\u503c\u4e86'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1063596060.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071791598.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071791598.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g13/M06/0E/1D/rBEhUlK-iygIAAAAAAHCKrsBA0kAAHYOAJX1RsAAcJC651.jpg'],
+	 'instant': [],
+	 'name': [u'\u9ec4\u91d1\u5b9d\u94bb \u91d1\u4f5b\u8d50\u798f\u7eaa\u5ff5\u5bf9\u8868\u60c5\u4fa3\u673a\u68b0\u8868\u4e2d\u534e\u91d1\u4f5b\u8868'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071791598.html'}
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071725370.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:16+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071725370.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g15/M02/1F/0D/rBEhWlK-XI8IAAAAAAJWxc-4eooAAHWCQKBa3EAAlbd663.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eac\u4e1c\u6b63\u54c1\u53f8\u9a6c\u5f66\u5b57\u5e16\u4e09\u7ef4\u5b57\u5e16\u591a\u6b21\u7ec3 \u5199\u5b57\u8bfe\u8bfe\u7ec3 \u4eba\u6559\u7248\u4e00\u5e74\u7ea7\u4e0b\u518c\u51f9\u51f8\u5b57\u5e16'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071725370.html'}
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071724767.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071724767.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g15/M0A/1F/0D/rBEhWFK-XCIIAAAAAAJwSWRP7ToAAHWCALhrU8AAnBh476.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eac\u4e1c\u6b63\u54c1\u53f8\u9a6c\u5f66\u5b57\u5e16\u4e09\u7ef4\u5b57\u5e16\u591a\u6b21\u7ec3 \u5199\u5b57\u8bfe\u8bfe\u7ec3 \u4eba\u6559\u7248\u56db\u5e74\u7ea7\u4e0b\u518c\u51f9\u51f8\u5b57\u5e16'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071724767.html'}
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1066109242.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1066109242.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g15/M04/1C/1C/rBEhWVKvrPYIAAAAAANgBIkiAL0AAG2bQLscmcAA2Ac257.jpg'],
+	 'instant': [],
+	 'name': [u'\u548c\u7530\u767d\u7389\u5f90\u60b2\u9e3f\u91d1\u9576\u7389 \u60b2\u9e3f\u5341\u9a8f\u4f20\u4e16\u91d1\u9576\u7389 \u9650\u91cf\u9650\u65f6\u62a2\u8d2d'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1066109242.html'}
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1062663713.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064495299.html> (referer: http://list.jd.com/1713-11745-11756-0-0-0-0-0-0-0-1-1-2.html) ['partial']
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1062663713.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g14/M07/04/1F/rBEhVlKfE3IIAAAAAANFxnuyQ3oAAGdtwF1bCQAA0Xe622.jpg'],
+	 'instant': [],
+	 'name': [u'\u6bdb\u4e3b\u5e2d\u5468\u603b\u7406\u7eaf\u91d1\u50cf\u7fe1\u7fe0\u91d1\u94bb\u56fd\u8868 \u9886\u8896\u60c5\u4fa3\u5bf9\u8868 \u7eaa\u5ff5\u73cd\u85cf'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1062663713.html'}
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071724247.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064495299.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g13/M06/0B/08/rBEhVFKoKq4IAAAAAAGuPbFzAc4AAGqogKpd2sAAa5V527.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eb2\u5b50\u79cd\u690d\xb7\u73cd\u73e0\u756a\u8304'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064495299.html'}
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071724247.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g15/M01/1F/0D/rBEhWlK-W6YIAAAAAAJ2xIyPl0wAAHWBwNzpQgAAnbc618.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eac\u4e1c\u6b63\u54c1\u53f8\u9a6c\u5f66\u5b57\u5e16\u4e09\u7ef4\u5b57\u5e16\u591a\u6b21\u7ec3 \u5199\u5b57\u8bfe\u8bfe\u7ec3 \u4eba\u6559\u7248\u4e94\u5e74\u7ea7\u4e0b\u518c\u51f9\u51f8\u5b57\u5e16'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071724247.html'}
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071722306.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11755.html> (referer: http://www.jd.com/book/booksort.aspx)
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071722306.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M06/0E/1B/rBEhU1K-WfQIAAAAAAJyztskwFQAAHXqADv0WYAAnLm194.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eac\u4e1c\u6b63\u54c1\u53f8\u9a6c\u5f66\u5b57\u5e16\u4e09\u7ef4\u5b57\u5e16\u591a\u6b21\u7ec3 \u5199\u5b57\u8bfe\u8bfe\u7ec3 \u4eba\u6559\u7248\u4e09\u5e74\u7ea7\u4e0b\u518c\u51f9\u51f8\u5b57\u5e16'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071722306.html'}
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071714326.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11754.html> (referer: http://www.jd.com/book/booksort.aspx)
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1069183255.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071714326.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M03/0E/1B/rBEhVFK-UpQIAAAAAAJrZPlfMRcAAHXmgP58bsAAmt8411.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eac\u4e1c\u6b63\u54c1 \u53f8\u9a6c\u5f66\u5b57\u5e16\u4e09\u7ef4\u5b57\u5e16\u591a\u6b21\u7ec3 \u5199\u5b57\u8bfe\u8bfe\u7ec3 \u4eba\u6559\u7248\u4e8c\u5e74\u7ea7\u4e0b\u518c\u51f9\u51f8\u5b57\u5e16'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071714326.html'}
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11753.html> (referer: http://www.jd.com/book/booksort.aspx)
+2014-03-16 20:30:17+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1069183255.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g14/M06/09/0B/rBEhVVK6R94IAAAAAAPLVLpaV3QAAHUZAKPgfIAA8ts072.jpg'],
+	 'instant': [],
+	 'name': [u'\u8865\u90ae\u8d39'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1069183255.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1068238046.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1068238046.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g15/M08/1D/18/rBEhWFKz6esIAAAAAAJeoOogIZgAAHBZQJ9fkoAAl64471.jpg'],
+	 'instant': [],
+	 'name': [u'\u5c0f\u4e66\u6cd5\u5bb6 \u7ec3\u5b57\u677f \u795e\u5947\u591a\u529f\u80fd\u53cc\u8bed\u7ec3\u4e60\u677f \u7ec3\u5b57\u677f \u795e\u5947\u9b54\u6c34 \u81ea\u52a8\u6d88\u5931 \u53cd\u590d\u4f7f\u7528\u5199\u7ec3\u65b9\u4fbf'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1068238046.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1061831870.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1061831870.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img10.360buyimg.com/n1/g14/M05/04/08/rBEhV1Kb_zQIAAAAAAOKt3yE8uoAAGU7APTzFMAA4rP280.jpg'],
+	 'instant': [],
+	 'name': [u'\u4fc3\u9500\u70ed\u5356\u4e1c\u65b9\u7ea2\u6bdb\u4e3b\u5e2d\u91d1\u94bb\u7fe1\u7fe0\u56fd\u8868 \u7eaa\u5ff5\u6bdb\u6cfd\u4e1c\u8bde\u8fb0120\u5468\u5e74\u624b\u8868'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1061831870.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1055397048.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-1.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1055397048.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g15/M09/15/0B/rBEhWlKBdQoIAAAAAAB8l_6TEgkAAFYdAOP2RkAAHyv043.jpg'],
+	 'instant': [],
+	 'name': [u'\u97e9\u56fd\u91d1\u5c5e\u521b\u610f\u4e66\u7b7e \u56db\u53f6\u8349\u25c6\u8774\u8776\u25c6\u94f6\u674f\u53f6\u25c6\u7b49'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1055397048.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1071725751.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1071725751.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M07/0E/1B/rBEhU1K-XQ4IAAAAAAKGer5lvUMAAHXrQNYriYAAoaS744.jpg'],
+	 'instant': [],
+	 'name': [u'\u4eac\u4e1c\u6b63\u54c1\u53f8\u9a6c\u5f66\u5b57\u5e16\u4e09\u7ef4\u5b57\u5e16\u591a\u6b21\u7ec3 \u5199\u5b57\u8bfe\u8bfe\u7ec3 \u4eba\u6559\u7248\u516d\u5e74\u7ea7\u4e0b\u518c\u51f9\u51f8\u5b57\u5e16'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1071725751.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1075611606.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1075611606.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g15/M05/02/08/rBEhWlLVKzgIAAAAAAKax8m22B0AAH5dAEfpmQAAprf080.jpg'],
+	 'instant': [],
+	 'name': [u'\u4e2d\u534e\u767b\u6708\u7389\u5154\u91d1\u7389\u7d2b\u7802\u58f6 \u4e2d\u534e\u7389\u5154\u767b\u6708\u7d2b\u7802\u58f6\uff08\u4e00\u7ec4\u4e09\u628a\u58f6\uff09\u9650\u91cf\u53d1\u884c'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1075611606.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1074298681.html> (referer: http://list.jd.com/1713-11745-11758.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1074298681.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M02/10/17/rBEhU1LNOqcIAAAAAATSRm1_VXcAAHvDQMxygQABNJe354.jpg'],
+	 'instant': [],
+	 'name': [u'\u592e\u884c\u9996\u5957\u5341\u4e8c\u751f\u8096\u6d41\u901a\u7eaa\u5ff5\u5e01\u5927\u5168\u5957\u4e00\u4e8c\u4e09\u8f6e\u751f\u8096\u7eaa\u5ff5\u7816\u901a\u5b9d\u5e0136\u679a'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1074298681.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1061830068.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1061830068.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g15/M03/19/12/rBEhWFKb_YoIAAAAAAJlsJI-LGoAAGM4wKTmUUAAmXI077.jpg'],
+	 'instant': [],
+	 'name': [u'\u6bdb\u4e3b\u5e2d\u548c\u7530\u7389\u91d1\u94bb\u8868\u738b\u624b\u8868 \u7eaa\u5ff5\u6bdb\u6cfd\u4e1c\u540c\u5fd7\u8bde\u8fb0120\u5468\u5e74\u624b\u8868\u5bf9\u8868\u9650\u65f6\u4fc3\u9500'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1061830068.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1063004851.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/16008916.html> (referer: http://list.jd.com/1713-6929-6933.html)
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1063004851.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g14/M01/05/07/rBEhVVKgZt0IAAAAAAiQq5xknIkAAGg8QL5wvIACJDD349.jpg'],
+	 'instant': [],
+	 'name': [u'\u684c\u4e0a\u9999\u8349\u7cfb\u5217\uff1a\u7231\u4f18\u5fae\u82b1\u56ed\u9999\u8349\uff0812\u76d2\u88c5\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1063004851.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064114079.html> (referer: http://list.jd.com/1713-11745-11755.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/16008916.html>
+	{'ISBN': [u'9789868508811'],
+	 'author': [u'\u9ea5\u53ef\xb7\u5f17\u91cc\u66fc ',
+	            u'Michael Freeman',
+	            u'\u5433\u5149\u4e9e'],
+	 'description': [u'\xa0\xa0\xa0\xa0\u5728\u651d\u5f71\u6642\uff0c\u4f60\u7528\u7684\u662f\u53e6\u4e00\u96d9\u773c\u775b\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u62cd\u7167\u6642\uff0c\u900f\u904e\u53d6\u666f\u5668\u770b\u5230\u7684\u4e16\u754c\uff0c\u8207\u8089\u773c\u6240\u898b\u6703\u6709\u4e9b\u5fae\u5999\u4e14\u5f71\u97ff\u91cd\u5927\u7684\u5dee\u7570\uff1b\u800c\u651d\u5f71\u5e2b\u5728\u5275\u4f5c\u6642\uff0c\u6216\u57fa\u65bc\u81ea\u8eab\u7d93\u9a57\uff0c\u6216\u57fa\u65bc\u5275\u4f5c\u610f\u5716\uff0c\u6216\u57fa\u65bc\u69cb\u5716\u539f\u7406\uff0c\u4e5f\u662f\u7528\u53e6\u4e00\u96d9\u773c\u775b\uff0c\u89c0\u770b\u773c\u524d\u7684\u4e16\u754c\u3002\u672c\u66f8\u900f\u904e\u651d\u5f71\u5e2b\u7684\u773c\u775b\uff0c\u8b93\u4f60\u77e5\u9053\u5982\u4f55\u62cd\u51fa\u610f\u6db5\u8c50\u5bcc\u3001\u51fa\u8272\u3001\u5177\u6709\u610f\u5716\u7684\u756b\u9762\uff0c\u4e5f\u77e5\u9053\u600e\u9ebc\u904b\u7528\u651d\u5f71\u5e2b\u7684\u773c\u775b\uff0c\u53bb\u89e3\u8b80\u651d\u5f71\u4f5c\u54c1\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u4e00\u5e45\u756b\u9762\u61c9\u8a72\u600e\u9ebc\u69cb\u5716\uff1f',
+	                 u'\xa0\xa0\xa0\xa0\u672c\u66f8\u5f9e\u57fa\u672c\u7684\u69cb\u5716\u5143\u7d20\u548c\u651d\u5f71\u6280\u5de7\u958b\u59cb\uff0c\u89e3\u91cb\u7167\u7247\u7684\u5927\u5c0f\u548c\u6bd4\u4f8b\u5c0d\u756b\u9762\u7684\u5f71\u97ff\u3001\u8a2d\u8a08\u57fa\u672c\u8981\u7d20\u7684\u61c9\u7528\uff08\u4f8b\u5982\u5716\u5f62\u7d50\u69cb\u3001\u7dda\u689d\u5716\u6848\u7684\u914d\u7f6e\u3001\u659c\u7dda\u66f2\u7dda\u6697\u793a\u7684\u5f35\u529b\u3001\u660e\u6697\u5c0d\u6bd4\uff0c\u5230\u5982\u4f55\u5e73\u8861\u8996\u89ba\u91cd\u91cf\u7b49\uff09\uff0c\u53ca\u8272\u5f69\u8272\u8abf\u548c\u69cb\u5716\u7684\u95dc\u4fc2\u3002\u9019\u6a23\u69cb\u5716\u624d\u6f02\u4eae\uff01\u4f46\u662f\u70ba\u4ec0\u9ebc\uff1f',
+	                 u'\xa0\xa0\xa0\xa0\u4f5c\u8005\u63d0\u51fa\u7f8e\u5b78\u7684\u904b\u4f5c\u539f\u7406\uff0c\u5305\u62ec\u4eba\u773c\u95b1\u8b80\u756b\u9762\u7684\u7fd2\u6163\u3001\u8996\u89ba\u5fc3\u7406\u5b78\uff0c\u5982\u6b64\uff0c\u82e5\u8cc7\u6df1\u651d\u5f71\u5e2b\u6216\u73a9\u5bb6\u5df2\u7d93\u73a9\u81a9\u4e86\u57fa\u672c\u651d\u5f71\u548c\u4fee\u5716\u6280\u5de7\uff0c\u4e5f\u53ef\u4ee5\u5728\u638c\u63e1\u7f8e\u5b78\u539f\u7406\u4e4b\u5f8c\uff0c\u8b8a\u5316\u51fa\u66f4\u8c50\u5bcc\u7684\u98a8\u683c\u548c\u8868\u73fe\u624b\u6cd5\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u81e8\u5834\u651d\u5f71\u7684\u6c7a\u5b9a\u6027\u77ac\u9593',
+	                 u'\xa0\xa0\xa0\xa0\u651d\u5f71\u5e2b\u9762\u5c0d\u7684\uff0c\u7d93\u5e38\u4e0d\u662f\u975c\u614b\u3001\u53ef\u4ee5\u6240\u5fc3\u6240\u6b32\u64fa\u7f6e\u7684\u5834\u666f\u3002\u4f5c\u8005\u4ee5\u5be6\u4f8b\u8b1b\u89e3\uff0c\u5728\u8857\u982d\u62cd\u651d\u6642\uff0c\u5982\u4f55\u89c0\u5bdf\u3001\u6b78\u7d0d\u3001\u9810\u6e2c\u666f\u7269\u7684\u8b8a\u5316\uff0c\u4ee5\u6355\u6349\u5230\u6c7a\u5b9a\u6027\u7684\u77ac\u9593\u3001\u9ad8\u6f6e\u7684\u4e00\u523b\u3002\u7167\u7247\u53ea\u6709\u4e00\u5f35\uff0c\u537b\u80fd\u5448\u73fe\u4e0d\u540c\u6548\u679c\xa0\xa0\u7167\u7247\u5b8c\u6210\u4e4b\u5f8c\uff0c\u651d\u5f71\u5e2b\u9084\u53ef\u4ee5\u85c9\u7531Photoshop\u7b49\u5716\u7247\u8655\u7406\u8edf\u9ad4\uff0c\u628a\u540c\u4e00\u5f35\u7167\u7247\u8a6e\u91cb\u51fa\u4e0d\u540c\u5473\u9053\u3002\u900f\u904e\u88c1\u5207\uff0c\u756b\u9762\u80fd\u5448\u73fe\u4e0d\u540c\u7684\u611f\u89ba\u548c\u610f\u5716\uff1b\u660e\u6697\u3001\u5c0d\u6bd4\u3001\u8272\u5f69\u7684\u8abf\u6821\uff0c\u4e5f\u6703\u5f71\u97ff\u756b\u9762\u7684\u6548\u679c\u548c\u8868\u9054\u7684\u610f\u6db5\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u8a8d\u8b58\u651d\u5f71\u5927\u5e2b',
+	                 u'\xa0\xa0\xa0\xa0\u4f5c\u8005\u540c\u6642\u4ecb\u7d39\u8a31\u591a\u651d\u5f71\u5927\u5e2b\u6216\u85dd\u8853\u5bb6\u51fa\u5834\uff08\u4f8b\u5982\u5e03\u5217\u677e\u3001\u5b89\u745f?\u4e9e\u7576\u65af\u3001\u7f85\u4f2f?\u6cd5\u862d\u514b\u7b49\uff09\uff0c\u5e36\u6211\u5011\u9032\u5165\u5927\u5e2b\u7684\u4e16\u754c\uff0c\u4e00\u7aba\u4ed6\u5011\u62cd\u651d\u6642\u7684\u60f3\u6cd5\u53ca\u5fc3\u7406\u72c0\u614b\u3002\u9019\u4e0d\u53ea\u662f\u4e00\u672c\u95dc\u65bc\u651d\u5f71\u69cb\u5716\u3001\u5f71\u50cf\u8a2d\u8a08\u7684\u5de5\u5177\u66f8\uff0c\u4e5f\u662f\u5e36\u4f60\u9032\u5165\u651d\u5f71\u5275\u4f5c\u3001\u651d\u5f71\u85dd\u8853\u7684\u9032\u968e\u651d\u5f71\u66f8\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u666f\u6846\uff1a\u63a2\u7d22\u666f\u6846\u7684\u52d5\u7dda\u3001\u88c1\u5207\u3001\u63a5\u5408\u3001\u64f4\u5927\u3001\u6c34\u5e73\u7dda\u7b49\u8981\u7d20\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u8a2d\u8a08\u57fa\u672c\u539f\u7406\uff1a\u5c0d\u6bd4\u3001\u5716\u6848\u3001\u7d50\u69cb\u3001\u5e73\u8861\u611f\u548c\u8996\u89ba\u91cd\u91cf\u7b49\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u7e6a\u756b\u548c\u651d\u5f71\u8981\u7d20\uff1a\u6c34\u5e73\u7dda\u3001\u5782\u76f4\u7dda\u3001\u659c\u7dda\u3001\u66f2\u7dda\u3001\u904b\u52d5\u3001\u7126\u9ede\u3001\u66dd\u5149\u7b49\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u5149\u5f71\u548c\u8272\u5f69\u7684\u69cb\u5716\uff1a\u95dc\u65bc\u5149\u7dda\u3001\u8272\u5f69\u3001\u8272\u8abf\u7684\u89e3\u8aaa\uff0c\u5305\u62ec\u9ed1\u767d\u651d\u5f71\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u610f\u5716\uff1a\u5e36\u9818\u651d\u5f71\u8005\u505c\u4e0b\u4f86\u601d\u8003\u62cd\u651d\u7684\u5167\u5728\u52d5\u6a5f\u548c\u610f\u5716\uff0c\u4f60\u7684\u76ee\u7684\u662f\u8981\u53d6\u6085\u5927\u773e\uff0c\u9084\u662f\u8981\u8207\u773e\u4e0d\u540c\u3001\u51fa\u4eba\u610f\u8868\uff1f',
+	                 u'\xa0\xa0\xa0\xa0\u904e\u7a0b\uff1a\u662f\u76f4\u89ba\uff0c\u9084\u662f\u7cbe\u5fc3\u7684\u69cb\u601d\uff1f\u76f4\u89ba\u53c8\u6709\u4ec0\u9ebc\u57fa\u790e\uff1f\u651d\u5f71\u5448\u73fe\u600e\u6a23\u7684\u85dd\u8853\u8a9e\u6cd5\uff0c\u53c8\u70ba\u4f55\u6bd4\u7e6a\u756b\u66f4\u96e3\u5206\u6790\uff1f'],
+	 'img': [u' http://img10.360buyimg.com/n1/g3/M02/04/1C/rBEGE0-18gEIAAAAAADOWiYvzpUAAA9QQNUh0UAAM5y471.jpg'],
+	 'instant': [u'\uffe5152.60'],
+	 'name': [u'\u651d\u5f71\u5e2b\u4e4b\u773c\uff1a\u6578\u4f4d\u651d\u5f71\u7684\u601d\u8003\u3001\u8a2d\u8a08\u548c\u69cb\u5716',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5927\u5bb6\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5124.50'],
+	 'url': 'http://item.jd.com/16008916.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064114079.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g14/M05/06/05/rBEhVVKml0EIAAAAAAJqbmrYp30AAGsuQD0dkMAAmqG731.jpg'],
+	 'instant': [],
+	 'name': [u'\u591a\u529f\u80fd\u513f\u7ae5\u8d34\u7eb8\uff1a\u52a8\u7269\u4e16\u754c\uff085\u679a\u5165\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064114079.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064112718.html> (referer: http://list.jd.com/1713-11745-11755.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064112718.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g13/M07/0A/1D/rBEhVFKmleQIAAAAAAJks5iLETsAAGmLQIEtAQAAmTL266.jpg'],
+	 'instant': [],
+	 'name': [u'\u591a\u529f\u80fd\u513f\u7ae5\u8d34\u7eb8\uff1a\u5c0f\u53a8\u5e08\uff086\u679a\u5165\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064112718.html'}
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064108814.html> (referer: http://list.jd.com/1713-11745-11755.html) ['partial']
+2014-03-16 20:30:18+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064108814.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g15/M01/1B/0F/rBEhWFKmkt0IAAAAAAJg3RswUQsAAGkpQMKfhMAAmD1327.jpg'],
+	 'instant': [],
+	 'name': [u'\u591a\u529f\u80fd\u513f\u7ae5\u8d34\u7eb8\uff1a\u4e0a\u5b66\u53bb\uff086\u679a\u5165\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064108814.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11074691.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11327610.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11074691.html>
+	{'ISBN': [u'9787116077379'],
+	 'author': [u'\u5730\u8d28\u51fa\u7248\u793e'],
+	 'description': [u'\xa0\xa0\xa0\xa0\u4f18\u8d28\u67d4\u548c\u706f\u5149\uff1b\u73af\u4fddPVC\u6750\u8d28\uff1bCTP\u8c03\u9891\u7cbe\u5370\uff1b\u9ad8\u54c1\u8d28\u91d1\u8272\u5f13\u5f62\u652f\u67b6\uff1b\u9ad8\u5f3a\u5ea6\u7cbe\u7f8e\u624b\u63d0\u5305\u88c5\u76d2\uff1b\u56fd\u9645\u6d41\u884c\u6807\u51c6\u5c3a\u5bf8\uff089\u82f1\u5bf8\uff09\u3002'],
+	 'img': [u' http://img11.360buyimg.com/n1/g7/M03/07/00/rBEHZVBWw8EIAAAAAABDUt3SodkAABXsACQAV0AAENq437.jpg'],
+	 'instant': [u'\uffe5198.00'],
+	 'name': [u'22.8cm\u706f\u5149\u5730\u7403\u4eea\uff08\u706f\u5149\u7248\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5730\u8d28\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5140.70'],
+	 'url': 'http://item.jd.com/11074691.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11327610.html>
+	{'ISBN': [u'9787503021374'],
+	 'author': [u'\u535a\u76ee\u5730\u56fe\u5236\u54c1\u6709\u9650\u516c\u53f8'],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/g15/M05/0E/05/rBEhWVJT03wIAAAAAAzcORB8L4gAAD5xAL_WYAADNxR156.jpg'],
+	 'instant': [u'\uffe559.00'],
+	 'name': [u'\u535a\u76ee\u5730\u7403\u4eea\uff1a14CM\u653f\u533a\u503e\u89d2\u4e07\u5411\u5730\u7403\u4eea11-14-33',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6d4b\u7ed8\u51fa\u7248\u793e'],
+	 'price': [u'\uffe546.80'],
+	 'url': 'http://item.jd.com/11327610.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064113359.html> (referer: http://list.jd.com/1713-11745-11755.html) ['partial']
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064113359.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img14.360buyimg.com/n1/g15/M0A/1B/0F/rBEhWFKmluIIAAAAAAKIdpD3KGYAAGksQFUugAAAoiO791.jpg'],
+	 'instant': [],
+	 'name': [u'\u591a\u529f\u80fd\u513f\u7ae5\u8d34\u7eb8\uff1a\u5c0f\u5c0f\u552e\u8d27\u5458\uff086\u679a\u5165\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064113359.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11346187.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11346187.html>
+	{'ISBN': [u'9787503031632'],
+	 'author': [u'\u6d4b\u7ed8\u51fa\u7248\u793e'],
+	 'description': [],
+	 'img': [u' http://img11.360buyimg.com/n1/g13/M03/15/01/rBEhVFJ4RPAIAAAAAADr4fGwcAsAAFAPAHKF_kAAOv5473.jpg'],
+	 'instant': [u'\uffe5189.00'],
+	 'name': [u'\u535a\u76ee\u5730\u7403\u4eea\uff1a25CM\u4e2d\u82f1\u6587\u653f\u533a\u4eff\u53e4\u5730\u7403\u4eea\uff08\u70ab\u5f71\u9ed1\u67b6\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6d4b\u7ed8\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5151.20'],
+	 'url': 'http://item.jd.com/11346187.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11227834.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11227834.html>
+	{'ISBN': [u'6959809120218'],
+	 'author': [u'\u535a\u76ee\u5730\u56fe\u5236\u54c1\u6709\u9650\u516c\u53f8'],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/g15/M04/00/0D/rBEhWlGyx3wIAAAAAAVGjwfQSSwAAAFdABuyzAABUan653.jpg'],
+	 'instant': [u'\uffe599.00'],
+	 'name': [u'\u535a\u76ee\u5730\u7403\u4eea\uff1a20CM\u653f\u533a\u706f\u5149\u5730\u7403\u4eea\uff08\u70ab\u5f71\u9ed1\u652f\u67b6\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6d4b\u7ed8\u51fa\u7248\u793e'],
+	 'price': [u'\uffe583.20'],
+	 'url': 'http://item.jd.com/11227834.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11118988.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11118988.html>
+	{'ISBN': [u'9787807545798'],
+	 'author': [u'\u5c71\u4e1c\u7701\u5730\u56fe\u51fa\u7248\u793e'],
+	 'description': [u'\xa0\xa0\xa0\xa0\u76f4\u5f8418\u5398\u7c73\uff0c\u5927\u5c0f\u9002\u4e2d\uff0c\u4e07\u5411\u65cb\u8f6c\uff0c\u8f6c\u4e3a\u5b66\u751f\u5730\u7406\u5b66\u4e60\u7cbe\u5fc3\u6253\u9020\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u6e05\u6670\u8868\u793a\u7ecf\u7eac\u7f51\u683c\uff0c\u56fd\u9645\u65e5\u671f\u53d8\u66f4\u7ebf\uff0c\u5357\u5317\u56de\u5f52\u7ebf\u548c\u5357\u5317\u6781\u5708\uff0c\u6709\u52a9\u4e8e\u76f4\u89c2\u5730\u5efa\u7acb\u5730\u7406\u65b9\u4f4d\u6982\u5ff5\uff1b\u7406\u89e3\u5730\u8f6c\u504f\u5411\u529b\u7684\u5f62\u6210\uff1b\u6f14\u793a\u5730\u7403\u7684\u81ea\u8f6c\u548c\u516c\u8f6c\uff0c\u7406\u89e3\u56db\u5b63\u7684\u53d8\u5316\u548c\u663c\u591c\u7684\u66f4\u66ff\uff1b\u8ba1\u7b97\u5730\u65b9\u65f6\u548c\u533a\u65f6\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u4e30\u5bcc\u77e5\u8bc6\u70b9\u6fc0\u53d1\u5b66\u751f\u5730\u7406\u5b66\u4e60\u6e90\u52a8\u529b\u3002\u6db5\u76d6\u4e16\u754c\u4e03\u5927\u6d32\u3001\u56db\u5927\u6d0b\u3001\u4e16\u754c\u8457\u540d\u5c71\u5cf0\u3001\u9ad8\u539f\u3001\u5e73\u539f\u3001\u6d77\u6d0b\u3001\u6d77\u6c9f\u3001\u6cb3\u6d41\u3001\u6e56\u6cca\u7b49\u81ea\u7136\u5730\u7406\u8981\u7d20\u3002\u5168\u9762\u5c55\u793a\u4e16\u754c\u4e3b\u8981\u6d0b\u6d41\u7684\u5206\u5e03\u3001\u540d\u79f0\u53ca\u8d70\u5411\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u91c7\u7528\u6700\u65b0\u5730\u56fe\u8d44\u6599\uff0c\u6807\u6ce8\u4e09\u6c99\u5e02\u7b49\u6700\u65b0\u57ce\u5e02\u4fe1\u606f\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u5168\u9762\u5c55\u793a\u4e16\u754c\u4e0a\u6240\u6709\u56fd\u5bb6\u548c\u5730\u533a\u7684\u540d\u79f0\u548c\u754c\u7ebf\uff0c\u591a\u8fbe\u5343\u6761\u7684\u57ce\u5e02\u540d\u79f0\uff0c\u6db5\u76d6\u4e86\u4e16\u754c\u4e3b\u8981\u57ce\u5e02\u3002',
+	                 u'\xa0\xa0\xa0\xa0\u6700\u65b0\u73af\u4fdd\u8bbe\u8ba1\uff0c\u8010\u78e8\u4e00\u6b21\u6210\u578b\uff0c\u9ad8\u6e05\u6670\u9ad8\u4eae\u5ea6\u7403\u4f53\u3002'],
+	 'img': [u' http://img10.360buyimg.com/n1/g9/M03/0E/08/rBEHaVCiGwIIAAAAAADiJAnRNLwAACyggAxSKMAAOI8863.jpg'],
+	 'instant': [u'\uffe588.80'],
+	 'name': [u'18CM\u4e07\u5411\u5730\u7403\u4eea\uff08\u653f\u533a\u7248\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5c71\u4e1c\u7701\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe574.60'],
+	 'url': 'http://item.jd.com/11118988.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11377192.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11331320.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11377192.html>
+	{'ISBN': [u'9787807048367'],
+	 'author': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/g15/M0A/1F/06/rBEhWlK9FBEIAAAAAAJVq-UwJ30AAHTLgKTSJsAAlXD175.jpg'],
+	 'instant': [u'\uffe5368.00'],
+	 'name': [u'\u5730\u7403\u4eea\uff0825cm\u653f\u533a\u9ad8\u4eae \u706f\u5149 \u91d1\u5c5e\u5e95\u5ea7\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5269.30'],
+	 'url': 'http://item.jd.com/11377192.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11227833.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11331320.html>
+	{'ISBN': [u'9787807047735'],
+	 'author': [u'\u5929\u57df\u5317\u6597'],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/g13/M00/0F/08/rBEhUlJTdrQIAAAAAANpOdQ6hD8AAD4EgL2IMgAA2lR830.jpg'],
+	 'instant': [u'\uffe5128.00'],
+	 'name': [u'\u5730\u7403\u4eea\uff0821cm \u653f\u533a\xb7\u5730\u7406\u7248\xb7\u94f6\u8272\u5f13\u5f62\uff09\uff08\u914d\u6559\u8f85\u6302\u56fe\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6210\u90fd\u5730\u56fe'],
+	 'price': [u'\uffe596.00'],
+	 'url': 'http://item.jd.com/11331320.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11227833.html>
+	{'ISBN': [u'6959809120225'],
+	 'author': [u'\u535a\u76ee\u5730\u56fe\u5236\u54c1\u6709\u9650\u516c\u53f8'],
+	 'description': [],
+	 'img': [u' http://img11.360buyimg.com/n1/g15/M04/00/0D/rBEhWVGyx3wIAAAAAAiAgcf3XwYAAAFdABmSpcACICZ545.jpg'],
+	 'instant': [u'\uffe589.00'],
+	 'name': [u'\u535a\u76ee\u5730\u7403\u4eea\uff1a20CM\u653f\u533a\u5730\u7403\u4eea\uff08\u65f6\u5c1a\u94f6\u652f\u67b6\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6d4b\u7ed8\u51fa\u7248\u793e'],
+	 'price': [u'\uffe572.20'],
+	 'url': 'http://item.jd.com/11227833.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11258050.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11258050.html>
+	{'ISBN': [u'9787807546856'],
+	 'author': [u'\u5317\u4eac\u5929\u57df\u5317\u6597\u56fe\u4e66\u6709\u9650\u516c\u53f8'],
+	 'description': [u'\u3000\u3000\u300a14cm 360\xb0\u4e07\u5411\u65cb\u8f6c\u5730\u7403\u4eea\uff08\u653f\u533a+\u5730\u5f62\u7248\uff09\u300b\u517c\u505a\u65e5\u5e38\u67e5\u8be2\u548c\u4e2d\u5b66\u751f\u5b66\u4e60\u4e4b\u7528\uff0c\u5730\u5f62\u3001\u653f\u533a\u4e00\u7403\u4e24\u7528\uff0c\u51c6\u786e\u5448\u73b0\u4e86\u4e03\u5927\u6d32\u548c\u56db\u5927\u6d0b\u7684\u4f4d\u7f6e\u5173\u7cfb\uff0c\u6807\u793a\u4e86\u9646\u5730\u4e3b\u8981\u7684\u5c71\u7cfb\u5c71\u8109\u3001\u6e56\u6cca\u6cb3\u6d41\u4ee5\u53ca\u91cd\u8981\u7684\u5730\u7406\u5355\u5143\uff0c\u6d77\u6d0b\u4e3b\u8981\u7684\u6d0b\u6d41\u5206\u5e03\u3001\u6d77\u76c6\u6d77\u6c9f\u3001\u5927\u6d0b\u4e2d\u810a\u7b49\uff0c\u6d77\u9646\u5730\u5f62\u4e00\u76ee\u4e86\u7136\u3002',
+	                 u'\u3000\u3000\u300a14cm 360\xb0\u4e07\u5411\u65cb\u8f6c\u5730\u7403\u4eea\uff08\u653f\u533a+\u5730\u5f62\u7248\uff09\u300b\u4e2d\u591a\u8fbe\u4e0a\u5343\u6761\u7684\u57ce\u5e02\u540d\u79f0\uff0c\u6db5\u76d6\u4e86\u4e16\u754c\u4e3b\u8981\u57ce\u5e02\uff0c\u540c\u65f6\u987e\u53ca\u4e86\u4e00\u4e9b\u65f6\u4e8b\u70ed\u70b9\u5730\u533a\u5730\u540d\uff0c\u76f4\u5f8414\u5398\u7c73\uff0c\u7cbe\u81f4\u8f7b\u5de7\uff0c\u4fbf\u4e8e\u684c\u8fb9\u6446\u653e\u3001\u624b\u6301\u67e5\u770b\uff0c\u6700\u65b0\u73af\u4fdd\u8bbe\u8ba1\uff0c\u5148\u8fdb\u751f\u4ea7\u5de5\u827a\uff0c\u8010\u78e8\u4e00\u6b21\u6210\u578b\uff0c\u7403\u9762\u5149\u6d01\u5706\u6da6\uff0c\u4e07\u5411\u65cb\u8f6c\uff0c\u4eba\u6027\u5316\u8bbe\u8ba1\uff0c\u7075\u6d3b360\u5ea6\u65cb\u8f6c\uff0c\u67e5\u9605\u66f4\u4fbf\u6377\u3002'],
+	 'img': [u' http://img10.360buyimg.com/n1/g13/M03/00/1E/rBEhVFG5VZYIAAAAAA1Oy6xYKFEAAAMDQOcyKAADU7j876.jpg'],
+	 'instant': [u'\uffe559.80'],
+	 'name': [u'14cm 360\xb0\u4e07\u5411\u65cb\u8f6c\u5730\u7403\u4eea\uff08\u653f\u533a+\u5730\u5f62\u7248\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5c71\u4e1c\u7701\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe548.80'],
+	 'url': 'http://item.jd.com/11258050.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11377193.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11214268.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11377193.html>
+	{'ISBN': [u'9787807048251'],
+	 'author': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'description': [],
+	 'img': [u' http://img11.360buyimg.com/n1/g15/M04/05/03/rBEhWlL8RCcIAAAAAAO15J_CXtAAAIdUwNToEgAA7X8126.jpg'],
+	 'instant': [u'\uffe5428.00'],
+	 'name': [u'\u5730\u7403\u4eea\uff0830cm\u4eff\u53e4\xb7\u7acb\u4f53\u6d6e\u96d5\xb7\u706f\u5149\xb7\u4eff\u7ea2\u6728\u5e95\u5ea7\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5313.20'],
+	 'url': 'http://item.jd.com/11377193.html'}
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11346188.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:19+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11214268.html>
+	{'ISBN': [u'6959809132358'],
+	 'author': [u'\u4e2d\u56fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/g12/M00/00/16/rBEQYFGBzWEIAAAAAABQ1-2Z_kYAAAItQFTRF8AAFDv750.jpg'],
+	 'instant': [u'\uffe5420.00'],
+	 'name': [u'\u535a\u76ee\u5730\u7403\u4eea\uff1a32CM\u653f\u533a\u4e2d\u3001\u82f1\u6587\u4eff\u53e4\u5730\u7403\u4eea\uff08\u94f6\u8272\u5706\u5ea7\uff0911-32-35',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u4e2d\u56fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5331.80'],
+	 'url': 'http://item.jd.com/11214268.html'}
+2014-03-16 20:30:19+0800 [jingdong] ERROR: Error processing {'ISBN': [u'9787503024849'],
+	 'author': [],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/g13/M02/15/16/rBEhU1J7SegIAAAAAANZPb1FJlcAAFIUwBGSL8AA1lV639.jpg'],
+	 'instant': [u'\uffe5260.00'],
+	 'name': [u'\u535a\u76ee\u5730\u7403\u4eea\uff1a25CM\u4e2d\u82f1\u6587\u5730\u5f62\u653f\u533a\u706f\u5149\u5730\u7403\u4eea\uff08\u6728\u5ea7\u5408\u91d1\u67b6\uff0911-25-01',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6d4b\u7ed8\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5206.10'],
+	 'url': 'http://item.jd.com/11346188.html'}
+	Traceback (most recent call last):
+	  File "C:\Python27\lib\site-packages\scrapy-0.22.2-py2.7.egg\scrapy\middleware.py", line 62, in _process_chain
+	    return process_chain(self.methods[methodname], obj, *args)
+	  File "C:\Python27\lib\site-packages\scrapy-0.22.2-py2.7.egg\scrapy\utils\defer.py", line 65, in process_chain
+	    d.callback(input)
+	  File "C:\Python27\lib\site-packages\twisted\internet\defer.py", line 382, in callback
+	    self._startRunCallbacks(result)
+	  File "C:\Python27\lib\site-packages\twisted\internet\defer.py", line 490, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "C:\Python27\lib\site-packages\twisted\internet\defer.py", line 577, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "C:\Users\Administrator\Source\Repos\orcinus_price\crawl\pipelines.py", line 32, in process_item
+	    dbdata["author"] = item["author"][0]
+	exceptions.IndexError: list index out of range
+	
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/10169306.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11214271.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11377191.html> (referer: http://list.jd.com/1713-11745-11753-0-0-0-0-0-0-0-1-1-2.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/10169306.html>
+	{'ISBN': [u'9787503121098 '],
+	 'author': [u'\u4e2d\u56fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/18093/b554bf33-def9-40da-a1ea-f74260d8a454.jpg'],
+	 'instant': [u'\uffe5260.00'],
+	 'name': [u'\u653f\u533a\u4e2d\u3001\u82f1\u6587\u706f\u5149\u5730\u7403\u4eea\xb7\u6728\u5ea7\u5408\u91d1\u67b6\xb7\u535a\u76ee\u5730\u7403\u4eea\uff1a25\u5398\u7c73\u5730\u5f62',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u4e2d\u56fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5221.00'],
+	 'url': 'http://item.jd.com/10169306.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11214271.html>
+	{'ISBN': [u'6959809132365'],
+	 'author': [u'\u5317\u4eac\u535a\u76ee\u5730\u56fe\u5236\u54c1\u6709\u9650\u516c\u53f8'],
+	 'description': [],
+	 'img': [u' http://img11.360buyimg.com/n1/g12/M00/00/1C/rBEQYVGCLUIIAAAAAAIr6VI2LrAAAALTQAivlUAAiwB205.jpg'],
+	 'instant': [u'\uffe5420.00'],
+	 'name': [u'32CM\u653f\u533a\u4e2d\u3001\u82f1\u6587\u4eff\u53e4\u5730\u7403\u4eea\uff08\u91d1\u8272\u5706\u5ea7\uff0911-32-36',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u4e2d\u56fd\u5730\u56fe\u51fa\u7248\u793e',
+	           u'\u6d4b\u7ed8\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5338.40'],
+	 'url': 'http://item.jd.com/11214271.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11377191.html>
+	{'ISBN': [u'9787807048312'],
+	 'author': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'description': [],
+	 'img': [u' http://img11.360buyimg.com/n1/g15/M06/00/06/rBEhWlLFBfoIAAAAAAQcok6xO8IAAHfrwDNaUkABBy6565.jpg'],
+	 'instant': [u'\uffe5128.00'],
+	 'name': [u'\u5730\u7403\u4eea\uff0820cm\u5730\u5f62\u653f\u533a\u7248\xb7\u4e09\u8db3\u9f0e\u7acb\u91d1\u8272\u652f\u67b6\xb7LED\u706f\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe593.70'],
+	 'url': 'http://item.jd.com/11377191.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11331317.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11392318.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11345749.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11331317.html>
+	{'ISBN': [u'9787807048329'],
+	 'author': [u'\u5929\u57df\u5317\u6597'],
+	 'description': [],
+	 'img': [u' http://img11.360buyimg.com/n1/g14/M04/14/10/rBEhVVJWMAIIAAAAAAk8hCP6UvsAAEAWQEVDC8ACTyc802.jpg'],
+	 'instant': [u'\uffe5128.00'],
+	 'name': [u'\u5730\u7403\u4eea\uff0820cm \u653f\u533a\u7248 \u4e09\u8db3\u9f0e\u7acb\u94f6\u8272\u652f\u67b6  LED\u706f\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6210\u90fd\u5730\u56fe'],
+	 'price': [u'\uffe596.00'],
+	 'url': 'http://item.jd.com/11331317.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11392318.html>
+	{'ISBN': [u'9787807048572'],
+	 'author': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'description': [u'\u3000\u3000\u5730\u7403\u4eea\u5c55\u793a\u4e86\u4e03\u5927\u6d32\u548c\u56db\u5927\u6d0b\u7684\u4f4d\u7f6e\u5173\u7cfb\uff0c\u6db5\u76d6\u4e86\u5c71\u8109\u3001\u6cb3\u6d41\u3001\u6e56\u6cca\u3001\u9ad8\u539f\u3001\u4e18\u9675\u3001\u76c6\u5730\u3001\u6c99\u6f20\u7b49\u81ea\u7136\u5730\u7406\u8981\u7d20\uff0c\u53cd\u6620\u4e86\u4e16\u754c\u884c\u653f\u533a\u57df\u3001\u9996\u90fd\u3001\u57ce\u5e02\u7684\u5730\u7406\u4f4d\u7f6e\u3002\u5730\u7403\u4eea\u5de7\u5999\u914d\u7f6e\u4e86\u4e16\u754c\u5404\u5730\u8457\u540d\u7684\u81ea\u7136\u666f\u89c2\u3001\u53e4\u4eca\u5efa\u7b51\u3001\u4eba\u6587\u5386\u53f2\u3001\u79d1\u5b66\u6280\u672f\u3001\u5de5\u827a\u7f8e\u672f\u3001\u4f53\u80b2\u7ade\u6280\u3001\u52a8\u690d\u7269\u7b49\u767e\u79d1\u77e5\u8bc6\u56fe\u6848\u56fe\u7247188\u5e45\uff0c\u751f\u52a8\u76f4\u89c2\uff0c\u4e00\u76ee\u4e86\u7136\u3002\u878d\u5730\u7406\u77e5\u8bc6\u4e0e\u767e\u79d1\u5b66\u4e60\u4e3a\u4e00\u4f53\uff0c\u662f\u5b69\u5b50\u611f\u89c2\u8ba4\u77e5\u4e16\u754c\u7684\u542f\u8499\u8bfb\u7269\u3002'],
+	 'img': [u' http://img10.360buyimg.com/n1/g13/M01/13/09/rBEhU1Lk1hAIAAAAAAb_a3qbf1kAAIPHwG0OWMABv-D655.jpg'],
+	 'instant': [u'\uffe5168.00'],
+	 'name': [u'\u5c0f\u591c\u706f\xb7\u513f\u7ae5\u5730\u7403\u4eea\uff08\u5c11\u513f\u767e\u79d1\u7248\uff09\uff0820cm\xb7\u5f13\u5f62\u652f\u67b6\xb7LED\u706f\u5149\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5123.00'],
+	 'url': 'http://item.jd.com/11392318.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11345749.html>
+	{'ISBN': [u'9787807048008'],
+	 'author': [u'\u5929\u57df\u5317\u6597'],
+	 'description': [],
+	 'img': [u' http://img11.360buyimg.com/n1/g13/M04/15/04/rBEhVFJ4ibIIAAAAAAPml42opKEAAFBQAEf488AA-av640.jpg'],
+	 'instant': [u'\uffe5298.00'],
+	 'name': [u'26cm \u4e2d\u82f1\u6587\u653f\u533a\u706f\u5149\u5730\u7403\u4eea',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6210\u90fd\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5218.10'],
+	 'url': 'http://item.jd.com/11345749.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11392317.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11392317.html>
+	{'ISBN': [u'9787807547242'],
+	 'author': [u'\u5317\u4eac\u5929\u57df\u5317\u6597\u56fe\u4e66\u6709\u516c\u53f8'],
+	 'description': [u'\u3000\u3000\u5730\u7403\u4eea\u5c55\u793a\u4e86\u4e16\u754c\u4e03\u5927\u6d32\u3001\u56db\u5927\u6d0b\uff0c\u5168\u9762\u51c6\u786e\u7684\u8868\u793a\u4e86\u4e16\u754c\u4e0a\u8457\u540d\u7684\u5c71\u7cfb\u3001\u9ad8\u539f\u3001\u5e73\u539f\u3001\u6d77\u6d0b\u3001\u6cb3\u6d41\u3001\u6e56\u6cca\u3001\u6c99\u6f20\u7b49\u81ea\u7136\u5730\u7406\u8981\u7d20\u3002\u53cd\u6620\u4e86\u4e16\u754c\u884c\u653f\u533a\u57df\u3001\u9996\u90fd\u3001\u9996\u5e9c\u3001\u57ce\u5e02\u7684\u5730\u7406\u4f4d\u7f6e\u3002'],
+	 'img': [u' http://img11.360buyimg.com/n1/g13/M01/13/09/rBEhUlLk1hAIAAAAAAXgKUr5Q4QAAIPHwGuWSIABeBB420.jpg'],
+	 'instant': [u'\uffe5218.00'],
+	 'name': [u'\u653f\u533a\u5730\u7403\u4eea\uff0832cm\u4e2d\u6587\u653f\u533a\u7248\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5c71\u4e1c\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5159.50'],
+	 'url': 'http://item.jd.com/11392317.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11214252.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11228438.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/10829797.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11214252.html>
+	{'ISBN': [u'6959809132310'],
+	 'author': [u'\u5317\u4eac\u535a\u76ee\u5730\u56fe\u5236\u54c1\u6709\u9650\u516c\u53f8'],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/g12/M00/00/1C/rBEQYVGCLUIIAAAAAAO9GtnTudwAAALTQAb8boAA70y235.jpg'],
+	 'instant': [u'\uffe5420.00'],
+	 'name': [u'32CM\u5730\u5f62\u4e2d\u3001\u82f1\u6587\u5730\u7403\u4eea\uff08\u94f6\u8272\u5706\u5ea7\uff0911-32-31',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u4e2d\u56fd\u5730\u56fe\u51fa\u7248\u793e',
+	           u'\u6d4b\u7ed8\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5334.20'],
+	 'url': 'http://item.jd.com/11214252.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11228438.html>
+	{'ISBN': [u'9787116080829'],
+	 'author': [u'\u5929\u57df\u5317\u6597'],
+	 'description': [u'\u3000\u3000\u300a26cm\u706f\u5149\u5730\u7403\u4eea\xb7\u4e2d\u6587\u653f\u533a\u7248\uff1a\u6728\u5e95\u5ea7\u5408\u91d1\u652f\u67b6\uff08\u5065\u5eb7LED\u5149\u6e90\uff09\u300b\u5185\u5bb9\u4e30\u5bcc\uff0c\u5168\u9762\u5c55\u793a\u4e16\u754c\u56fd\u5bb6\u548c\u4e3b\u8981\u57ce\u5e02\uff0c\u4e3b\u8981\u6d0b\u6d41\u7684\u5206\u5e03\u3001\u540d\u79f0\u53ca\u8d70\u5411\uff1b\u6db5\u76d6\u4e16\u754c\u4e03\u5927\u6d32\u3001\u56db\u5927\u6d0b\u3001\u4e16\u754c\u8457\u540d\u5c71\u5cf0\u3001\u9ad8\u539f\u3001\u5e73\u539f\u3001\u6d77\u6d0b\u3001\u6d77\u6c9f\u3001\u6cb3\u6d41\u3001\u6e56\u6cca\u7b49\u81ea\u7136\u5730\u7406\u8981\u7d20\u3002'],
+	 'img': [u' http://img10.360buyimg.com/n1/g12/M00/02/07/rBEQYFGHc7sIAAAAAAIWMF5GmR8AAAb1APzBnoAAhZI701.jpg'],
+	 'instant': [u'\uffe5298.00'],
+	 'name': [u'26cm\u706f\u5149\u5730\u7403\u4eea\xb7\u4e2d\u6587\u653f\u533a\u7248\uff1a\u6728\u5e95\u5ea7\u5408\u91d1\u652f\u67b6\uff08\u5065\u5eb7LED\u5149\u6e90\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5730\u8d28\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5250.30'],
+	 'url': 'http://item.jd.com/11228438.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/10829797.html>
+	{'ISBN': [u'9787116072923'],
+	 'author': [u'\u5317\u4eac\u5929\u57df\u5317\u6597\u56fe\u4e66\u6709\u9650\u516c\u53f8'],
+	 'description': [u'\u3000\u3000\u5730\u7403\u81ea\u8f6c23.5\u5ea6\u503e\u89d2\u4e07\u5411\u65cb\u8f6c',
+	                 u'\u3000\u3000\u9ad8\u4eae\u5ea6\u9ad8\u6e05\u6670\u7403\u4f53',
+	                 u'\u3000\u3000\u8010\u78e8\u4e00\u6b21\u6210\u578b',
+	                 u'\u3000\u3000\u6700\u65b0\u4e16\u754c\u653f\u533a\u8d44\u6599'],
+	 'img': [u' http://img11.360buyimg.com/n1/g15/M07/05/04/rBEhWVL8VqgIAAAAAANtrT3vCRUAAIdfwDcFzsAA23F706.jpg'],
+	 'instant': [u'\uffe559.80'],
+	 'name': [u'14cm\u5730\u7403\u4eea\uff08\u4e07\u5411\u653f\u533a\u7248\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5730\u8d28\u51fa\u7248\u793e'],
+	 'price': [u'\uffe544.20'],
+	 'url': 'http://item.jd.com/10829797.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1061834836.html> (referer: http://list.jd.com/1713-11745-11759.html) ['partial']
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11752.html> (referer: http://www.jd.com/book/booksort.aspx)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11331312.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1061834836.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img11.360buyimg.com/n1/g13/M0A/09/00/rBEhVFKcAWAIAAAAAARueaXzed8AAGOfANLi1kABG6R510.jpg'],
+	 'instant': [],
+	 'name': [u'\u6bdb\u4e3b\u5e2d\u548c\u7530\u7389\u8868\u4e2d\u56fd\u9886\u8896\u548c\u7530\u7389\u91d1\u94bb\u8868 \u7eaa\u5ff5\u6bdb\u6cfd\u4e1c\u8bde\u8fb0120\u5468\u5e74\u624b\u8868 \u673a\u68b0\u7537\u8868'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1061834836.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11331327.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11331312.html>
+	{'ISBN': [u'9787807047681'],
+	 'author': [u'\u5929\u57df\u5317\u6597'],
+	 'description': [u' \n', u' \n', u' \n', u' \n', u' \n'],
+	 'img': [u' http://img10.360buyimg.com/n1/g14/M04/14/03/rBEhVVJTosQIAAAAAAOFEC1l1jgAAD7QQA_Uh4AA4Uo117.jpg'],
+	 'instant': [u'\uffe589.90'],
+	 'name': [u'\u5730\u7403\u4eea\uff0818cm \u653f\u533a\u4e07\u5411\u5730\u7403\u4eea\uff09\uff08\u65b0\u8bfe\u6807\u4e2d\u5b66\u5730\u7406\u5b66\u4e60\u4e13\u7528\uff09\uff08\u9644\u4e16\u754c\u5730\u7406\u5730\u56fe\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u6210\u90fd\u5730\u56fe'],
+	 'price': [u'\uffe567.40'],
+	 'url': 'http://item.jd.com/11331312.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11162583.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11074690.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11749.html> (referer: http://www.jd.com/book/booksort.aspx)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11331327.html>
+	{'ISBN': [u'9787807547075'],
+	 'author': [u'\u5929\u57df\u5317\u6597'],
+	 'description': [],
+	 'img': [u' http://img11.360buyimg.com/n1/g13/M07/0F/08/rBEhUlJTaXwIAAAAAATJ3OVI8H8AAD34gDtWOkABMn0001.jpg'],
+	 'instant': [u'\uffe5368.00'],
+	 'name': [u'\u5c0f\u591c\u706f\uff1a\u513f\u7ae5\u5730\u7403\u4eea\uff08\u5c11\u513f\u767e\u79d1\u7248\uff09\uff0826cm \u4e07\u5411\u65cb\u8f6c\xb7LED\u706f\u5149\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5c71\u4e1c'],
+	 'price': [u'\uffe5276.00'],
+	 'url': 'http://item.jd.com/11331327.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11750.html> (referer: http://www.jd.com/book/booksort.aspx)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11162583.html>
+	{'ISBN': [u'9787807546832'],
+	 'author': [u'\u5317\u4eac\u5929\u57df\u5317\u6597\u56fe\u4e66\u6709\u9650\u516c\u53f8'],
+	 'description': [u'\u3000\u3000\u517c\u505a\u65e5\u5e38\u67e5\u8be2\u548c\u4e2d\u5b66\u751f\u5b66\u4e60\u4e4b\u7528\u3002\u6cbf\u5730\u7403\u503e\u89d2\u65b9\u5411\u4e07\u5411\u65cb\u8f6c\uff0c\u76f4\u5f8418\u5398\u7c73\uff0c\u5927\u5c0f\u9002\u4e2d\uff0c\u4fbf\u4e8e\u6848\u5934\u6446\u653e\u3001\u67e5\u770b\uff0c\u9002\u5408\u5bb6\u5ead\u4e66\u684c\u4e66\u67dc\u4ee5\u53ca\u5b66\u6821\u6559\u5ba4\u4f1a\u8bae\u5ba4\u6f14\u793a\u4f7f\u7528\u3002',
+	                 u'\u3000\u3000\u5730\u5f62\u3001\u653f\u533a\u4e00\u7403\u4e24\u7528\u3002\u51c6\u786e\u5448\u73b0\u4e86\u4e03\u5927\u6d32\u548c\u56db\u5927\u6d0b\u7684\u4f4d\u7f6e\u5173\u7cfb\uff0c\u6807\u793a\u4e86\u9646\u5730\u4e3b\u8981\u7684\u5c71\u7cfb\u5c71\u8109\u3001\u6e56\u6cca\u6cb3\u6d41\u4ee5\u53ca\u91cd\u8981\u7684\u5730\u7406\u5355\u5143\uff0c\u6d77\u6d0b\u4e3b\u8981\u7684\u6d0b\u6d41\u5206\u5e03\u3001\u6d77\u76c6\u6d77\u6c9f\u3001\u5927\u6d0b\u4e2d\u810a\u7b49\uff0c\u6d77\u9646\u5730\u5f62\u4e00\u76ee\u4e86\u7136\u3002',
+	                 u'\u3000\u300010X10\u5ea6\u7ecf\u7eac\u7f51\u683c\uff0c\u56fd\u9645\u65e5\u671f\u53d8\u66f4\u7ebf\uff0c\u5357\u5317\u56de\u5f52\u7ebf\u548c\u5357\u5317\u6781\u5708\uff0c\u6709\u52a9\u4e8e\u76f4\u89c2\u5730\u5efa\u7acb\u5730\u7406\u65b9\u4f4d\u6982\u5ff5\uff1b\u7406\u89e3\u5730\u8f6c\u504f\u5411\u529b\u7684\u5f62\u6210\uff1b\u6f14\u793a\u5730\u7403\u7684\u81ea\u8f6c\u548c\u516c\u8f6c\uff0c\u7406\u89e3\u56db\u5b63\u7684\u53d8\u5316\u548c\u663c\u591c\u7684\u66f4\u66ff\uff1b\u8ba1\u7b97\u5730\u65b9\u65f6\u548c\u533a\u65f6\u3002',
+	                 u'\u3000\u3000\u591a\u8fbe\u5343\u4f59\u6761\u7684\u57ce\u5e02\u540d\u79f0\uff0c\u6db5\u76d6\u4e86\u4e16\u754c\u4e3b\u8981\u57ce\u5e02\uff0c\u540c\u65f6\u987e\u53ca\u4e86\u4e00\u4e9b\u65f6\u4e8b\u70ed\u70b9\u5730\u533a\u5730\u540d\u3002',
+	                 u'\u3000\u3000\u6700\u65b0\u73af\u4fdd\u8bbe\u8ba1\uff0c\u5148\u8fdb\u751f\u4ea7\u5de5\u827a\uff0c\u8010\u78e8\u4e00\u6b21\u6210\u578b\uff0c\u7403\u9762\u5149\u6d01\u5706\u6da6\u3002'],
+	 'img': [u' http://img11.360buyimg.com/n1/g10/M00/14/0F/rBEQWVFn4cIIAAAAAAJ3LycP0UsAAEANQPT8CwAAndH743.jpg'],
+	 'instant': [u'\uffe588.80'],
+	 'name': [u'18cm\u5730\u7403\u4eea\uff08\u5730\u5f62+\u653f\u533a\uff09\uff08\u513f\u7ae5\u3001\u5b66\u751f\u3001\u5c45\u5bb6\u9002\u7528\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5c71\u4e1c\u7701\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe570.90'],
+	 'url': 'http://item.jd.com/11162583.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11074690.html>
+	{'ISBN': [u'9787116077386'],
+	 'author': [u'\u5730\u8d28\u51fa\u7248\u793e\u5730\u56fe\u7f16\u8f91\u5ba4',
+	            u'\u5317\u4eac\u5929\u57df\u5317\u6597\u56fe\u4e66\u6709\u9650\u516c\u53f8'],
+	 'description': [u'\xa0\xa0\xa0\xa0 \u2606 \u76f4\u5f8422.8\u5398\u7c73\uff0c\u5927\u5c0f\u9002\u4e2d\uff0c\u9002\u5408\u5b66\u751f\u3001\u529e\u516c\u3001\u5c45\u5bb6\u4f7f\u7528\u3002',
+	                 u'\n\xa0\xa0\xa0\xa0 \u2606 \u6e05\u6670\u8868\u793a\u7ecf\u7eac\u7f51\u683c\uff0c\u56fd\u9645\u65e5\u671f\u53d8\u66f4\u7ebf\uff0c\u5357\u5317\u56de\u5f52\u7ebf\u548c\u5357\u5317\u6781\u5708\uff0c\u6709\u52a9\u4e8e\u76f4\u89c2\u5730\u5efa\u7acb\u5730\u7406\u65b9\u4f4d\u6982\u5ff5\uff1b\u7406\u89e3\u5730\u8f6c\u504f\u5411\u529b\u7684\u5f62\u6210\uff1b\u6f14\u793a\u5730\u7403\u7684\u81ea\u8f6c\u548c\u516c\u8f6c\uff0c\u7406\u89e3\u56db\u5b63\u7684\u53d8\u5316\u548c\u663c\u591c\u7684\u66f4\u66ff\uff1b\u8ba1\u7b97\u5730\u65b9\u65f6\u548c\u533a\u65f6\u3002',
+	                 u'\n\xa0\xa0\xa0\xa0 \u2606 \u91c7\u7528\u6700\u65b0\u5730\u56fe\u8d44\u6599\uff0c\u6807\u6ce8\u4e09\u6c99\u5e02\u7b49\u6700\u65b0\u57ce\u5e02\u4fe1\u606f\u3002',
+	                 u'\n\xa0\xa0\xa0\xa0 \u2606 \u5168\u9762\u5c55\u793a\u4e16\u754c\u4e0a\u6240\u6709\u56fd\u5bb6\u548c\u5730\u533a\u7684\u540d\u79f0\u548c\u754c\u7ebf\uff0c\u591a\u8fbe\u5343\u6761\u7684\u57ce\u5e02\u540d\u79f0\uff0c\u6db5\u76d6\u4e86\u4e16\u754c\u4e3b\u8981\u57ce\u5e02\u3002',
+	                 u'\n\xa0\xa0\xa0\xa0 \u2606 \u6700\u65b0\u73af\u4fdd\u8bbe\u8ba1\uff0c\u8010\u78e8\u4e00\u6b21\u6210\u578b\uff0c\u7403\u9762\u5149\u6d01\u5706\u6da6\u3002'],
+	 'img': [u' http://img10.360buyimg.com/n1/g13/M08/14/13/rBEhVFL8Vz0IAAAAAAL8Ip2LLRwAAIfQQB_mncAAvw6817.jpg'],
+	 'instant': [u'\uffe5168.00'],
+	 'name': [u'22.8cm\u5730\u7403\u4eea', u'\r\n            ', u'\r\n        '],
+	 'press': [u'\u5730\u8d28\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5119.00'],
+	 'url': 'http://item.jd.com/11074690.html'}
+2014-03-16 20:30:20+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11212854.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:20+0800 [jingdong] INFO: Closing spider (shutdown)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11752-0-0-0-0-0-0-0-1-1-2.html> (referer: http://list.jd.com/1713-11745-11752.html)
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11212854.html>
+	{'ISBN': [u'9787116080836'],
+	 'author': [u'\u5317\u4eac\u5929\u57df\u5317\u6597\u56fe\u4e66\u6709\u9650\u516c\u53f8'],
+	 'description': [u'\u3000\u3000\u2606 \u8010\u78e8\u4e00\u6b21\u6210\u578b\u7403\u4f53\uff0c\u5b9e\u73b0\u5357\u5317\u534a\u7403\u3001\u8d64\u9053\u5b8c\u7f8e\u8854\u63a5\u3002',
+	                 u'\u3000\u3000\u2606 \u5065\u5eb7LED\u5149\u6e90\uff0c\u8282\u80fd\u73af\u4fdd\u5b89\u5168\u3002',
+	                 u'\u3000\u3000\u2606 \u6728\u5e95\u5ea7\u5408\u91d1\u652f\u67b6\uff0c\u5c3d\u663e\u9ad8\u8d35\u5178\u96c5\u6c14\u8d28\u3002',
+	                 u'\u3000\u3000\u2606 \u9ad8\u6e05\u6670\u9ad8\u4eae\u5ea6\u7403\u4f53\u3001\u73af\u4fddPVC\u6750\u8d28\u3001CTP\u8c03\u9891\u7cbe\u5370\u3002',
+	                 u'\u3000\u3000\u2606 \u6700\u65b0\u5730\u56fe\u8d44\u6599\uff0c\u6807\u6ce8\u201c\u4e09\u6c99\u5e02\u201d\u3002',
+	                 u'\u3000\u3000\u2606 \u5185\u5bb9\u4e30\u5bcc\uff0c\u4e2d\u82f1\u6587\u53cc\u8bed\u5168\u9762\u5c55\u793a\u4e16\u754c\u4e3b\u8981\u6d0b\u6d41\u7684\u5206\u5e03\u3001\u540d\u79f0\u53ca\u8d70\u5411\uff1b\u6db5\u76d6\u4e16\u754c\u4e03\u5927\u6d32\u3001\u56db\u5927\u6d0b\u3001\u4e16\u754c\u8457\u540d\u5c71\u5cf0\u3001\u9ad8\u539f\u3001\u5e73\u539f\u3001\u6d77\u6d0b\u3001\u6d77\u6c9f\u3001\u6cb3\u6d41\u3001\u6e56\u6cca\u7b49\u81ea\u7136\u5730\u7406\u8981\u7d20\u3002',
+	                 u'\u3000\u3000\u2606 \u5546\u52a1\u3001\u5b66\u4e60\u3001\u529e\u516c\u3001\u5c45\u5bb6\u5747\u9002\u7528\u3002',
+	                 u'\u3000\u3000\u2606 \u9ad8\u5f3a\u5ea6\u7cbe\u7f8e\u624b\u63d0\u5305\u88c5\u76d2\uff0c\u9988\u8d60\u4f73\u54c1\u3002'],
+	 'img': [u' http://img10.360buyimg.com/n1/g12/M00/08/01/rBEQYVGZ2AMIAAAAAAZ-Rxgo16QAABklgMz15YABn5f554.jpg'],
+	 'instant': [u'\uffe5398.00'],
+	 'name': [u'32cm\u706f\u5149\u5730\u7403\u4eea\uff08\u4e2d\u82f1\u6587\u53cc\u8bed\u653f\u533a\u7248\xb7\u6728\u5e95\u5ea7\u5408\u91d1\u652f\u67b6\u5065\u5eb7LED\u5149\u6e90\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5730\u8d28\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5291.30'],
+	 'url': 'http://item.jd.com/11212854.html'}
+2014-03-16 20:30:20+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/11331314.html> (referer: http://list.jd.com/1713-11745-11753.html)
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064108388.html> (referer: http://list.jd.com/1713-11745-11755.html) ['partial']
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Crawled (200) <GET http://item.jd.com/1064108057.html> (referer: http://list.jd.com/1713-11745-11755.html) ['partial']
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/11331314.html>
+	{'ISBN': [u'9787807546740'],
+	 'author': [u'\u5929\u57df\u5317\u6597'],
+	 'description': [],
+	 'img': [u' http://img10.360buyimg.com/n1/g15/M00/0E/10/rBEhWFJWIGQIAAAAAAPIKe7oLS0AAD9ygA_2MkAA8hB392.jpg'],
+	 'instant': [u'\uffe5468.00'],
+	 'name': [u'\u5730\u7403\u4eea\uff0832cm\u5730\u5f62\xb7\u653f\u533a\u7248\xb7\u91d1\u8272\u5f13\u5f62\u652f\u67b6\xb7LED\u706f\u5149\uff09',
+	          u'\r\n            ',
+	          u'\r\n        '],
+	 'press': [u'\u5c71\u4e1c\u7701\u5730\u56fe\u51fa\u7248\u793e'],
+	 'price': [u'\uffe5342.50'],
+	 'url': 'http://item.jd.com/11331314.html'}
+2014-03-16 20:30:21+0800 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Crawled (200) <GET http://list.jd.com/1713-11745-11751.html> (referer: http://www.jd.com/book/booksort.aspx)
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064108388.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img13.360buyimg.com/n1/g14/M02/06/05/rBEhVVKmkpYIAAAAAAKZn993lZQAAGsqwDaXGsAApm3224.jpg'],
+	 'instant': [],
+	 'name': [u'\u591a\u529f\u80fd\u513f\u7ae5\u8d34\u7eb8\uff1a\u8fc7\u5bb6\u5bb6\uff086\u679a\u5165\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064108388.html'}
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Scraped from <200 http://item.jd.com/1064108057.html>
+	{'ISBN': [],
+	 'author': [],
+	 'description': [],
+	 'img': [u'http://img12.360buyimg.com/n1/g13/M0A/0A/1D/rBEhVFKmklkIAAAAAAJflTQhNVYAAGmIwFurGEAAl-t938.jpg'],
+	 'instant': [],
+	 'name': [u'\u591a\u529f\u80fd\u513f\u7ae5\u8d34\u7eb8\uff1a\u516c\u4e3b\u5b66\u56ed3\uff086\u679a\u5165\uff09'],
+	 'press': [],
+	 'price': [],
+	 'url': 'http://item.jd.com/1064108057.html'}
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Retrying <GET http://item.jd.com/11346186.html> (failed 1 times): An error occurred while connecting: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+	].
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Retrying <GET http://item.jd.com/1075749575.html> (failed 1 times): An error occurred while connecting: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+	].
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Retrying <GET http://item.jd.com/1071794199.html> (failed 1 times): [<twisted.python.failure.Failure <class 'twisted.internet.error.ConnectionLost'>>]
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Retrying <GET http://item.jd.com/1082445769.html> (failed 1 times): An error occurred while connecting: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+	].
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Retrying <GET http://item.jd.com/1083092923.html> (failed 1 times): An error occurred while connecting: [Failure instance: Traceback (failure with no frames): <class 'twisted.internet.error.ConnectionLost'>: Connection to the other side was lost in a non-clean fashion: Connection lost.
+	].
+2014-03-16 20:30:21+0800 [jingdong] DEBUG: Retrying <GET http://item.jd.com/10488660.html> (failed 1 times): [<twisted.python.failure.Failure <class 'twisted.internet.error.ConnectionLost'>>]
