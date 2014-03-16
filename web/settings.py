@@ -5,6 +5,7 @@ import os
 import sys
 
 workdir = os.path.split( os.path.realpath( sys.argv[0] ))[0]
+template_dir = os.path.join(workdir,"template")
 
 settings = {
     "static_path": os.path.join(workdir, "static"),

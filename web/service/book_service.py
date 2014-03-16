@@ -18,3 +18,4 @@ class BookService(object):
     def query_for_period(self, isbn, start_time, end_time):
         yield book_dao.query({'isbn', isbn}, start_time, end_time)
 
+
