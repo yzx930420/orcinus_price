@@ -7,20 +7,24 @@ import sys
 from tornado.web import Application
 from tornado.web import StaticFileHandler
 from tornado.ioloop import IOLoop
+from web.settings import *
+#
+# workdir = os.path.split( os.path.realpath( sys.argv[0] ))[0]
+#
+# settings = {
+#     "static_path": os.path.join(workdir, "static"),
+#     "template_path": os.path.join(workdir, "template"),
+#     "listen_port":8888,
+#     "xsrf_cookies": False,
+#
+# }
 
-workdir = os.path.split( os.path.realpath( sys.argv[0] ))[0]
-
-settings = {
-    "static_path": os.path.join(workdir, "static"),
-    "listen_port":8888,
-    "xsrf_cookies": False,
-
-}
 
 
 from web.controller import book_detail_controller,index_controller,result_set_controller
 
 if __name__ == "__main__":
+    print workdir
     application = Application([(r"/index", index_controller.IndexController),
         (r"/resultset", result_set_controller.ResultSetController),
         (r"/bookdetail/(.*)", book_detail_controller.BookDetailController),
