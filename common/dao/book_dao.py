@@ -58,6 +58,7 @@ class BookDAO():
 
         return book
 
+    # 插入book
     def insert(self, book):
         goods,bookpo = self.__parse_book_to_po(book)
         # 插入goods(isbn, instant_price, link, platform, crawling_time)
@@ -168,6 +169,33 @@ class BookDAO():
 
         return booklist
 
+    # 对键值对pair进行查询，尾部匹配
+    def query_tail_matched(self, pair):
+        sql = 'select isbn, price, title, author, press, description, cover ' \
+              'from book_info ' \
+              'where %s like "%%%s"' %(pair)
+        self.cursor.execute(sql)
+        bookpo_list = self.cursor.fetchall()
+        booklist = []
+
+        for bpo in bookpo_list:
+            print 'isbn = ', bpo[0]
+            bookpo = BookPO()
+            bookpo.set_all(bpo)
+
+            sql = 'select isbn, link, platform, instant_price, crawling_time ' \
+                  'from book_goods_info ' \
+                  'where isbn="%s"' %(bookpo.isbn)
+            self.cursor.execute(sql)
+            goodspo_list = self.cursor.fetchall()
+
+            for gpo in goodspo_list:
+                goodspo = GoodsPO()
+                goodspo.set_all(gpo)
+                booklist.append(self.__parse_po_to_book(bookpo, goodspo))
+
+        return booklist
+
     # 传入isbn通过时间范围查询
     def query_by_time(self, isbn, start_time, end_time):
         sql = 'select isbn, price, title, author, press, description, cover  ' \
@@ -219,12 +247,11 @@ def test_insert():
         book_dao.insert(book)
 
 def test_query():
-    #pair = ("isbn", '00001001')
-    result = book_dao.query_by_time('00050001', 50, 10000)
+    pair = ("isbn", '001')
+    result = book_dao.query_tail_matched(pair)
     for book in result:
         print book.isbn, book.price, book.platform, book.instant_price, book.crawling_time
 
 if __name__=="__main__":
-    test_insert()
     test_query()
 
