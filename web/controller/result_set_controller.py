@@ -10,16 +10,16 @@ class ResultSetController(RequestHandler):
     def initialize(self):
         self.service = BookService()
 
-    def get(self, *args, **kwargs):
+    def get(self):
         action = self.get_argument("action")
         keyword = self.get("keyword")
         result = []
-        if action == None || action == "any":
+        if action == None or action == "any":
            result = self.service.query_by_keyword(keyword)
         else:
             result = self.service.query_by_pair({action:keyword})
 
         self.render(os.path.join(template_dir, "resultset.html"), list=result)
 
-    def post(self, *args, **kwargs):
+    def post(self):
         self.get()
