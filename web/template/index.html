@@ -1,9 +1,38 @@
-<html>
-<head><title></title></head>
-
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>最强买手</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/index.css" rel="stylesheet" type="text/css"/>
+    <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="/static/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/static/js/index.js" type="text/javascript"></script>
+</head>
 <body>
+<div id="search_bar">
+    <img src="/static/image/title.png" alt="请输入 书名、作者、ISBN" class="search_title"/>
 
-{{ content }}
-
+    <form action="/resultset" method="get">
+        <div class="col-lg-6" id="key_word_area">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button id="search_type" type="button" class="btn btn-default dropdown-toggle input-lg"
+                            data-toggle="dropdown" >全部<span
+                            class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="search_option" href="#" action="isbn">ISBN</a></li>
+                        <li><a class="search_option" href="#" action="title">书名</a></li>
+                        <li><a class="search_option" href="#" action="author">作者</a></li>
+                        <li><a class="search_option" href="#" action="any">全部</a></li>
+                    </ul>
+                </div>
+                <input id="key_word" type="text" name="keyword" class="form-control input-lg">
+                <input id="action" type="hidden" name="action" value="any"  >
+            </div>
+        </div>
+        <input type="submit" id="search_btn" value="" />
+</div>
+</form>
 </body>
 </html>

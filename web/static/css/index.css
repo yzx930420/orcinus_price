@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FFF url("/static/image/bg.png") 0 0 repeat;
+    min-width:1200px;
+}
+
+#search_bar {
+    margin-top:200px;
+    margin-left:auto;
+    margin-right:auto;
+    width:450px;
+}
+
+#key_word_area {
+    width:100%;
+    margin-top:20px;
+}
+
+.search_title {
+    margin-left:29px;
+}
+
+#search_btn {
+    position:relative;
+    top:20px;
+    left:192px;
+    width: 70px;
+    height: 68px;
+    background: transparent url("/static/image/search.png") 0 0 no-repeat;
+    border-color: transparent;
+}
