@@ -94,9 +94,11 @@ class BookDAO():
 
     # 对键值对pair进行查询，完全匹配
     def query_perfectly_matched(self, pair):
+        key = pair.keys()[0]
+        value = pair[key]
         sql = 'select isbn, price, title, author, press, description, cover  ' \
               'from book_info ' \
-              'where %s="%s"' %(pair)
+              'where %s="%s"' %(key, value)
         self.cursor.execute(sql)
         bookpo_list = self.cursor.fetchall()
         booklist = []
@@ -116,12 +118,13 @@ class BookDAO():
 
         return booklist
 
-
     # 对键值对pair进行查询，任意匹配
     def query_any_matched(self, pair):
+        key = pair.keys()[0]
+        value = pair[key]
         sql = 'select isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
-              'where %s like "%%%s%%"' %(pair)
+              'where %s like "%%%s%%"' %(key, value)
         self.cursor.execute(sql)
         bookpo_list = self.cursor.fetchall()
         booklist = []
@@ -144,9 +147,11 @@ class BookDAO():
 
     # 对键值对pair进行查询，前方匹配
     def query_front_matched(self, pair):
+        key = pair.keys()[0]
+        value = pair[key]
         sql = 'select isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
-              'where %s like "%s%%"' %(pair)
+              'where %s like "%s%%"' %(key, value)
         self.cursor.execute(sql)
         bookpo_list = self.cursor.fetchall()
         booklist = []
@@ -171,9 +176,11 @@ class BookDAO():
 
     # 对键值对pair进行查询，尾部匹配
     def query_tail_matched(self, pair):
+        key = pair.keys()[0]
+        value = pair[key]
         sql = 'select isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
-              'where %s like "%%%s"' %(pair)
+              'where %s like "%%%s"' %(key, value)
         self.cursor.execute(sql)
         bookpo_list = self.cursor.fetchall()
         booklist = []
@@ -247,8 +254,8 @@ def test_insert():
         book_dao.insert(book)
 
 def test_query():
-    pair = ("isbn", '001')
-    result = book_dao.query_tail_matched(pair)
+    pair = {"isbn": '00001001'}
+    result = book_dao.query_front_matched(pair)
     for book in result:
         print book.isbn, book.price, book.platform, book.instant_price, book.crawling_time
 

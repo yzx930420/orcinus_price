@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'yzx930420'
 
 from common.model.book import Book
@@ -8,14 +9,20 @@ class BookService(object):
         for attr in Book.attrs:
             if attr == 'time':
                 continue
-            print attr
-            yield book_dao.query({attr, keyword})
+            for book in book_dao.query_perfectly_matched({attr: keyword}):
+                yield book
 
     def query_by_pair(self, pair):
-        yield  book_dao.query(pair)
-
+        yield  book_dao.query_perfectly_matched(pair)
 
     def query_for_period(self, isbn, start_time, end_time):
-        yield book_dao.query({'isbn', isbn}, start_time, end_time)
+        yield book_dao.query_by_time(isbn, start_time, end_time)
+
+# 测试
+if __name__ == '__main__':
+    book_service = BookService()
+    for book in book_service.query_by_keyword('50001'):
+        print book
+
 
 
