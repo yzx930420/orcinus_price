@@ -100,25 +100,15 @@ class BookDAO():
         for bpo in bookpo_list:
             print 'isbn = ', bpo[0]
             bookpo = BookPO()
-            bookpo.isbn = bpo[0]
-            bookpo.price = bpo[1]
-            bookpo.title = bpo[2]
-            bookpo.author = bpo[3]
-            bookpo.press = bpo[4]
-            bookpo.desciption = bpo[5]
-            bookpo.cover = bpo[6]
+            bookpo.set_all(bpo)
 
             sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info where isbn="%s"' %(bookpo.isbn)
             self.cursor.execute(sql)
             goodspo_list = self.cursor.fetchall()
             print 'goodspo_len = ', goodspo_list.__len__()
             for gpo in goodspo_list:
-                goodspo = GoodsPO
-                goodspo.isbn = gpo[0]
-                goodspo.link = gpo[1]
-                goodspo.platform = gpo[2]
-                goodspo.instant_price = gpo[3]
-                goodspo.crawling_time = gpo[4]
+                goodspo = GoodsPO()
+                goodspo.set_all(gpo);
                 booklist.append(self.__parse_po_to_book(bookpo, goodspo))
 
         print 'booklist_len = ', booklist.__len__()
@@ -135,27 +125,42 @@ class BookDAO():
         print 'len = ', bookpo_list.__len__()
         print bookpo_list
         for bpo in bookpo_list:
-            print 'isbn = ', bpo[0]
             bookpo = BookPO()
-            bookpo.isbn = bpo[0]
-            bookpo.price = bpo[1]
-            bookpo.title = bpo[2]
-            bookpo.author = bpo[3]
-            bookpo.press = bpo[4]
-            bookpo.desciption = bpo[5]
-            bookpo.cover = bpo[6]
+            bookpo.set_all(bpo)
 
             sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info where isbn="%s"' %(bookpo.isbn)
             self.cursor.execute(sql)
             goodspo_list = self.cursor.fetchall()
             print 'goodspo_len = ', goodspo_list.__len__()
             for gpo in goodspo_list:
-                goodspo = GoodsPO
-                goodspo.isbn = gpo[0]
-                goodspo.link = gpo[1]
-                goodspo.platform = gpo[2]
-                goodspo.instant_price = gpo[3]
-                goodspo.crawling_time = gpo[4]
+                goodspo = GoodsPO()
+                goodspo.set_all(gpo)
+                booklist.append(self.__parse_po_to_book(bookpo, goodspo))
+
+        print 'booklist_len = ', booklist.__len__()
+
+        return booklist
+
+    # 对键值对pair进行查询，前方匹配
+    def query_front_matched(self, pair):
+        sql = 'select isbn, price, title, author, press, description, cover  from book_info where %s like "%s%%"' %(pair)
+        self.cursor.execute(sql)
+        bookpo_list = self.cursor.fetchall()
+        booklist = []
+        print 'len = ', bookpo_list.__len__()
+        print bookpo_list
+        for bpo in bookpo_list:
+            print 'isbn = ', bpo[0]
+            bookpo = BookPO()
+            bookpo.set_all(bpo)
+
+            sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info where isbn="%s"' %(bookpo.isbn)
+            self.cursor.execute(sql)
+            goodspo_list = self.cursor.fetchall()
+            print 'goodspo_len = ', goodspo_list.__len__()
+            for gpo in goodspo_list:
+                goodspo = GoodsPO()
+                goodspo.set_all(gpo)
                 booklist.append(self.__parse_po_to_book(bookpo, goodspo))
 
         print 'booklist_len = ', booklist.__len__()
@@ -191,8 +196,8 @@ def test_insert():
         book_dao.insert(book)
 
 def test_query():
-    pair = ("isbn", 'ab')
-    result = book_dao.query_any_matched(pair)
+    pair = ("isbn", '00001001')
+    result = book_dao.query_perfectly_matched(pair)
     print 'result_len = ', result.__len__()
     for book in result:
         print book.isbn, book.price, book.platform, book.instant_price
