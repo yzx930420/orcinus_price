@@ -26,6 +26,7 @@ from web.controller import book_detail_controller,index_controller,result_set_co
 if __name__ == "__main__":
     print workdir
     application = Application([(r"/index", index_controller.IndexController),
+        (r"/", index_controller.IndexController),
         (r"/resultset", result_set_controller.ResultSetController),
         (r"/bookdetail/(.*)", book_detail_controller.BookDetailController),
         (r"/static/(.*)", StaticFileHandler, dict(path=settings["static_path"])),])
