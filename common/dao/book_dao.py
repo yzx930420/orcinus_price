@@ -178,28 +178,23 @@ class BookDAO():
 
     # 传入isbn通过时间范围查询
     def query_by_time(self, isbn, start_time, end_time):
-        sql = 'select isbn, price, title, author, press, description, cover  ' \
-              'from book_info ' \
-              'where isbn = "%s"' %(isbn)
+        sql = 'select book_info.isbn, price, title, author, press, description, cover, ' \
+              'link, platform, instant_price, crawling_time ' \
+              'from book_info, book_goods_info ' \
+              'where book_info.isbn = book_goods_info.isbn and book_info.isbn="%s" ' \
+              'and crawling_time between %d and %d' %(isbn, start_time, end_time)
         self.cursor.execute(sql)
-        bookpo_list = self.cursor.fetchall()
-        booklist = []
-        if bookpo_list.__len__() == 0:
-            return []
+        result_list = self.cursor.fetchall()
+        book_list = []
+        print 'hehe'
+        print result_list
+        print 'haha'
+        for result in result_list:
+            book = Book()
+            book.set_all(result)
+            book_list.append(book)
 
-        bookpo = BookPO()
-        bookpo.set_all(bookpo_list[0])
-
-        sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info ' \
-              'where isbn="%s" and crawling_time between %d and %d' %(bookpo.isbn, start_time, end_time)
-        self.cursor.execute(sql)
-        goodspo_list = self.cursor.fetchall()
-        for gpo in goodspo_list:
-            goodspo = GoodsPO()
-            goodspo.set_all(gpo)
-            booklist.append(self.__parse_po_to_book(bookpo, goodspo))
-
-        return booklist
+        return book_list
 
     def __del__(self):
         self.conn.close()
@@ -228,16 +223,7 @@ def test_insert():
 
 def test_query():
     pair = {"isbn": '00001001'}
-    result = book_dao.query_perfectly_matched(pair)
-    for book in result:
-        print book.isbn, book.price, book.platform, book.instant_price, book.crawling_time
-    result = book_dao.query_any_matched(pair)
-    for book in result:
-        print book.isbn, book.price, book.platform, book.instant_price, book.crawling_time
-    result = book_dao.query_tail_matched(pair)
-    for book in result:
-        print book.isbn, book.price, book.platform, book.instant_price, book.crawling_time
-    result = book_dao.query_front_matched(pair)
+    result = book_dao.query_by_time('00050001', 1, 100)
     for book in result:
         print book.isbn, book.price, book.platform, book.instant_price, book.crawling_time
 
