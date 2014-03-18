@@ -17,9 +17,22 @@ class ResultSetController(RequestHandler):
         if action == None or action == "any":
            result = self.service.query_by_keyword(keyword)
         else:
-            result = self.service.query_by_pair({action:keyword})
+            result = self.service.query_by_pair_any({action:keyword})
+            #result = self.service.query_by_pair({action:keyword})
 
-        self.render(os.path.join(template_dir, "resultset.html"), list=result)
+        if result == None or len(result) == 0:
+            self.write("没找到")
+        else:
+            self.render(os.path.join(template_dir, "resultset.html"), list=result)
 
     def post(self):
         self.get()
+
+
+#测试
+if __name__=="__main__":
+    ser = BookService()
+    list  = ser.query_by_pair_any({"isbn":"00001001"})
+    for a in list:
+        print a
+

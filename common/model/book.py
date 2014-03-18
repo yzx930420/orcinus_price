@@ -26,3 +26,6 @@ class Book(object):
         self.platform = list[8]
         self.instant_price = list[9]
         self.crawling_time = list[10]
+
+    def __str__(self):
+        return "isbn=%s" %(self.isbn)

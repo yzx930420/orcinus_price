@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'Dazdingo'
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.spider import Spider
@@ -21,6 +22,7 @@ class dangdangSpider(Spider):
         hehe = [u'\u4f5c\xa0\xa0\xa0\xa0\xa0\u8005']
         if(tempstr == hehe):
             path = 1
+            print "======================================================================"
         else:
             path = 2
         item['img'] = selec.xpath('//img[@id="largePic"]/@wsrc').extract()
@@ -31,6 +33,7 @@ class dangdangSpider(Spider):
         item['author'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path) + ']/div[2]/a/text()').extract()
         item['ISBN'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 3) + ']/div[2]/text()').extract()
         item['name'] = selec.xpath('//div[@class="head"]/h1/text()').extract()
+        item['platform'] = "当当网"
         tempstr = "".join(item['name'])
         print tempstr
         return item

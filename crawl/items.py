@@ -12,3 +12,4 @@ class bookItem(Item):
     instant = Field()
     img = Field()
     description = Field()
+    platform = Field()

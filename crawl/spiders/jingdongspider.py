@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'Dazdingo'
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 from scrapy.spider import Spider
@@ -23,6 +24,7 @@ class jingdongSpider(Spider):
         item['author'] = selec.xpath('//*[@id="summary-author"]/div[2]/a/text()').extract()
         item['ISBN'] = selec.xpath('//*[@id="summary-isbn"]/div[2]/text()').extract()
         item['name'] = selec.xpath('//*[@id="name"]/h1/text()').extract()
+        item['platform'] = "京东"
         tempstr = "".join(item['name'])
         print tempstr
         return item

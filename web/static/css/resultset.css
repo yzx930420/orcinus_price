@@ -206,6 +206,15 @@ body {
     border-radius:5px;
 }
 
+.result_item a{
+    text-decoration: none;
+    color:#000000;
+}
+
+.result_item a:hover{
+    color: #2DCC70;
+}
+
 .look_info{
     margin-left: 60px;
     margin-top: 220px;
