@@ -94,8 +94,8 @@ class BookDAO():
 
     # 对键值对pair进行查询，完全匹配
     def query_perfectly_matched(self, pair):
-        key = pair.keys()[0]
-        value = pair[key]
+        key = MySQLdb.escape_string(pair.keys()[0])
+        value = MySQLdb.escape_string(pair[key])
         if key == 'isbn':
             key = 'book_info.isbn'
         sql = 'select book_info.isbn, price, title, author, press, description, cover, ' \
@@ -115,8 +115,8 @@ class BookDAO():
 
     # 对键值对pair进行查询，任意匹配
     def query_any_matched(self, pair):
-        key = pair.keys()[0]
-        value = pair[key]
+        key = MySQLdb.escape_string(pair.keys()[0])
+        value = MySQLdb.escape_string(pair[key])
         if key == 'isbn':
             key = 'book_info.isbn'
         sql = 'select book_info.isbn, price, title, author, press, description, cover, ' \
@@ -136,8 +136,8 @@ class BookDAO():
 
     # 对键值对pair进行查询，前方匹配
     def query_front_matched(self, pair):
-        key = pair.keys()[0]
-        value = pair[key]
+        key = MySQLdb.escape_string(pair.keys()[0])
+        value = MySQLdb.escape_string(pair[key])
         if key == 'isbn':
             key = 'book_info.isbn'
         sql = 'select book_info.isbn, price, title, author, press, description, cover, ' \
@@ -157,8 +157,8 @@ class BookDAO():
 
     # 对键值对pair进行查询，尾部匹配
     def query_tail_matched(self, pair):
-        key = pair.keys()[0]
-        value = pair[key]
+        key = MySQLdb.escape_string(pair.keys()[0])
+        value = MySQLdb.escape_string(pair[key])
         if key == 'isbn':
             key = 'book_info.isbn'
         sql = 'select book_info.isbn, price, title, author, press, description, cover, ' \
@@ -229,4 +229,3 @@ def test_query():
 
 if __name__=="__main__":
     test_query()
-
