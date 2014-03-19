@@ -2,11 +2,16 @@
 """这里实现了对MYSQL的简单操作(同步的，阻塞的). """
 __author__ = 'yzx930420'
 
+
 import MySQLdb
 import common.dao.settings
 from common.model.book import Book
 from common.model.book_goods_info import BookGoodsInfo as GoodsPO
 from common.model.book_info import BookInfo as  BookPO
+import sys
+#reload(sys);
+# using exec to set the encoding, to avoid error in IDE.
+#exec("sys.setdefaultencoding('utf-8')");
 
 
 class BookDAO():
@@ -14,8 +19,11 @@ class BookDAO():
         self.conn = MySQLdb.connect(host=common.dao.settings.MYSQL_URL,
                                     user=common.dao.settings.MYSQL_USER,
                                     passwd=common.dao.settings.MYSQL_PASSWORD,
-                                    db=common.dao.settings.MYSQL_DATABASE)
+                                    db=common.dao.settings.MYSQL_DATABASE,
+                                    charset="utf8" )
         self.cursor = self.conn.cursor()
+        self.cursor.execute("set names utf8")
+        self.conn.commit();
 
     def __parse_book_to_po(self, book):
         #把Book转化为两个PO实体
@@ -72,8 +80,9 @@ class BookDAO():
                                         goods.crawling_time
         ])
 
+        print bookpo.title
         # 判断book_info中是否已经存在
-        select_sql = 'select * from book_info where isbn = %s' %(bookpo.isbn)
+        select_sql = 'select * from book_info where isbn = "%s"' %(bookpo.isbn)
         print 'sql = ', select_sql
         self.cursor.execute(select_sql)
         len = self.cursor.fetchall().__len__()
@@ -112,7 +121,7 @@ class BookDAO():
     # 对键值对pair进行查询，任意匹配
     def query_any_matched(self, pair):
         key = MySQLdb.escape_string(pair.keys()[0])
-        value = MySQLdb.escape_string(pair[key])
+        value = MySQLdb.escape_string(pair[key].encode('utf-8'))
         sql = 'select isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
               'where %s like "%%%s%%"' %(key, value)
@@ -218,10 +227,19 @@ def test_insert():
         book_dao.insert(book)
 
 def test_query():
-    pair = {"isbn": '00001001'}
-    result = book_dao.query_any_matched({'isbn':'00001'})
+    pair = {"isbn": 'saxsax'}
+    result = book_dao.query_any_matched(pair)
+    print len(result)
     for bookpo in result:
-        print bookpo.isbn, bookpo.price
+        print bookpo.isbn, bookpo.title.encode('utf-8')
+
+def test_insert_chinese():
+    book = Book()
+    book.title = "你好".decode('utf-8')
+    book.isbn = 'saxsax'
+    book_dao.insert(book)
 
 if __name__=="__main__":
+    test_insert_chinese()
+    print "okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
     test_query()

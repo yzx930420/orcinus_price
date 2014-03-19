@@ -22,21 +22,25 @@ class dangdangSpider(Spider):
         hehe = [u'\u4f5c\xa0\xa0\xa0\xa0\xa0\u8005']
         if(tempstr == hehe):
             path = 1
-            print "======================================================================"
         else:
             path = 2
         item['img'] = selec.xpath('//img[@id="largePic"]/@wsrc').extract()
         item['description'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()
-        item['instant'] = selec.xpath('//*[@id="originalPriceTag"]').extract()
+        item['instant'] = selec.xpath('//*[@id="originalPriceTag"]/text()').extract()
+        yuan = u'\uffe5'
+        item['instant'][0].rstrip(yuan)
+        item['instant'][0].rstrip(u'\xa0')
         item['press'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
         item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()
+        item['price'][0].rstrip(yuan)
+        item['price'][0].rstrip(u'\xa0')
         item['author'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path) + ']/div[2]/a/text()').extract()
         item['ISBN'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 3) + ']/div[2]/text()').extract()
         item['name'] = selec.xpath('//div[@class="head"]/h1/text()').extract()
-        item['platform'] = "当当网"
+        item['platform'] = 0
         tempstr = "".join(item['name'])
-        print tempstr
         return item
+
     def parse(self, response):
         selec = Selector(response)
         sites = selec.xpath('//*[@id="leftCate"]/ul/li/a/@href').extract()

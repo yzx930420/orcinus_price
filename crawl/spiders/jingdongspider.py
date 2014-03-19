@@ -19,12 +19,20 @@ class jingdongSpider(Spider):
         item['img'] = selec.xpath('//*[@id="spec-n1"]/img/@src').extract()
         item['description'] = selec.xpath('//*[@id="product-detail-1"]/div[2]/div[2]/div[1]/text()').extract()
         item['instant'] = selec.xpath('//*[@id="summary-market"]/div[2]/del/text()').extract()
+
+        #item['instant'][0].rstrip(yuan)
+        #item['instant'][0].rstrip(u'\xa0')
+        #item['instant'] = item['instant'][0][3:]
+
         item['press'] = selec.xpath('//*[@id="summary-ph"]/div[2]/a/text()').extract()
+
         item['price'] = selec.xpath('//*[@id="summary-price"]/div[2]/strong/text()').extract()
+        item['price'] = item['price'][0][3:]
+
         item['author'] = selec.xpath('//*[@id="summary-author"]/div[2]/a/text()').extract()
         item['ISBN'] = selec.xpath('//*[@id="summary-isbn"]/div[2]/text()').extract()
         item['name'] = selec.xpath('//*[@id="name"]/h1/text()').extract()
-        item['platform'] = "京东"
+        item['platform'] = 1
         tempstr = "".join(item['name'])
         print tempstr
         return item

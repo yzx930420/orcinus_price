@@ -77,9 +77,11 @@
                     </tr>
                 </table>
                 <div class="result_list">
+                    {% for goods in book.goods_list %}
                     <div class="result_item">
-                        <a href="#"><h4 class="no_margin">当当网：￥30.80</h4></a>
+                        <a href={{ goods.link }}><h4 class="no_margin">当当网：￥{{ goods.instant_price }}</h4></a>
                     </div>
+                    {% end %}
                 </div>
             </div>
             <img src="/static/image/show_info.png" alt="查看详情" class="look_info" onclick="lookInfo({{book.isbn}})"/>
