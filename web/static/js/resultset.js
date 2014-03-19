@@ -73,8 +73,20 @@ $(function () {
     });
 });
 
-function lookInfo(isbn) {;
-    var w = $("#book_info").width();
-    $("#book_info").animate({ right: '+=' + w + 'px' }, 'slow', function () {
-    });
+function lookInfo(isbn) {
+    $.get("/bookdetail/" + isbn, {
+        },
+        function (ret) {
+            $("#book_cover").attr("src", ret.cover);
+            $("#book_author").html(ret.author);
+            $("#book_press").html(ret.press);
+            $("#book_price").html(ret.price);
+            $("#book_isbn").html(ret.isbn);
+            $("#book_description").html(ret.decription);
+            $("#book_title").html(ret.title);
+            var w = $("#book_info").width();
+            $("#book_info").animate({ right: '+=' + w + 'px' }, 'slow', function () {
+            });
+        }
+    );
 }
