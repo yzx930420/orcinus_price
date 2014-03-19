@@ -10,7 +10,7 @@ template_dir = os.path.join(workdir,"template")
 settings = {
     "static_path": os.path.join(workdir, "static"),
     "template_path": os.path.join(workdir, "template"),
-    "listen_port":8888,
+    "listen_port":8080,
     "xsrf_cookies": False,
 
 }

@@ -82,7 +82,7 @@ function lookInfo(isbn) {
             $("#book_press").html(ret.press);
             $("#book_price").html(ret.price);
             $("#book_isbn").html(ret.isbn);
-            $("#book_description").html(ret.decription);
+            $("#book_description").html(ret.description);
             $("#book_title").html(ret.title);
             var w = $("#book_info").width();
             $("#book_info").animate({ right: '+=' + w + 'px' }, 'slow', function () {

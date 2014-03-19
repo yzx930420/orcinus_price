@@ -65,7 +65,7 @@
                         <td rowspan="2">
                             <img src="/static/image/down.png" alt="" class="search_img"/></td>
                         <td>
-                            <h3 class="no_margin">{{book.isbn}}&nbsp;&nbsp;{{book.author}}&nbsp;&nbsp;著</h3>
+                            <h3 class="no_margin">{{book.title}}&nbsp;&nbsp;{{book.author}}&nbsp;&nbsp;著</h3>
                         </td>
                     </tr>
                     <tr>
@@ -79,7 +79,12 @@
                 <div class="result_list">
                     {% for goods in book.goods_list %}
                     <div class="result_item">
+                        {% if goods.platform == 0 %}
                         <a href={{ goods.link }}><h4 class="no_margin">当当网：￥{{ goods.instant_price }}</h4></a>
+                        {% end %}
+                        {% if goods.platform == 1 %}
+                        <a href={{ goods.link }}><h4 class="no_margin">京东：￥{{ goods.instant_price }}</h4></a>
+                        {% end %}
                     </div>
                     {% end %}
                 </div>
