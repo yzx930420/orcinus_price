@@ -1,0 +1,13 @@
+create table book_info(isbn char(13),
+                       price decimal(6,2),
+                       title varchar(90),
+                       author varchar(50),
+                       press varchar(50),
+                       description varchar(200),
+                       cover varchar(200))
+
+create table book_goods_info(isbn char(13),
+                             instant_price decimal(6,2),
+                             link varchar(90),
+                             platform int,
+                             crawling_time float)
