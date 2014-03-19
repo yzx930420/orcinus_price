@@ -15,9 +15,9 @@ class ResultSetController(RequestHandler):
         keyword = self.get_argument("keyword")
         result = []
         if action == None or action == "any":
-           result = self.service.query_by_keyword(keyword)
+           result = self.service.query_by_pair_any({'title'.encode('utf-8'):keyword.encode('utf-8')})
         else:
-            result = self.service.query_by_pair_any({action:keyword})
+            result = self.service.query_by_pair_any({action.encode('utf-8'):keyword.encode('utf-8')})
             #result = self.service.query_by_pair({action:keyword})
 
         if result == None or len(result) == 0:

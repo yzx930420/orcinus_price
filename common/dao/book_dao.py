@@ -121,7 +121,7 @@ class BookDAO():
     # 对键值对pair进行查询，任意匹配
     def query_any_matched(self, pair):
         key = MySQLdb.escape_string(pair.keys()[0])
-        value = MySQLdb.escape_string(pair[key].encode('utf-8'))
+        value = MySQLdb.escape_string(pair[key])
         sql = 'select isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
               'where %s like "%%%s%%"' %(key, value)
