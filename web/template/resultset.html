@@ -42,7 +42,7 @@
                 {% for book in list %}
                 <li title= {{ book.title }} >
                     <img alt= {{ book.title }}
-                         src= {{ book.cover}}>
+                         src= {{ book.cover}} />
                     <span>{{ book.title }}</span>
                 </li>
                 {% end %}
@@ -95,48 +95,31 @@
     <div class="left_side">
         <div>
             <img src="/static/image/right.png" alt=""/>
-            <span class="book_name">城门开</span>
+            <span id="book_title" class="book_name"></span>
         </div>
-        <img src="http://img36.ddimg.cn/93/24/20866026-1_w_2.jpg" alt="封面" class="front_cover_big"/>
+        <img id="book_cover" src="" alt="封面" class="front_cover_big"/>
         <table class="book_info_table">
             <tr>
                 <td>作者：</td>
-                <td>北岛</td>
+                <td id="book_author"></td>
             </tr>
             <tr>
                 <td>出版社：</td>
-                <td>生活·读书·新知三联书店</td>
-            </tr>
-            <tr>
-                <td>出版社：</td>
-                <td>2010-9</td>
-            </tr>
-            <tr>
-                <td>页数：</td>
-                <td>197</td>
+                <td id="book_press"></td>
             </tr>
             <tr>
                 <td>定价：</td>
-                <td>35.00元</td>
-            </tr>
-            <tr>
-                <td>装帧：</td>
-                <td>精装</td>
+                <td id="book_price"></td>
             </tr>
             <tr>
                 <td>ISBN：</td>
-                <td>9787108035295</td>
+                <td id="book_isbn"></td>
             </tr>
         </table>
     </div>
     <div class="right_side">
         <img src="/static/image/content.png" alt="内容简介" class="content_intro"/>
-
-        <p>
-            生于北京，长于北京的作者，阔别家乡十三年后重回北京，发现他在自己的故乡成了异乡人仿佛到了一座陌生的城市。于是他便要“重建我的北京”,用他文字召回北京消失的气味儿、声音和光影，恢复被拆除的四合院、胡同和庙宇的原貌，让瓦顶排浪般涌向低低天际线的景象重现，让鸽哨响彻蓝天的清脆回到人们耳边……同时，作者也把我们带回到他儿时的游戏中，带回到他的读书生活中带回到他的母校，带回的“大串联”的旅途…他重建了这座“孩子们熟知四季变化，居民们胸有方向感”的城池，打开城门，欢迎四海漂泊的游子，欢迎无家可归的孤魂，欢迎所有好奇的客人们。</p>
-        <img src="/static/image/writer.png" alt="作者简介" class="author_intro"/>
-
-        <p>北岛，原名赵振开，一九四九年生于北京，现居香港。一九七八年与朋友创办《今天》文学杂志并任主编至今，作品被译成三十多种文字。</p>
+        <p id="book_description"></p>
     </div>
 </div>
 </body>
