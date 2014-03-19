@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>最强买手</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/resultset.css" rel="stylesheet" type="text/css"/>
+    <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="/static/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/static/js/resultset.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div class="top_bar">
+    <img src="/static/image/title.png" alt="请输入 书名、作者、ISBN" class="title"/>
+
+    <form action="/resultset" method="get">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button id="search_type" type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">全部<span
+                        class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a class="search_option" href="#" action="isbn">ISBN</a></li>
+                    <li><a class="search_option" href="#" action="title">书名</a></li>
+                    <li><a class="search_option" href="#" action="author">作者</a></li>
+                    <li><a class="search_option" href="#" action="any">全部</a></li>
+                </ul>
+            </div>
+            <input id="key_word" type="text" name="keyword" class="form-control">
+            <input id="action" type="hidden" name="action" value="any">
+            <input type="submit" id="search_btn" value=""/>
+        </div>
+    </form>
+</div>
+<div class="header"></div>
+<div class="search_result_list">
+    <div class="scrollbox">
+        <div id="prev" class="f-l scrollbtn disabled"></div>
+        <div class="f-l scrollpic">
+            <ul>
+                {% for book in list %}
+                <li title= {{ book.title }} >
+                    <img alt= {{ book.title }}
+                         src= {{ book.cover}} />
+                    <span>{{ book.title }}</span>
+                </li>
+                {% end %}
+
+            </ul>
+        </div>
+        <div id="next" class="f-r scrollbtn"></div>
+    </div>
+</div>
+<div id="focus">
+    <div id="focuspic">
+
+        {% for book in list %}
+        <div class="indexbanner">
+            <img class="front_cover" alt= {{ book.title }} src= {{ book.cover }}/>
+
+            <div class="search_result">
+                <table>
+                    <tr>
+                        <td rowspan="2">
+                            <img src="/static/image/down.png" alt="" class="search_img"/></td>
+                        <td>
+                            <h3 class="no_margin">{{book.title}}&nbsp;&nbsp;{{book.author}}&nbsp;&nbsp;著</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4 class="no_margin">
+                                <small> {{ book.press }}</small>
+                            </h4>
+                        </td>
+                    </tr>
+                </table>
+                <div class="result_list">
+                    {% for goods in book.goods_list %}
+                    <div class="result_item">
+                        {% if goods.platform == 0 %}
+                        <a href={{ goods.link }}><h4 class="no_margin">当当网：￥{{ goods.instant_price }}</h4></a>
+                        {% end %}
+                        {% if goods.platform == 1 %}
+                        <a href={{ goods.link }}><h4 class="no_margin">京东：￥{{ goods.instant_price }}</h4></a>
+                        {% end %}
+                    </div>
+                    {% end %}
+                </div>
+            </div>
+            <img src="/static/image/show_info.png" alt="查看详情" class="look_info" onclick="lookInfo({{book.isbn}})"/>
+
+        </div>
+
+        {% end %}
+    </div>
+</div>
+
+<div id="book_info">
+    <div id="back_to_search"></div>
+    <div class="left_side">
+        <div>
+            <img src="/static/image/right.png" alt=""/>
+            <span id="book_title" class="book_name"></span>
+        </div>
+        <img id="book_cover" src="" alt="封面" class="front_cover_big"/>
+        <table class="book_info_table">
+            <tr>
+                <td>作者：</td>
+                <td id="book_author"></td>
+            </tr>
+            <tr>
+                <td>出版社：</td>
+                <td id="book_press"></td>
+            </tr>
+            <tr>
+                <td>定价：</td>
+                <td id="book_price"></td>
+            </tr>
+            <tr>
+                <td>ISBN：</td>
+                <td id="book_isbn"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="right_side">
+        <img src="/static/image/content.png" alt="内容简介" class="content_intro"/>
+        <p id="book_description"></p>
+    </div>
+</div>
+</body>
+</html>

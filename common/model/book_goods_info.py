@@ -15,3 +15,12 @@ class BookGoodsInfo:
         self.platform = list[2]
         self.instant_price = list[3]
         self.crawling_time = list[4]
+
+    def to_dir(self):
+        result = {}
+        result['isbn'] = self.isbn
+        result['link'] = self.link
+        result['platform'] = self.platform
+        result['instant_price'] = str(self.instant_price)
+        result['crawling_time'] = self.crawling_time
+        return result

@@ -36,6 +36,7 @@ class dangdangSpider(Spider):
         item['name'] = selec.xpath('//div[@class="head"]/h1/text()').extract()
         item['platform'] = 0 #当当代码是0
         return item
+
     def parse(self, response):
         selec = Selector(response)
         sites = selec.xpath('//*[@id="leftCate"]/ul/li/a/@href').extract()

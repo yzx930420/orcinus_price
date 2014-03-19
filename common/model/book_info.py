@@ -13,6 +13,20 @@ class BookInfo:
         self.cover = ''
         self.goods_list = []
 
+    def to_dir(self):
+        result = {}
+        result['isbn'] = self.isbn
+        result['price'] = str(self.price)
+        result['title'] = self.title
+        result['author']  = self.author
+        result['press'] = self.press
+        result['description'] = self.description
+        result['cover'] = self.cover
+        #for item in self.goods_list:
+        #    result['goods_list'].append(item.to_dir)
+        print result
+        return result
+
     def set_all(self, list):
         self.isbn = list[0]
         self.price = list[1]

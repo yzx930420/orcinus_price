@@ -3,11 +3,8 @@ __author__ = 'Dazdingo'
 
 from common.dao.book_dao import book_dao
 from common.model.book import Book
-#import pymongo
 
 class Pipeline(object):
-    #con = pymongo.Connection("localhost", 27017)
-    #db = con.bestbuyer
     def process_item(self, item, spider):
         if(len(item['ISBN']) == 0):
             return item
@@ -24,17 +21,5 @@ class Pipeline(object):
             newbook.description = item["description"][0]
         newbook.platform = item['platform']
         #newbook.time = ?
+        newbook.platform = item['platform']
         book_dao.insert(newbook)
-    #def process_item(self, item, spider):
-    #    if(len(item['ISBN']) == 0):
-    #    	return item
-    #    dbdata = {"name":"","price":"","ISBN":"","author":"","press":"","img":"","description":""}
-    #    dbdata["name"] = item["name"][0]
-    #    dbdata["price"] = item["price"][0]
-    #    dbdata["ISBN"] = item["ISBN"][0]
-    #    dbdata["author"] = item["author"][0]
-    #    dbdata["press"] = item["press"][0]
-    #    dbdata["img"] = item["img"][0]
-    #    dbdata["description"] = item["description"]
-    #    self.db.bookInfo.insert(dbdata)
-    #    return item

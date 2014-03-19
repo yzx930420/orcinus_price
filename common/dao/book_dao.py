@@ -2,11 +2,16 @@
 """这里实现了对MYSQL的简单操作(同步的，阻塞的). """
 __author__ = 'yzx930420'
 
+
 import MySQLdb
 import common.dao.settings
 from common.model.book import Book
 from common.model.book_goods_info import BookGoodsInfo as GoodsPO
 from common.model.book_info import BookInfo as  BookPO
+import sys
+#reload(sys);
+# using exec to set the encoding, to avoid error in IDE.
+#exec("sys.setdefaultencoding('utf-8')");
 
 
 class BookDAO():
@@ -14,8 +19,11 @@ class BookDAO():
         self.conn = MySQLdb.connect(host=common.dao.settings.MYSQL_URL,
                                     user=common.dao.settings.MYSQL_USER,
                                     passwd=common.dao.settings.MYSQL_PASSWORD,
-                                    db=common.dao.settings.MYSQL_DATABASE)
+                                    db=common.dao.settings.MYSQL_DATABASE,
+                                    charset="utf8" )
         self.cursor = self.conn.cursor()
+        self.cursor.execute("set names utf8")
+        self.conn.commit();
 
     def __parse_book_to_po(self, book):
         #把Book转化为两个PO实体
@@ -72,8 +80,9 @@ class BookDAO():
                                         goods.crawling_time
         ])
 
+        print bookpo.title
         # 判断book_info中是否已经存在
-        select_sql = 'select * from book_info where isbn = %s' %(bookpo.isbn)
+        select_sql = 'select * from book_info where isbn = "%s"' %(bookpo.isbn)
         print 'sql = ', select_sql
         self.cursor.execute(select_sql)
         len = self.cursor.fetchall().__len__()
@@ -92,141 +101,105 @@ class BookDAO():
                                                       bookpo.cover])
         self.conn.commit()
 
-    # 对键值对pair进行查询，完全匹配
+    # 对键值对pair进行查询，完全匹配, return bookpo_list
     def query_perfectly_matched(self, pair):
-        key = pair.keys()[0]
-        value = pair[key]
-        sql = 'select isbn, price, title, author, press, description, cover  ' \
+        key = MySQLdb.escape_string(pair.keys()[0])
+        value = MySQLdb.escape_string(pair[key])
+        sql = 'select isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
               'where %s="%s"' %(key, value)
         self.cursor.execute(sql)
-        bookpo_list = self.cursor.fetchall()
-        booklist = []
-        for bpo in bookpo_list:
+        result_list = self.cursor.fetchall()
+        bookpo_list = []
+        for result in result_list:
             bookpo = BookPO()
-            bookpo.set_all(bpo)
+            bookpo.set_all(result)
+            bookpo_list.append(bookpo)
 
-            sql = 'select isbn, link, platform, instant_price, crawling_time ' \
-                  'from book_goods_info ' \
-                  'where isbn="%s"' %(bookpo.isbn)
-            self.cursor.execute(sql)
-            goodspo_list = self.cursor.fetchall()
-            for gpo in goodspo_list:
-                goodspo = GoodsPO()
-                goodspo.set_all(gpo);
-                booklist.append(self.__parse_po_to_book(bookpo, goodspo))
-
-        return booklist
+        return bookpo_list
 
     # 对键值对pair进行查询，任意匹配
     def query_any_matched(self, pair):
-        key = pair.keys()[0]
-        value = pair[key]
+        key = MySQLdb.escape_string(pair.keys()[0])
+        value = MySQLdb.escape_string(pair[key].encode('utf-8'))
         sql = 'select isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
               'where %s like "%%%s%%"' %(key, value)
         self.cursor.execute(sql)
-        bookpo_list = self.cursor.fetchall()
-        booklist = []
-
-        for bpo in bookpo_list:
+        result_list = self.cursor.fetchall()
+        bookpo_list = []
+        for result in result_list:
             bookpo = BookPO()
-            bookpo.set_all(bpo)
+            bookpo.set_all(result)
+            bookpo_list.append(bookpo)
 
-            sql = 'select isbn, link, platform, instant_price, crawling_time ' \
-                  'from book_goods_info ' \
-                  'where isbn="%s"' %(bookpo.isbn)
-            self.cursor.execute(sql)
-            goodspo_list = self.cursor.fetchall()
-            for gpo in goodspo_list:
-                goodspo = GoodsPO()
-                goodspo.set_all(gpo)
-                booklist.append(self.__parse_po_to_book(bookpo, goodspo))
-
-        return booklist
+        return bookpo_list
 
     # 对键值对pair进行查询，前方匹配
     def query_front_matched(self, pair):
-        key = pair.keys()[0]
-        value = pair[key]
-        sql = 'select isbn, price, title, author, press, description, cover ' \
+        key = MySQLdb.escape_string(pair.keys()[0])
+        value = MySQLdb.escape_string(pair[key])
+        sql = 'select book_info.isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
-              'where %s like "%s%%"' %(key, value)
+              'where %s like "%s%%" '%(key, value)
         self.cursor.execute(sql)
-        bookpo_list = self.cursor.fetchall()
-        booklist = []
-
-        for bpo in bookpo_list:
-            print 'isbn = ', bpo[0]
+        result_list = self.cursor.fetchall()
+        bookpo_list = []
+        for result in result_list:
             bookpo = BookPO()
-            bookpo.set_all(bpo)
+            bookpo.set_all(result)
+            bookpo_list.append(bookpo)
 
-            sql = 'select isbn, link, platform, instant_price, crawling_time ' \
-                  'from book_goods_info ' \
-                  'where isbn="%s"' %(bookpo.isbn)
-            self.cursor.execute(sql)
-            goodspo_list = self.cursor.fetchall()
-
-            for gpo in goodspo_list:
-                goodspo = GoodsPO()
-                goodspo.set_all(gpo)
-                booklist.append(self.__parse_po_to_book(bookpo, goodspo))
-
-        return booklist
+        return bookpo_list
 
     # 对键值对pair进行查询，尾部匹配
     def query_tail_matched(self, pair):
-        key = pair.keys()[0]
-        value = pair[key]
+        key = MySQLdb.escape_string(pair.keys()[0])
+        value = MySQLdb.escape_string(pair[key])
         sql = 'select isbn, price, title, author, press, description, cover ' \
               'from book_info ' \
               'where %s like "%%%s"' %(key, value)
         self.cursor.execute(sql)
-        bookpo_list = self.cursor.fetchall()
-        booklist = []
-
-        for bpo in bookpo_list:
-            print 'isbn = ', bpo[0]
+        result_list = self.cursor.fetchall()
+        bookpo_list = []
+        for result in result_list:
             bookpo = BookPO()
-            bookpo.set_all(bpo)
+            bookpo.set_all(result)
+            bookpo_list.append(bookpo)
 
-            sql = 'select isbn, link, platform, instant_price, crawling_time ' \
-                  'from book_goods_info ' \
-                  'where isbn="%s"' %(bookpo.isbn)
-            self.cursor.execute(sql)
-            goodspo_list = self.cursor.fetchall()
-
-            for gpo in goodspo_list:
-                goodspo = GoodsPO()
-                goodspo.set_all(gpo)
-                booklist.append(self.__parse_po_to_book(bookpo, goodspo))
-
-        return booklist
+        return bookpo_list
 
     # 传入isbn通过时间范围查询
     def query_by_time(self, isbn, start_time, end_time):
-        sql = 'select isbn, price, title, author, press, description, cover  ' \
-              'from book_info ' \
-              'where isbn = "%s"' %(isbn)
+        sql = 'select book_info.isbn, price, title, author, press, description, cover, ' \
+              'link, platform, instant_price, crawling_time ' \
+              'from book_info, book_goods_info ' \
+              'where book_info.isbn = book_goods_info.isbn and book_info.isbn="%s" ' \
+              'and crawling_time between %d and %d' %(isbn, start_time, end_time)
         self.cursor.execute(sql)
-        bookpo_list = self.cursor.fetchall()
-        booklist = []
-        if bookpo_list.__len__() == 0:
-            return []
+        result_list = self.cursor.fetchall()
+        book_list = []
+        for result in result_list:
+            book = Book()
+            book.set_all(result)
+            book_list.append(book)
 
-        bookpo = BookPO()
-        bookpo.set_all(bookpo_list[0])
+        return book_list
 
-        sql = 'select isbn, link, platform, instant_price, crawling_time from book_goods_info ' \
-              'where isbn="%s" and crawling_time between %d and %d' %(bookpo.isbn, start_time, end_time)
+    def query_to_get_book_goods_info_by_isbn(self, isbn):
+        sql = 'select isbn, link, platform, instant_price, max(crawling_time) ' \
+              'from book_goods_info ' \
+              'where isbn="%s" ' \
+              'group by platform' %(isbn)
         self.cursor.execute(sql)
-        goodspo_list = self.cursor.fetchall()
-        for gpo in goodspo_list:
+        result_list = self.cursor.fetchall()
+        goods_list = []
+        for result in result_list:
             goodspo = GoodsPO()
-            goodspo.set_all(gpo)
-            booklist.append(self.__parse_po_to_book(bookpo, goodspo))
+            goodspo.set_all(result)
+            goods_list.append(goodspo)
 
-        return booklist
+        return goods_list
 
     def __del__(self):
         self.conn.close()
@@ -254,11 +227,19 @@ def test_insert():
         book_dao.insert(book)
 
 def test_query():
-    pair = {"isbn": '00001001'}
-    result = book_dao.query_front_matched(pair)
-    for book in result:
-        print book.isbn, book.price, book.platform, book.instant_price, book.crawling_time
+    pair = {"isbn": 'saxsax'}
+    result = book_dao.query_any_matched(pair)
+    print len(result)
+    for bookpo in result:
+        print bookpo.isbn, bookpo.title.encode('utf-8')
+
+def test_insert_chinese():
+    book = Book()
+    book.title = "你好".decode('utf-8')
+    book.isbn = 'saxsax'
+    book_dao.insert(book)
 
 if __name__=="__main__":
+    test_insert_chinese()
+    print "okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
     test_query()
-
