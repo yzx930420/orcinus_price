@@ -8,33 +8,46 @@ from crawl.items import bookItem
 from scrapy.http.request import Request
 from scrapy import log
 import string
+import re
+
+
+
+
 class dangdangSpider(Spider):
     name = "dangdang"
     allowed_domains = ["dangdang.com"]
     start_urls = ["http://category.dangdang.com/cp01.00.00.00.00.00.html"]
     url_head = "http://category.dangdang.com"
+    platformcode = 0 #当当代码是0
+    keymap = [(re.compile(u'作(.*)者'),'author','./a/text()'),
+          (re.compile(u'出(.*)版(.*)社'),'press','./a/text()'),
+          (re.compile(u'ISBN'),'ISBN','./text()')]
+    img_path = '//img[@id="largePic"]/@wsrc'
+    description_path = '//*[@id="content_all"]/p/text()'
+    instant_path = '//*[@id="salePriceTag"]/text()'
+    price_path = '//*[@id="originalPriceTag"]/text()'
+    name_path = '//div[@class="head"]/h1/text()'
+    bookbox_path = '//div[@class="book_messbox"]'
+
     def catchitem(self,response):
         selec = Selector(response)
         item = bookItem()
         item['url'] = response.url
-        tempstr = selec.xpath('//div[@class="book_messbox"]/div[1]/div[1]/text()').extract()
-        path = 1
-        divauthor = [u'\u4f5c\xa0\xa0\xa0\xa0\xa0\u8005'] #用来识别不同页面排版中 作者在第几个div
-        if(tempstr == divauthor):
-            path = 1
-        else:
-            path = 2
-        item['img'] = selec.xpath('//img[@id="largePic"]/@wsrc').extract()
-        item['description'] = selec.xpath('//*[@id="content_all"]/p/text()').extract()
-        item['instant'] = selec.xpath('//*[@id="originalPriceTag"]/text()').extract()
-        item['instant'][0] = item['instant'][0].replace(u'\uffe5','')        #处理价格前面的人民币符号
-        item['press'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 1) + ']/div[2]/a/text()').extract()
-        item['price'] = selec.xpath('//*[@id="salePriceTag"]/text()').extract()
-        item['price'][0] = item['price'][0].replace(u'\uffe5','')           #处理价格前面的人民币符号
-        item['author'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path) + ']/div[2]/a/text()').extract()
-        item['ISBN'] = selec.xpath('//div[@class="book_messbox"]/div[' + str(path + 3) + ']/div[2]/text()').extract()
-        item['name'] = selec.xpath('//div[@class="head"]/h1/text()').extract()
-        item['platform'] = 0 #当当代码是0
+        bookbox = selec.xpath(self.bookbox_path)
+        for message in bookbox.xpath('./div[@class="clearfix m_t6"]'):
+            left = message.xpath('./div[@class="show_info_left"]/text()').extract()[0]
+            right = message.xpath('./div[@class="show_info_right"]')
+            for pat,name,value_path in self.keymap:
+                if pat.match(left):
+                    item[name] = right.xpath(value_path).extract()
+                    print "======================",name,right
+
+        item['img'] = selec.xpath(self.img_path).extract()
+        item['description'] = selec.xpath(self.description_path).extract()
+        item['instant'] = selec.xpath(self.instant_path).extract()
+        item['price'] = selec.xpath(self.price_path).extract()
+        item['name'] = selec.xpath(self.name_path).extract()
+        item['platform'] = self.platformcode
         return item
 
     def parse(self, response):
@@ -63,3 +76,6 @@ class dangdangSpider(Spider):
             request = Request(url = self.url_head + sites[0],
                               callback=self.viewpage)
             yield request
+
+    def replaceRMB(astring):
+        return astring.replace(u'\uffe5','')

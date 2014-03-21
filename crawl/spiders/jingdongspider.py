@@ -17,7 +17,7 @@ class jingdongSpider(Spider):
         item = bookItem()
         item['url'] = response.url
         item['img'] = selec.xpath('//*[@id="spec-n1"]/img/@src').extract()
-        item['description'] = selec.xpath('//*[@id="product-detail-1"]/div[2]/div[2]/div[1]/text()').extract()
+        item['description'] = selec.xpath('//div[@class="con"]').extract()
         item['instant'] = selec.xpath('//*[@id="summary-market"]/div[2]/del/text()').extract()
         item['instant'][0] = item['instant'][0].replace(u'\uffe5','')        #处理价格前面的人民币符号
         item['press'] = selec.xpath('//*[@id="summary-ph"]/div[2]/a/text()').extract()
