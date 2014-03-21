@@ -9,16 +9,22 @@ class Pipeline(object):
         if(len(item['ISBN']) == 0):
             return item
         newbook = Book()
-        newbook.title = item["name"][0]
-        newbook.price = item["price"][0]
-        newbook.isbn = item["ISBN"][0]
-        newbook.author = item["author"][0]
-        newbook.press = item["press"][0]
-        newbook.instant_price = item["instant"][0]
-        newbook.link = item["url"]
-        newbook.cover = item["img"][0]
+        if len(item["name"]) !=0:
+            newbook.title = item["name"][0]
+        if len(item["price"]) !=0:
+            newbook.price = item["price"][0]
+        if len(item["author"]) !=0:
+            newbook.author = item["author"][0]
+        if len(item["press"]) !=0:
+            newbook.press = item["press"][0]
+        if len(item["instant"]) !=0:
+            newbook.instant_price = item["instant"][0]
+        if len(item["img"]) !=0:
+            newbook.cover = item["img"][0]
         if len(item["description"]) != 0 :
             newbook.description = item["description"][0]
+        newbook.isbn = item["ISBN"][0]
+        newbook.link = item["url"]
         newbook.platform = item['platform']
         #newbook.time = ?
         newbook.platform = item['platform']

@@ -12,7 +12,6 @@ import re
 
 
 
-
 class dangdangSpider(Spider):
     name = "dangdang"
     allowed_domains = ["dangdang.com"]
