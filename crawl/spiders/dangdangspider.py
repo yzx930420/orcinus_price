@@ -47,6 +47,8 @@ class dangdangSpider(Spider):
         item['price'] = selec.xpath(self.price_path).extract()
         item['name'] = selec.xpath(self.name_path).extract()
         item['platform'] = self.platformcode
+        item['price'][0] = self.replaceRMB(item['price'][0])
+        item['instant'][0] = self.replaceRMB(item['instant'][0])
         return item
 
     def parse(self, response):
