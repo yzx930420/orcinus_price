@@ -2,7 +2,8 @@ __author__ = 'Dazdingo'
 
 from scrapy.item import Item, Field
 
-class bookItem(Item):
+
+class BookItem(Item):
     price = Field()
     ISBN = Field()
     name = Field()
@@ -12,4 +13,12 @@ class bookItem(Item):
     instant = Field()
     img = Field()
     description = Field()
+    platform = Field()
+
+
+class DetailItem(Item):
+    id = Field()
+    evaluation = Field()
+    evaluation_people = Field()
+    hot_comments = Field()
     platform = Field()

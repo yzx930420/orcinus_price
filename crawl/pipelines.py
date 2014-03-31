@@ -3,29 +3,49 @@ __author__ = 'Dazdingo'
 
 from common.dao.book_dao import book_dao
 from common.model.book import Book
+from scrapy.exceptions import DropItem
 
-class Pipeline(object):
+
+class BookPipeline(object):
+
     def process_item(self, item, spider):
-        if(len(item['ISBN']) == 0):
+        if item['ISBN']:
             return item
-        newbook = Book()
-        if len(item["name"]) !=0:
-            newbook.title = item["name"][0]
-        if len(item["price"]) !=0:
-            newbook.price = item["price"][0]
-        if len(item["author"]) !=0:
-            newbook.author = item["author"][0]
-        if len(item["press"]) !=0:
-            newbook.press = item["press"][0]
-        if len(item["instant"]) !=0:
-            newbook.instant_price = item["instant"][0]
-        if len(item["img"]) !=0:
-            newbook.cover = item["img"][0]
-        if len(item["description"]) != 0 :
-            newbook.description = item["description"][0]
-        newbook.isbn = item["ISBN"][0]
-        newbook.link = item["url"]
-        newbook.platform = item['platform']
-        #newbook.time = ?
-        newbook.platform = item['platform']
-        book_dao.insert(newbook)
+        new_book = Book()
+        if item["name"]:
+            new_book.title = item["name"][0]
+        if item["price"]:
+            new_book.price = item["price"][0]
+        if item["author"]:
+            new_book.author = item["author"][0]
+        if item["press"]:
+            new_book.press = item["press"][0]
+        if item["instant"]:
+            new_book.instant_price = item["instant"][0]
+        if item["img"]:
+            new_book.cover = item["img"][0]
+        if item["description"]:
+            new_book.description = item["description"][0]
+        new_book.isbn = item["ISBN"][0]
+        new_book.link = item["url"]
+        new_book.platform = item['platform']
+        #new_book.time = ?
+        new_book.platform = item['platform']
+        book_dao.insert(new_book)
+
+
+class DetailPipeline(object):
+
+    def __init__(self):
+        self.ids_seen = set()
+
+    def process_item(self, item, spider):
+        if item['id'] in self.ids_seen:
+            raise DropItem("Duplicate item found: %s" % item)
+        else:
+            self.ids_seen.add(item['id'])
+            #if item['evaluation_people']:
+            #if item['evaluation']:
+            #if item['hot_comments']:
+            #item['platform']
+            # TODO
