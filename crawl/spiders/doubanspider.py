@@ -26,7 +26,7 @@ class DoubanSpider(Spider):
         item = DetailItem()
         item['url'] = response.url
         info_div = selector.xpath(self.info_path).extract()
-        item['isbn'] = self.get_ISBN_path.findall(info_div[0])[0][0].replace(u' ', '')
+        item['ISBN'] = self.get_ISBN_path.findall(info_div[0])[0][0].replace(u' ', '')
         item['evaluation_people'] = selector.xpath(self.evaluation_people_path).extract()
         item['evaluation'] = selector.xpath(self.evaluation_path).extract()
         item['hot_comments'] = selector.xpath(self.hot_comments_path).extract()

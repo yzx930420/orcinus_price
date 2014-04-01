@@ -17,12 +17,14 @@ class JingdongSpider(Spider):
         item = BookItem()
         item['url'] = response.url
         item['img'] = selector.xpath('//*[@id="spec-n1"]/img/@src').extract()
-        item['description'] = selector.xpath('//div[@class="con"]').extract()
-        item['instant'] = selector.xpath('//*[@id="summary-market"]/div[2]/del/text()').extract()
-        item['instant'][0] = item['instant'][0].replace(u'\uffe5', '')        # 处理价格前面的人民币符号
+        item['description'] = selector.xpath('//div[@class="con"]/text()').extract()
+        item['instant'] = selector.xpath('//*[@id="summary-price"]/div[2]/strong/text()').extract()
+        if item['instant']:
+            item['instant'][0] = item['instant'][0].replace(u'\uffe5', '')        # 处理价格前面的人民币符号
         item['press'] = selector.xpath('//*[@id="summary-ph"]/div[2]/a/text()').extract()
-        item['price'] = selector.xpath('//*[@id="summary-price"]/div[2]/strong/text()').extract()
-        item['price'][0] = item['price'][0].replace(u'\uffe5', '')           # 处理价格前面的人民币符号
+        item['price'] = selector.xpath('//*[@id="summary-market"]/div[2]/del/text()').extract()
+        if item['price']:
+            item['price'][0] = item['price'][0].replace(u'\uffe5', '')            # 处理价格前面的人民币符号
         item['author'] = selector.xpath('//*[@id="summary-author"]/div[2]/a/text()').extract()
         item['ISBN'] = selector.xpath('//*[@id="summary-isbn"]/div[2]/text()').extract()
         item['name'] = selector.xpath('//*[@id="name"]/h1/text()').extract()

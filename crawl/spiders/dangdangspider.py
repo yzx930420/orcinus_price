@@ -33,6 +33,7 @@ class DangdangSpider(Spider):
             right = message.xpath('./div[@class="show_info_right"]')
             for pat, name, value_path in self.key_map:
                 if pat.match(left):
+                    # TODO
                     item[name] = right.xpath(value_path).extract()
 
         item['img'] = selector.xpath(self.img_path).extract()
