@@ -17,7 +17,8 @@ class BookItem(Item):
 
 
 class DetailItem(Item):
-    id = Field()
+    ISBN = Field()
+    url = Field()
     evaluation = Field()
     evaluation_people = Field()
     hot_comments = Field()

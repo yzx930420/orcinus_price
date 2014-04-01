@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Dazdingo'
 
+import re
 from scrapy.spider import Spider
 from scrapy.selector import Selector
 from crawl.items import DetailItem
@@ -16,12 +17,16 @@ class DoubanSpider(Spider):
     evaluation_people_path = '//span[@property="v:votes"]/text()'  # already tested
     evaluation_path = '//strong[@class="ll rating_num "]/text()'  # already tested
     hot_comments_path = '//div[@class="review-short"]/text()'  # already tested
+    get_ISBN_path = re.compile('ISBN:.*</span>(.*)(\d*)<br>')
+    info_path = '//*[@id="info"]'
     platform_code = 3  # 豆瓣代码是3
 
     def catch_item(self, response):  # 抓取书本
         selector = Selector(response)
         item = DetailItem()
-        item['id'] = response.url
+        item['url'] = response.url
+        info_div = selector.xpath(self.info_path).extract()
+        item['isbn'] = self.get_ISBN_path.findall(info_div[0])[0][0].replace(u' ', '')
         item['evaluation_people'] = selector.xpath(self.evaluation_people_path).extract()
         item['evaluation'] = selector.xpath(self.evaluation_path).extract()
         item['hot_comments'] = selector.xpath(self.hot_comments_path).extract()

@@ -40,10 +40,10 @@ class DetailPipeline(object):
         self.ids_seen = set()
 
     def process_item(self, item, spider):
-        if item['id'] in self.ids_seen:
+        if item['ISBN'] in self.ids_seen:
             raise DropItem("Duplicate item found: %s" % item)
         else:
-            self.ids_seen.add(item['id'])
+            self.ids_seen.add(item['ISBN'])
             #if item['evaluation_people']:
             #if item['evaluation']:
             #if item['hot_comments']:

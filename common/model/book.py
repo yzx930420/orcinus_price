@@ -1,6 +1,9 @@
 __author__ = 'nothi'
+
+
 class Book(object):
     attrs = ["isbn", "price", "title","author", "press", "description", "cover", "link", "platform", "instant_price","crawling_time"]
+
     def __init__(self):
         self.isbn = ''
         self.price = 0.0
