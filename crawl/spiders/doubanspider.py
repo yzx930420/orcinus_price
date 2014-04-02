@@ -16,7 +16,7 @@ class DoubanSpider(Spider):
 
     evaluation_people_path = '//span[@property="v:votes"]/text()'  # already tested
     evaluation_path = '//strong[@class="ll rating_num "]/text()'  # already tested
-    hot_comments_path = '//div[@class="review-short"]/text()'  # already tested
+    hot_comments_path = '//div[@class="review-short"]/span/text()'  # already tested
     get_ISBN_path = re.compile('ISBN:.*</span>(.*)(\d*)<br>')
     info_path = '//*[@id="info"]'
     platform_code = 3  # 豆瓣代码是3
