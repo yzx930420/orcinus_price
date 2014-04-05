@@ -4,6 +4,7 @@ from scrapy.spider import Spider
 from scrapy.selector import Selector
 from crawl.items import BookItem
 from scrapy.http.request import Request
+import re
 
 
 class AmazonSpider(Spider):
@@ -12,13 +13,14 @@ class AmazonSpider(Spider):
     start_urls = ["http://www.amazon.cn/gp/book/all_category"]
     url_head = "http://www.amazon.cn"
 
+    info_path = '//td[@class="bucket"]/div[@class="content"]/ul'
     img_path = '//*[@id="original-main-image"]/@src'
     description_path = '//*[@id="postBodyPS"]/div/text()'
     instant_path = '//*[@id="actualPriceValue"]/b/text()'
     price_path = '//*[@id="listPriceValue"]/text()'
     name_path = '//*[@id="btAsinTitle"]/span/text()'
-    press_path = '//td[@class="bucket"]/div/ul/li[1]/text()'
-    ISBN_path = '//td[@class="bucket"]/div/ul/li[5]/text()'
+    press_path = re.compile(u'出版社.*</b>.(.*)</li>')
+    ISBN_path = re.compile(u'ISBN.*</b>.(\d*).')
     author_path = '//*[@id="handleBuy"]/div[1]/span/a'
     platform_code = 2  # 亚马逊代码是2
 
@@ -26,9 +28,10 @@ class AmazonSpider(Spider):
         selector = Selector(response)
         item = BookItem()
         item['url'] = response.url
-        item['press'] = selector.xpath(self.press_path).extract()
+        info_div = selector.xpath(self.info_path).extract()
+        item['press'] = self.press_path.findall(info_div[0])
         item['author'] = selector.xpath(self.author_path).extract()
-        item['ISBN'] = selector.xpath(self.ISBN_path).extract()
+        item['ISBN'] = self.ISBN_path.findall(info_div[0])
         item['img'] = selector.xpath(self.img_path).extract()
         item['description'] = selector.xpath(self.description_path).extract()
         item['instant'] = selector.xpath(self.instant_path).extract()
