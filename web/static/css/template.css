@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background-color: #fcfcfc;
+    min-width: 1200px;
+    font-family:'微软雅黑';
+}
+
+.title {
+    width: 200px;
+    float: left;
+    margin: 10px 10px 0px 10px;
+}
+
+#search_btn {
+    float:left;
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    background: transparent url("/static/image/search_small.png") 0 0 no-repeat;
+    border-color: transparent;
+}
+
+#key_word{
+    max-width: 246px;
+}
+
+.top_bar {
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.fixclear {
+    clear: both;
+}
