@@ -1,0 +1,118 @@
+.book_detail_info {
+    margin-top: 10px;
+    padding-left: 70px;
+}
+
+.book_title {
+    width: 1000px;
+    font-size: 25px;
+    font-family: '微软雅黑';
+    color: #2d2b2b;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;;
+}
+
+.cover {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #e0e0e0;
+    float: left;
+}
+
+.cover img {
+    height: 100%;
+    width: 100%;
+}
+
+.price {
+    position: relative;
+    margin-left: 340px;
+}
+
+.shop_name {
+    text-align: right;
+    color: #575555;
+    font-size: 18px;
+}
+
+.shop_price {
+    color: #d5172e;
+    font-size: 20px;
+}
+
+.shop_link {
+    width: 100px;
+}
+
+.shop_link a img {
+    width: 100%;
+}
+
+.shops {
+    border-collapse: separate;
+    border-spacing: 20px 50px;
+}
+
+.attr_panel {
+    margin-top: 30px;
+}
+
+.trend_padding{
+    padding-bottom: 20px;
+}
+
+.comment_padding{
+    padding-bottom: 10px;
+}
+
+.attr_title {
+    color: #2dcc70;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#price_trend {
+    width: 800px;
+    height: 400px;
+    margin-left: 30px;
+}
+
+.book_attr {
+    border-collapse: separate;
+    border-spacing: 80px 10px;
+    color: #565656;
+    font-size: 18px;
+}
+
+.comments {
+    width: 800px;
+}
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.comment img {
+    width: 80px;
+    float: left;
+}
+
+.content {
+    margin-left: 120px;
+    font-size: 18px;
+}
+
+.comment_author {
+    color: #565656;
+}
+
+.comment_body {
+    margin:10px 0px 10px 40px;
+    color: #272626;
+}
+
+.comment_date {
+    color: #565656;
+}

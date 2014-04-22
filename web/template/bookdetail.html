@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>最强买手</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/template.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/bookdetail.css" rel="stylesheet" type="text/css"/>
+    <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="/static/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/static/js/highcharts.js" type="text/javascript"></script>
+    <script src="/static/js/exporting.js" type="text/javascript"></script>
+    <script src="/static/js/template.js" type="text/javascript"></script>
+    <script src="/static/js/bookdetail.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="top_bar">
+    <img src="/static/image/title.png" alt="请输入 书名、作者、ISBN" class="title"/>
+
+    <form action="/resultset" method="get">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button id="search_type" type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">全部<span
+                        class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a class="search_option" href="#" action="isbn">ISBN</a></li>
+                    <li><a class="search_option" href="#" action="title">书名</a></li>
+                    <li><a class="search_option" href="#" action="author">作者</a></li>
+                    <li><a class="search_option" href="#" action="any">全部</a></li>
+                </ul>
+            </div>
+            <input id="key_word" type="text" name="keyword" class="form-control">
+            <input id="action" type="hidden" name="action" value="any">
+            <input type="submit" id="search_btn" value=""/>
+        </div>
+    </form>
+</div>
+<div class="book_detail_info">
+    <h1 class="book_title">鸟哥的Linux私房菜 基础学习篇(第3版)&nbsp;&nbsp;鸟哥著</h1>
+
+    <div>
+        <div class="cover">
+            <img src="/static/image/cover.jpg" alt="封面">
+        </div>
+        <div class="price">
+            <table class="shops">
+                <tr>
+                    <td class="shop_name">京东商城:</td>
+                    <td class="shop_price">￥ 60.20</td>
+                    <td class="shop_link"><a href="#"><img src="/static/image/buy.png"></a></td>
+                </tr>
+                <tr>
+                    <td class="shop_name">当当网:</td>
+                    <td class="shop_price">￥ 60.20</td>
+                    <td class="shop_link"><a href="#"><img src="/static/image/buy.png"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="fixclear"></div>
+    <div class="attr_panel">
+        <div class="attr_title">产品参数</div>
+        <table class="book_attr">
+            <tr>
+                <td>作者: 鸟哥</td>
+                <td>出版社: 人民邮电出版社</td>
+                <td>出版年月: 2010-9</td>
+            </tr>
+            <tr>
+                <td>页数: 197</td>
+                <td>定价: 50.00元</td>
+                <td>ISBN: 9787108035295</td>
+            </tr>
+            <tr>
+                <td>装帧: 平装</td>
+                <td>开本: 16开</td>
+            </tr>
+        </table>
+    </div>
+    <div class="attr_panel">
+        <div class="attr_title trend_padding">价格走势</div>
+        <div id="price_trend"></div>
+    </div>
+    <div class="attr_panel">
+        <div class="attr_title comment_padding">产品评论</div>
+        <div class="comments">
+            <div class="comment">
+                <img src="/static/image/dangdang.png">
+
+                <div class="content">
+                    <div class="comment_author">代码兔&nbsp;&nbsp;来自当当网的评论</div>
+                    <div class="comment_body">
+                        必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！
+                    </div>
+                    <div class="comment_date">2014年04月17日</div>
+                </div>
+                <div class="fixclear"></div>
+            </div>
+            <div class="comment">
+                <img src="/static/image/dangdang.png">
+
+                <div class="content">
+                    <div class="comment_author">代码兔&nbsp;&nbsp;来自当当网的评论</div>
+                    <div class="comment_body">
+                        必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！
+                    </div>
+                    <div class="comment_date">2014年04月17日</div>
+                </div>
+                <div class="fixclear"></div>
+            </div>
+            <div class="comment">
+                <img src="/static/image/dangdang.png">
+
+                <div class="content">
+                    <div class="comment_author">代码兔&nbsp;&nbsp;来自当当网的评论</div>
+                    <div class="comment_body">
+                        必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！
+                    </div>
+                    <div class="comment_date">2014年04月17日</div>
+                </div>
+                <div class="fixclear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

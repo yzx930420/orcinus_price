@@ -1,304 +1,58 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+.result_list{
+    margin-top: 10px;
+    padding-left: 70px;
 }
 
-body {
-    background: #FFF url("/static/image/bg.png") 0 0 repeat;
-    min-width: 1200px;
+.result_item{
+    margin-bottom: 20px;
 }
 
-.title {
-    width: 200px;
-    float: left;
-    margin: 10px 10px 0px 10px;
-}
-
-#search_btn {
+.cover {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #e0e0e0;
     float:left;
-    margin-left: 10px;
-    width: 35px;
-    height: 35px;
-    background: transparent url("/static/image/search_small.png") 0 0 no-repeat;
-    border-color: transparent;
 }
 
-#key_word{
-    max-width: 246px;
-}
-
-.top_bar {
-    position: fixed;
-    min-width: 1000px;
-    height: 50px;
-    padding-top: 5px;
-    background-color: #E6E6E6;
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-}
-
-.header {
-    height: 50px;
-}
-
-.search_result_list {
-    width: 736px;
-    height: 140px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    border-radius: 10px;
-    background-color: whitesmoke;
-}
-
-/* 图片滚动css */
-.f-l {
-    float: left;
-}
-
-.f-r {
-    float: right;
-}
-
-#focus {
-    width: 1000px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-    margin: 20px auto;
-}
-
-#focus #focuspic {
-    height: 100%;
-    width: auto;
-    overflow: hidden;
-    position: relative;
-    float: left;
-}
-
-#focus #focuspic .indexbanner {
-    width: 1000px;
-    float: left;
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-}
-
-.scrollbox {
-    height: 100%;
+.cover img {
     width: 100%;
-    float: left;
+    height: 100%;
 }
 
-.scrollbox .scrollbtn {
-    width: 12px;
-    height: 37px;
-    margin-top: 40px;
-    overflow: hidden;
-    background: url(/static/image/arrow.gif) no-repeat;
-    cursor: pointer;
+.book_info{
+    margin-left: 170px;
+    width: 600px;
+    height: 160px;
+    padding-top: 5px;
 }
 
-.scrollbox #prev {
-    margin-left: 10px;
-    background-position: 0 0;
-    cursor: pointer;
+.book_info_row {
+    margin-bottom: 5px;
 }
 
-.scrollbox #prev.disabled {
-    background-position: 0 -37px;
-    cursor: default;
-}
-
-.scrollbox #next {
-    margin-right: 10px;
-    background-position: -12px 0;
-    cursor: pointer;
-}
-
-.scrollbox #next.disabled {
-    background-position: -12px -37px;
-    cursor: default;
-}
-
-.scrollbox .scrollpic {
-    margin: 0 16px 0 16px;
-    display: inline;
-    width: 660px;
-    height: 130px;
-    overflow: hidden;
-}
-
-.scrollbox .scrollpic ul {
-    width: auto;
-    float: left;
-    display: inline;
-}
-
-.scrollbox .scrollpic li {
-    float: left;
-    width: 110px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.scrollbox .scrollpic li img {
-    width: 100px;
-    height: 100px;
-}
-
-.scrollbox .scrollpic li span {
-    display: block;
-    height: 30px;
-    line-height: 30px;
+.book_title{
+    width: 100%;
+    font-size: 20px;
     text-overflow: ellipsis;
-    overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;;
 }
 
-.scrollbox .scrollpic li:hover span, .scrollbox .scrollpic li.current span {
-    color: #3366cc;
-    font-weight: 800;
+.book_title a{
+    color: #131313;
 }
 
-.scrollbox .scrollpic li.current img {
-    border: solid 1px #3366cc;
+.book_title a:hover{
+    color: #196ea9;
 }
 
-/* 图片滚动css */
-
-.front_cover{
-    margin-top: 100px;
-    float:left;
-    width: 250px;
-    height: 250px;
-    box-shadow:-5px 5px 10px 0 rgba(0,0,0,0.1);
+.book_price {
+    color: #2dcc70;
+    font-size: 25px;
+    font-weight: 700;
 }
 
-.search_result {
-    float:left;
-    margin-left: 40px;
-    margin-top: 40px;
-}
-
-.search_img {
-    margin-right:10px;
-}
-
-.no_margin {
-    margin-top:0px;
-    margin-bottom:0px;
-}
-
-
-.result_list {
-    margin-top:15px;
-    width:400px;
-}
-
-.result_item {
-    padding-left:20px;
-    padding-bottom:10px;
-    padding-top:10px;
-    margin-bottom:10px;
-    background-color:white;
-    border-radius:5px;
-}
-
-.result_item a{
-    text-decoration: none;
-    color:#000000;
-}
-
-.result_item a:hover{
-    color: #2DCC70;
-}
-
-.look_info{
-    margin-left: 60px;
-    margin-top: 220px;
-    cursor: pointer;
-}
-
-#book_info {
-    position:fixed;
-    top: 0px;
-    right:-1200px;
-    width:1200px;
-    height:100%;
-    z-index:999;
-    background: #FFF url(/static/image/bg.png) 0 0 repeat;
-    *border-right:2px solid #959595;
-    -webkit-box-shadow:-10px 0 10px 0 rgba(0,0,0,0.1);
-    box-shadow:-10px 0 10px 0 rgba(0,0,0,0.1);
-    overflow:auto;
-}
-
-.left_side {
-    float:left;
-    width:400px;
-    margin-left:80px;
-    margin-top:30px;
-}
-
-.right_side {
-    float:right;
-    margin-top:30px;
-    margin-right:50px;
-    width:600px;
-    min-height:600px;
-    background-color:white;
-    border-radius:5px;
-    padding-left:15px;
-    padding-right:15px;
-    color:#2d2b2b;
-    font-size:13px;
-}
-
-#back_to_search {
-    float: left;
-    width: 43px;
-    height: 168px;
-    position: relative;
-    top: 50%;
-    left: 40px;
-    margin-top: -84px;
-    background-image: url('/static/image/back.png');
-    cursor: pointer;
-}
-
-.book_name {
-    display:inline;
-    font-weight:700;
-    font-size:25px;
-    margin-left:10px;
-}
-
-.front_cover_big {
-    width:350px;
-    height: 350px;
-    margin-top:10px;
-    margin-left: 25px;
-    -webkit-box-shadow:-5px 5px 10px 0 rgba(0,0,0,0.1);
-    box-shadow:-5px 5px 10px 0 rgba(0,0,0,0.1);
-}
-
-.book_info_table {
-    position:relative;
-    left:15px;
-    top:10px;
-    border-collapse: separate;
-    border-spacing:5px 10px;
-    color:#565656;
-}
-
-.content_intro {
-    display:block;
-    margin:10px 0 10px 0;
-}
-
-.author_intro {
-    display:block;
-    margin:20px 0 10px 0;
+.book_prop{
+    color: #575555;
+    font-size: 18px;
 }

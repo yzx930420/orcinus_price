@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>最强买手</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/template.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/notfind.css" rel="stylesheet" type="text/css"/>
+    <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="/static/js/bootstrap.js" type="text/javascript"></script>
+    <script src="/static/js/template.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="top_bar">
+    <img src="/static/image/title.png" alt="请输入 书名、作者、ISBN" class="title"/>
+
+    <form action="/resultset" method="get">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button id="search_type" type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">全部<span
+                        class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a class="search_option" href="#" action="isbn">ISBN</a></li>
+                    <li><a class="search_option" href="#" action="title">书名</a></li>
+                    <li><a class="search_option" href="#" action="author">作者</a></li>
+                    <li><a class="search_option" href="#" action="any">全部</a></li>
+                </ul>
+            </div>
+            <input id="key_word" type="text" name="keyword" class="form-control">
+            <input id="action" type="hidden" name="action" value="any">
+            <input type="submit" id="search_btn" value=""/>
+        </div>
+    </form>
+</div>
+<div class="main">
+    <div class="content">
+        <img src="/static/image/thief.png">
+        <div class="desc">
+            <h1>这个页面被小贼偷走了。。。</h1>
+            <a href="/index"><img src="/static/image/return_home.jpg"></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

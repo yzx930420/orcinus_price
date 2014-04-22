@@ -4,30 +4,31 @@
 }
 
 body {
-    background: #FFF url("/static/image/bg.png") 0 0 repeat;
-    min-width:1200px;
+    background-color: #fcfcfc;
+    min-width: 1200px;
+    font-family: '微软雅黑';
 }
 
 #search_bar {
-    margin-top:200px;
-    margin-left:auto;
-    margin-right:auto;
-    width:450px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
 }
 
 #key_word_area {
-    width:100%;
-    margin-top:20px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .search_title {
-    margin-left:29px;
+    margin-left: 29px;
 }
 
 #search_btn {
-    position:relative;
-    top:20px;
-    left:192px;
+    position: relative;
+    top: 20px;
+    left: 192px;
     width: 70px;
     height: 68px;
     background: transparent url("/static/image/search.png") 0 0 no-repeat;
