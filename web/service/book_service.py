@@ -19,6 +19,19 @@ class BookService(object):
             book_info.goods_list = book_dao.query_to_get_book_goods_info_by_isbn(book_info.isbn)
         return book_info_list
 
+    def query_by_pair_any_page(self, pair, page):
+        """
+           @pair :关键字
+           @page: 页数
+        """
+        return self.query_by_pair_any(pair)[page * 10 : page * 10 + 10]
+
+    def query_by_pair_size(self, pair):
+        """
+            返回有多少页
+        """
+        return len(self.query_by_pair_any(pair));
+
     def query_by_pair_front(self, pair):
         book_info_list = book_dao.query_front_matched(pair)
         for book_info in book_info_list:
