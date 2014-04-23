@@ -35,46 +35,23 @@
     </form>
 </div>
 <div class="result_list">
+    {% for result_item in list %}
     <div class="result_item">
         <div class="cover">
-            <img src="/static/image/cover.jpg" alt="封面">
+            <!--<img src="/static/image/cover.jpg" alt="封面">-->
+            <img src="{{ result_item.cover }}" alt="封面">
         </div>
         <div class="book_info">
             <div class="book_title book_info_row">
-                <a href="/bookdetail" title="">鸟哥的Linux私房菜 服务器架设篇（第3版）</a>
+                <a href="/bookdetail/{{ result_item.isbn }}" title="{{ result_item.title }}"> {{ result_item.title }}</a>
             </div>
-            <div class="book_price book_info_row">￥ 57.80</div>
-            <div class="book_prop book_info_row">作&nbsp;&nbsp;者:&nbsp;&nbsp;鸟哥</div>
-            <div class="book_prop book_info_row">出版社:&nbsp;&nbsp;人民邮电出版社</div>
+            <div class="book_price book_info_row">￥ {{ result_item.price }} </div>
+            <div class="book_prop book_info_row">作&nbsp;&nbsp;者:&nbsp;&nbsp;{{ result_item.author }}</div>
+            <div class="book_prop book_info_row">出版社:&nbsp;&nbsp;{{ result_item.press }}</div>
         </div>
     </div>
+    {% end %}
 
-    <div class="result_item">
-        <div class="cover">
-            <img src="/static/image/cover.jpg" alt="封面">
-        </div>
-        <div class="book_info">
-            <div class="book_title book_info_row">
-                <a href="#" title="">鸟哥的Linux私房菜 服务器架设篇（第3版）</a>
-            </div>
-            <div class="book_price book_info_row">￥ 57.80</div>
-            <div class="book_prop book_info_row">作&nbsp;&nbsp;者:&nbsp;&nbsp;鸟哥</div>
-            <div class="book_prop book_info_row">出版社:&nbsp;&nbsp;人民邮电出版社</div>
-        </div>
-    </div>
-    <div class="result_item">
-        <div class="cover">
-            <img src="/static/image/cover.jpg" alt="封面">
-        </div>
-        <div class="book_info">
-            <div class="book_title book_info_row">
-                <a href="#" title="">鸟哥的Linux私房菜 服务器架设篇（第3版）</a>
-            </div>
-            <div class="book_price book_info_row">￥ 57.80</div>
-            <div class="book_prop book_info_row">作&nbsp;&nbsp;者:&nbsp;&nbsp;鸟哥</div>
-            <div class="book_prop book_info_row">出版社:&nbsp;&nbsp;人民邮电出版社</div>
-        </div>
-    </div>
 </div>
 
 </body>

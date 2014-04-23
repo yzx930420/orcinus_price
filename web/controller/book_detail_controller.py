@@ -12,19 +12,16 @@ class BookDetailController(RequestHandler):
         self.service = BookService()
 
     def get(self, isbn):
-        result = self.service.query_by_pair_any({"isbn":isbn})
-        result_json = {}
-        if len(result) != 0:
-            print "okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-            result_json = result[0].to_dir()
-            print type(result[0].to_dir())
-            print type(result[0])
+        result = self.service.query_by_pair_any({"isbn":isbn})[0]
+        for goods_info in result.goods_list:
+            if goods_info.platform == 0:
+                goods_info.platform = '当当网'
+            elif goods_info.platform == 1:
+                goods_info.platform = '京东商城'
+            elif goods_info.platform == 2:
+                goods_info.platform = '亚马逊'
 
-        self.write(result_json)
-        #from tornado.escape import json_encode
-        #print json_encode(result_json)
-        # self.write(json_encode(result[0]))
-        #self.render(join(template_dir,"bookdetail.html"),list=result)
+        self.render(os.path.join(template_dir, "bookdetail.html"), book=result)
 
     def post(self, isbn):
         self.get()

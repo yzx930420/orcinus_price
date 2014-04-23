@@ -21,7 +21,7 @@ class ResultSetController(RequestHandler):
             #result = self.service.query_by_pair({action:keyword})
 
         if result == None or len(result) == 0:
-            self.write("没找到")
+            self.render(os.path.join(template_dir, "notfind.html"), sentence="哈哈，书没找到")
         else:
             self.render(os.path.join(template_dir, "resultset.html"), list=result)
 

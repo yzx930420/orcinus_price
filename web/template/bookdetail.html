@@ -37,24 +37,26 @@
     </form>
 </div>
 <div class="book_detail_info">
-    <h1 class="book_title">鸟哥的Linux私房菜 基础学习篇(第3版)&nbsp;&nbsp;鸟哥著</h1>
+    <h1 class="book_title">{{ book.title }}&nbsp;&nbsp;{{ book.author }}著</h1>
 
     <div>
         <div class="cover">
-            <img src="/static/image/cover.jpg" alt="封面">
+            <img src="{{ book.cover }}" alt="封面">
         </div>
         <div class="price">
             <table class="shops">
+                {% for goods_info in book.goods_list %}
                 <tr>
-                    <td class="shop_name">京东商城:</td>
-                    <td class="shop_price">￥ 60.20</td>
-                    <td class="shop_link"><a href="#"><img src="/static/image/buy.png"></a></td>
+                    <td class="shop_name">{{ goods_info.platform}}:</td>
+                    <td class="shop_price">￥ {{goods_info.instant_price}}</td>
+                    <td class="shop_link"><a href="{{ goods_info.link}}"><img src="/static/image/buy.png"></a></td>
                 </tr>
-                <tr>
-                    <td class="shop_name">当当网:</td>
-                    <td class="shop_price">￥ 60.20</td>
-                    <td class="shop_link"><a href="#"><img src="/static/image/buy.png"></a></td>
-                </tr>
+                {% end %}
+                <!--<tr>-->
+                    <!--<td class="shop_name">当当网:</td>-->
+                    <!--<td class="shop_price">￥ 60.20</td>-->
+                    <!--<td class="shop_link"><a href="#"><img src="/static/image/buy.png"></a></td>-->
+                <!--</tr>-->
             </table>
         </div>
     </div>
@@ -63,19 +65,19 @@
         <div class="attr_title">产品参数</div>
         <table class="book_attr">
             <tr>
-                <td>作者: 鸟哥</td>
-                <td>出版社: 人民邮电出版社</td>
-                <td>出版年月: 2010-9</td>
+                <td>作者: {{ book.author }}</td>
+                <td>出版社: {{ book.press }}</td>
+                <!--<td>出版年月: 2010-9</td>-->
             </tr>
             <tr>
-                <td>页数: 197</td>
-                <td>定价: 50.00元</td>
-                <td>ISBN: 9787108035295</td>
+                <!--<td>页数: 197</td>-->
+                <td>定价: {{ book.price }}元</td>
+                <td>ISBN: {{ book.isbn }}</td>
             </tr>
-            <tr>
-                <td>装帧: 平装</td>
-                <td>开本: 16开</td>
-            </tr>
+            <!--<tr>-->
+                <!--<td>装帧: 平装</td>-->
+                <!--<td>开本: 16开</td>-->
+            <!--</tr>-->
         </table>
     </div>
     <div class="attr_panel">
