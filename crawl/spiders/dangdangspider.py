@@ -13,9 +13,9 @@ class DangdangSpider(Spider):
     start_urls = ["http://category.dangdang.com/cp01.00.00.00.00.00.html"]
     url_head = "http://category.dangdang.com"
     platform_code = 0  # 当当代码是0
-    key_map = [(re.compile(u'作(.*)者'), 'author', './a/text()'),
-               (re.compile(u'出(.*)版(.*)社'), 'press', './a/text()'),
-               (re.compile(u'ISBN'), 'ISBN', './text()')]
+    author_path = re.compile(u'作.*者</div>.*\s\s.*green">(.*)</a>')
+    press_path = re.compile(u'出.*版.*社</div>.*\s\s.*green">(.*)</a>')
+    ISBN_path = re.compile(u'ＩＳＢＮ</div>.*\s\s.*">(.*)</div>')
     img_path = '//img[@id="largePic"]/@wsrc'
     description_path = '//*[@id="content_all"]/p/text()'
     instant_path = '//*[@id="salePriceTag"]/text()'
@@ -27,15 +27,10 @@ class DangdangSpider(Spider):
         selector = Selector(response)
         item = BookItem()
         item['url'] = response.url
-        book_box = selector.xpath(self.book_box_path)
-        for message in book_box.xpath('./div[@class="clearfix m_t6"]'):
-            left = message.xpath('./div[@class="show_info_left"]/text()').extract()[0]
-            right = message.xpath('./div[@class="show_info_right"]')
-            for pat, name, value_path in self.key_map:
-                if pat.match(left):
-                    # TODO
-                    item[name] = right.xpath(value_path).extract()
-
+        book_box = selector.xpath(self.book_box_path).extract()
+        item['press'] = self.press_path.findall(book_box[0])
+        item['author'] = self.author_path.findall(book_box[0])
+        item['ISBN'] = self.ISBN_path.findall(book_box[0])
         item['img'] = selector.xpath(self.img_path).extract()
         item['description'] = selector.xpath(self.description_path).extract()
         item['instant'] = selector.xpath(self.instant_path).extract()
