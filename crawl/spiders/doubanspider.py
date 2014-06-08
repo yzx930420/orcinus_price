@@ -14,11 +14,10 @@ class DoubanSpider(Spider):
     start_urls = ["http://book.douban.com/tag/"]
     url_head = "http://book.douban.com"
 
-    evaluation_people_path = '//span[@property="v:votes"]/text()'  # already tested
-    evaluation_path = '//strong[@class="ll rating_num "]/text()'  # already tested
-    hot_comments_path = '//div[@class="review-short"]/span/text()'  # already tested
-    get_ISBN_path = re.compile('ISBN:.*</span>(.*)(\d*)<br>')
-    info_path = '//*[@id="info"]'
+    author_path = '//span[@class="reviewer vcard"]/a/text()'
+    comment_time_path = '//span[@class="date dtreviewed"]/text()'
+    detail_path = '//div[@class="description"]/p/text()'
+
     platform_code = 3  # 豆瓣代码是3
 
     def catch_item(self, response):  # 抓取书本
@@ -27,9 +26,10 @@ class DoubanSpider(Spider):
         item['url'] = response.url
         info_div = selector.xpath(self.info_path).extract()
         item['ISBN'] = self.get_ISBN_path.findall(info_div[0])[0][0].replace(u' ', '')
-        item['evaluation_people'] = selector.xpath(self.evaluation_people_path).extract()
-        item['evaluation'] = selector.xpath(self.evaluation_path).extract()
-        item['hot_comments'] = selector.xpath(self.hot_comments_path).extract()
+        item['author'] = selector.xpath(self.author_path).extract()
+        item['comment_time'] = selector.xpath(self.comment_time_path).extract()
+        item['detail'] = selector.xpath(self.detail_path).extract()
+
         item['platform'] = self.platform_code
         return item
 
@@ -46,12 +46,20 @@ class DoubanSpider(Spider):
         sites = selector.xpath('//div[@class="info"]/h2/a/@href').extract()
         for site in sites:
             request = Request(url=site,
-                              callback=self.catch_item)
+                              callback=self.click_comment)
             yield request
         sites = selector.xpath('//span[@class="next"]/a/@href').extract()
         if sites:
             request = Request(url=self.url_head + sites[0],
                               callback=self.view_page)
+            yield request
+
+    def click_comment(self, response):  # click_comment
+        selector = Selector(response)
+        sites = selector.xpath('//div[@class="title"]/a/@href').extract()
+        for site in sites:
+            request = Request(url=self.replace_url(site),
+                              callback=self.catch_item)
             yield request
 
     def replace_url(self, a_string):

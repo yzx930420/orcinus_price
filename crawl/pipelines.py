@@ -6,6 +6,7 @@ from crawl.items import BookItem
 from crawl.items import DetailItem
 from common.dao.book_dao import book_dao
 from common.model.book import Book
+from common.model.comment import Comment
 
 
 class BookPipeline(object):
@@ -39,30 +40,33 @@ class BookPipeline(object):
 
 
 class DetailPipeline(object):
+    """
     def __init__(self):
         self.ids_seen = set()
+    """
 
     def process_item(self, item, spider):
-        """
+
         if item['platform'] != 3:
             return item
+        #new_comment =
+        """
         if item['ISBN'] in self.ids_seen:
             raise DropItem('Duplicate item found: %s' % item['ISBN'])
         else:
-            db_data = {"ISBN": "", "evaluation": "",
-                       "evaluation_people": "", "hot_comments": ""}
-            self.ids_seen.add(item['ISBN'])
-            db_data['ISBN'] = item['ISBN']
-            if item['evaluation']:
-                db_data['evaluation'] = item['evaluation'][0]
-            if item['hot_comments']:
-                db_data['hot_comments'] = item['hot_comments']
-            if item['evaluation_people']:
-                db_data['evaluation_people'] = item['evaluation_people'][0]
+        """
+        new_comment = Comment()
 
-            print "ok  to  insert ======================="
-            self.db.comments.insert(db_data)
+        if item['author']:
+            new_comment['author'] = item['author'][0]
+        if item['hot_comments']:
+            new_comment['detail'] = item['detail'][0]
+        if item['comment_time']:
+            new_comment['comment_time'] = item['comment_time'][0]
+
+        print "ok  to  insert ======================="
+        # TODO
 
         return item
-        """
-        pass
+
+    pass

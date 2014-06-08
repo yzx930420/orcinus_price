@@ -19,7 +19,7 @@ class BookItem(Item):
 class DetailItem(Item):
     ISBN = Field()
     url = Field()
-    evaluation = Field()
-    evaluation_people = Field()
-    hot_comments = Field()
+    comment_time = Field()
+    author = Field()
+    detail = Field()
     platform = Field()

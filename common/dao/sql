@@ -4,10 +4,17 @@ create table book_info(isbn char(13),
                        author varchar(50),
                        press varchar(50),
                        description varchar(200),
-                       cover varchar(200))
+                       cover varchar(200));
 
 create table book_goods_info(isbn char(13),
                              instant_price decimal(6,2),
                              link varchar(90),
                              platform int,
-                             crawling_time float)
+                             crawling_time float);
+
+create table comment(isbn char(13),
+                     author varchar(50),
+                     comment_time varchar(20),
+                     detail varchar(200)
+)
+
