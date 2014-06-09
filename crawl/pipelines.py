@@ -49,12 +49,13 @@ class DetailPipeline(object):
 
         if item['platform'] != 3:
             return item
-        #new_comment =
+
         """
         if item['ISBN'] in self.ids_seen:
             raise DropItem('Duplicate item found: %s' % item['ISBN'])
         else:
         """
+
         new_comment = Comment()
 
         if item['author']:
