@@ -9,7 +9,7 @@ ITEM_PIPELINES = {
     'crawl.pipelines.DetailPipeline': 800,
 }
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-DOWNLOAD_DELAY = 2
+#DOWNLOAD_DELAY = 2
 RANDOMIZE_DOWNLOAD_DELAY = True
 USER_AGENT = ['Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36',
               'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36',
