@@ -7,6 +7,7 @@ from crawl.items import DetailItem
 from common.dao.book_dao import book_dao
 from common.model.book import Book
 from common.model.comment import Comment
+from common.dao.comment_dao import comment_dao
 
 
 class BookPipeline(object):
@@ -66,7 +67,7 @@ class DetailPipeline(object):
             new_comment['comment_time'] = item['comment_time'][0]
 
         print "ok  to  insert ======================="
-        # TODO
+        comment_dao.insert(new_comment)
 
         return item
 
