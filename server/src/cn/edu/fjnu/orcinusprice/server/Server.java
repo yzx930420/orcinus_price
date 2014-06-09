@@ -53,7 +53,8 @@ public class Server {
             Request request = parserJson(sb.toString());
 
             LuceneHelper lh = new LuceneHelper();
-            List<String> result = lh.search(request.getAction(), request.getKeyword());
+            List<String> result = lh.search(request.getAction(), request.getKeyword(),
+                    request.getIndex() + request.getSize());
             List<String> subResult = null;
             int start = request.getIndex();
             int end = request.getIndex() + request.getSize();

@@ -82,7 +82,7 @@ public class LuceneHelper {
 
     }
 
-    public List<String> search(String key, String value) {
+    public List<String> search(String key, String value, int num) {
         IndexSearcher searcher = null;
         searcher = new IndexSearcher(getReader());
         if (searcher == null)
@@ -90,7 +90,7 @@ public class LuceneHelper {
         TermQuery query = new TermQuery(new Term(key, value));
         List<String> isbnList = new ArrayList<String>();
         try {
-            TopDocs tds = searcher.search(query, QueryNum);
+            TopDocs tds = searcher.search(query, num);
 
             for (ScoreDoc sd : tds.scoreDocs) {
                 Document doc = searcher.doc(sd.doc);
