@@ -21,7 +21,7 @@ class AmazonSpider(Spider):
     name_path = '//*[@id="btAsinTitle"]/span/text()'
     press_path = re.compile(u'出版社.*</b>.(.*)</li>')
     ISBN_path = re.compile(u'ISBN.*</b>.(\d*).')
-    author_path = '//*[@id="handleBuy"]/div[1]/span/a'
+    author_path = '//*[@id="handleBuy"]/div[1]/span/a/text()'
     platform_code = 2  # 亚马逊代码是2
 
     def catch_item(self, response):  # 抓取书本
