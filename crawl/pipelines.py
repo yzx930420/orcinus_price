@@ -51,6 +51,8 @@ class DetailPipeline(object):
         if item['platform'] != 3:
             return item
 
+        if not item['ISBN']:
+            raise DropItem('item no isbn')
         """
         if item['ISBN'] in self.ids_seen:
             raise DropItem('Duplicate item found: %s' % item['ISBN'])
@@ -59,6 +61,8 @@ class DetailPipeline(object):
 
         new_comment = Comment()
 
+        if item['ISBN']:
+            new_comment['isbn'] = item['ISBN']
         if item['author']:
             new_comment['author'] = item['author'][0]
         if item['detail']:
