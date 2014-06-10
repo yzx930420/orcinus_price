@@ -64,7 +64,7 @@ class DetailPipeline(object):
         if item['ISBN']:
             new_comment['isbn'] = item['ISBN']
         if item['author']:
-            new_comment['author'] = item['author'][0]
+            new_comment['author'] = item['author']
         if item['detail']:
             new_comment['detail'] = item['detail'][0]
         if item['comment_time']:
