@@ -12,10 +12,11 @@ import java.util.List;
  */
 public class MysqlHelper {
 
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/test";
+    //private static final String URL = "jdbc:mysql://127.0.0.1:3306/test";
+    private static final String URL = "jdbc:mysql://121.199.50.11:3306/scrapy";
     private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static String USER_NAME = "root";
-    private static String PASSWORD = "123456";
+    private static String USER_NAME = "orca";
+    private static String PASSWORD = "orcamysql";
 
     static {
         try {
@@ -47,6 +48,7 @@ public class MysqlHelper {
                 String title = rs.getString("title");
                 String author = rs.getString("author");
                 bil.add(new BookIndex(isbn, title, author));
+                System.out.println(isbn + " " + title + " " + author);
             }
             free(rs, ps, conn);
             return bil;
@@ -58,8 +60,8 @@ public class MysqlHelper {
     }
 
 
-    public  static void free(ResultSet rs, Statement stat, Connection conn){
-        if(rs != null) {
+    public static void free(ResultSet rs, Statement stat, Connection conn) {
+        if (rs != null) {
             try {
                 rs.close();
             } catch (SQLException e) {
