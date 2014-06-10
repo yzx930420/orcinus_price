@@ -61,12 +61,11 @@ class DetailPipeline(object):
 
         if item['author']:
             new_comment['author'] = item['author'][0]
-        if item['hot_comments']:
+        if item['detail']:
             new_comment['detail'] = item['detail'][0]
         if item['comment_time']:
             new_comment['comment_time'] = item['comment_time'][0]
 
-        print "ok  to  insert ======================="
         comment_dao.insert(new_comment)
 
         return item
