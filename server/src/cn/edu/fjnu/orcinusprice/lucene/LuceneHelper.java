@@ -11,8 +11,11 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
+import org.wltea.analyzer.lucene.IKAnalyzer;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,12 +26,19 @@ import java.util.List;
 public class LuceneHelper {
     private static IndexReader reader = null;
     private static Directory dir = null;
+    private static String path = "/home/frank93/Temp/orcinus_price_index";
     private static MysqlHelper mysqlHelper = null;
     private static final int QueryNum = 100;
 
     public LuceneHelper() {
+//        try {
+//            reader = IndexReader.open(dir);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        File indexDir = new File(path);
         try {
-            reader = IndexReader.open(dir);
+            dir = FSDirectory.open(indexDir);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -39,6 +49,15 @@ public class LuceneHelper {
     }
 
     private IndexReader getReader() {
+        if (reader == null) {
+            try {
+                reader = IndexReader.open(dir);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return reader;
+        }
+
         IndexReader tr = null;
         try {
             tr = IndexReader.openIfChanged(reader);
@@ -54,7 +73,7 @@ public class LuceneHelper {
     }
 
     public void UpdateIndex() {
-        IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_35, new StandardAnalyzer(Version.LUCENE_35));
+        IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_35, new IKAnalyzer());
         IndexWriter writer = null;
         try {
             writer = new IndexWriter(dir, iwc);
@@ -68,14 +87,13 @@ public class LuceneHelper {
                 doc.add(new Field("title", bi.getTitle(), Field.Store.NO, Field.Index.ANALYZED_NO_NORMS));
                 writer.addDocument(doc);
             }
-            writer.close();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             if (writer != null)
                 try {
                     writer.close();
-                } catch (CorruptIndexException e) {
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
         }
@@ -95,6 +113,7 @@ public class LuceneHelper {
             for (ScoreDoc sd : tds.scoreDocs) {
                 Document doc = searcher.doc(sd.doc);
                 isbnList.add(doc.get("isbn"));
+                System.out.println(doc.get("isbn"));
             }
 
         } catch (IOException e) {
