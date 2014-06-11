@@ -10,6 +10,16 @@ class Comment:
         self.detail = ""
         self.link = ""
 
+    def to_dict(self):
+        result = {
+           'isbn' :self.isbn,
+           'author':self.author,
+           'comment_time':self.comment_time,
+           'detail':self.detail,
+           'link':self.link
+        }
+        return result
+
     def __getitem__(self, key):
         if "isbn" == key:
             return self.isbn
