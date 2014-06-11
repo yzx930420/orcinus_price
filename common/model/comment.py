@@ -12,11 +12,13 @@ class Comment:
 
     def to_dict(self):
         result = {
-           'isbn' :self.isbn,
+           #'isbn' :self.isbn,
            'author':self.author,
-           'comment_time':self.comment_time,
-           'detail':self.detail,
-           'link':self.link
+           #'comment_time':self.comment_time,
+           #'detail':self.detail,
+           #'link':self.link
+           "platform":u"豆瓣",
+           "content":self.detail
         }
         return result
 

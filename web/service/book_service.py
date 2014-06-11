@@ -7,6 +7,9 @@ from common.model.book_info import BookInfo
 from common.model.book_goods_info import BookGoodsInfo
 
 class BookService(object):
+    def quey_by_keyword(self, action,  keyword, index, size):
+        pass
+
     def query_by_pair_perfectly(self, pair):
         book_info_list = book_dao.query_perfectly_matched(pair)
         for book_info in book_info_list:
