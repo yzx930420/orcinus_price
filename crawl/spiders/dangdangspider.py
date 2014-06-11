@@ -23,11 +23,14 @@ class DangdangSpider(Spider):
     name_path = '//div[@class="head"]/h1/text()'
     book_box_path = '//div[@class="book_messbox"]'
 
-    def catch_item(self,response):
+    def catch_item(self, response):
         selector = Selector(response)
         item = BookItem()
         item['url'] = response.url
         book_box = selector.xpath(self.book_box_path).extract()
+        if not book_box:
+            item['platform'] = -1
+            return item
         item['press'] = self.press_path.findall(book_box[0])
         item['author'] = self.author_path.findall(book_box[0])
         item['ISBN'] = self.ISBN_path.findall(book_box[0])

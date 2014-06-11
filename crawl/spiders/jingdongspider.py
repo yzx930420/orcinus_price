@@ -35,7 +35,6 @@ class JingdongSpider(Spider):
         selector = Selector(response)
         sites = selector.xpath('//*[@id="booksort"]/div[2]/dl/dd/em/a/@href').extract()
         for site in sites:
-            print site
             request = Request(url=site,
                               callback=self.view_page)
             yield request
