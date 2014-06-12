@@ -8,6 +8,8 @@ import json
 from json import encoder
 encoder.FLOAT_REPR = lambda o: format(o, '.2f')
 
+
+MAX_BOOK_AMOUNT = 40
 def bookInfoToDict(book):
     result = {
         "name":book.title,
@@ -32,7 +34,7 @@ class ResultSetController(RequestHandler):
         for book in books:
             jsons.append(bookInfoToDict(book))
             i = i + 1
-            if i > 10:
+            if i > MAX_BOOK_AMOUNT:
                 break
         self.write(json.dumps(jsons,ensure_ascii=False))
 
