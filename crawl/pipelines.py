@@ -41,6 +41,7 @@ class BookPipeline(object):
         #new_book.time = ?
         new_book.platform = item['platform']
         book_dao.insert(new_book)
+        return item
 
 
 class DetailPipeline(object):

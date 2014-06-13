@@ -4,9 +4,22 @@ __author__ = 'nothi'
 import json
 from tornado.web import RequestHandler
 from common.model.book_info import BookInfo
+from common.model.book_goods_info import BookGoodsInfo
 from web.service.book_service import BookService
 from json import encoder
 encoder.FLOAT_REPR = lambda o: format(o, '.2f')
+
+def getJDPrice(book):
+    for goods in  book.goods_list:
+        if goods.platform == 1:
+            return goods.instant_price
+    return 10
+
+def getDDPrice(book):
+    for goods in  book.goods_list:
+        if goods.platform == 0:
+            return goods.instant_price
+    return -1
 
 def bookInfoToDict(book):
     result = {
@@ -16,8 +29,8 @@ def bookInfoToDict(book):
         "isbn":book.isbn,
         "press":book.press,
         "coverUrl":book.cover,
-        "jdPrice":float(10),
-        "ddPrice":float(10)
+        "jdPrice":float( getJDPrice(book) ),
+        "ddPrice":float( getDDPrice(book) )
     }
     return result
 
