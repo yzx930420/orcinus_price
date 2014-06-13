@@ -37,7 +37,8 @@ class JingdongSpider(Spider):
         for site in sites:
             request = Request(url=site,
                               callback=self.view_page)
-            yield request
+            if request.url == 'http://list.jd.com/1713-3287-3797.html':
+                yield request
 
     def view_page(self, response):  # 翻页
         selector = Selector(response)
