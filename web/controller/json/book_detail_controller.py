@@ -39,7 +39,7 @@ class BookDetailController(RequestHandler):
         self.service = BookService()
 
     def get(self,isbn):
-        obj = self.service.query_by_pair_any({"isbn":isbn})
+        obj = self.service.__query_by_pair_any({"isbn":isbn})
         if not obj:
             self.write("")
         else:

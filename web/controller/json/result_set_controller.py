@@ -28,7 +28,7 @@ class ResultSetController(RequestHandler):
     def get(self):
         action = self.get_argument("action", default="any")
         keyword = self.get_argument("keyword")
-        books = self.service.query_by_pair_any({"title":keyword})
+        books = self.service.__query_by_pair_any({"title":keyword})
         jsons = []
         i = 0
         for book in books:

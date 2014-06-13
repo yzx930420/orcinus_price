@@ -23,7 +23,6 @@ class ResultSetController(RequestHandler):
         if result == None or len(result) == 0:
             self.render(os.path.join(template_dir, "notfind.html"), sentence="哈哈，书没找到")
         else:
-            #self.render(os.path.join(template_dir, "resultset.html"), list=result)
             self.render(os.path.join(template_dir, "resultset.html"),
                         keyword=keyword, action=action,
                         index=index,items=result, pagecount=self.service.get_page_size(action,keyword))
@@ -35,7 +34,7 @@ class ResultSetController(RequestHandler):
 #测试
 if __name__=="__main__":
     ser = BookService()
-    list  = ser.query_by_pair_any({"isbn":"00001001"})
+    list  = ser.__query_by_pair_any({"isbn":"00001001"})
     for a in list:
         print a
 
