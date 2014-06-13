@@ -38,9 +38,12 @@ class AmazonSpider(Spider):
         item['price'] = selector.xpath(self.price_path).extract()
         item['name'] = selector.xpath(self.name_path).extract()
         item['platform'] = self.platform_code
-        item['price'][0] = self.replace_rmb(item['price'][0])
-        item['instant'][0] = self.replace_rmb(item['instant'][0])
-        item['platform'] = self.platform_code
+        if item['price']:
+            item['price'][0] = self.replace_rmb(item['price'][0])
+            item['instant'][0] = self.replace_rmb(item['instant'][0])
+            item['platform'] = self.platform_code
+        else:
+            item['platform'] = -1
         return item
 
     def parse(self, response):  # 入口
@@ -49,7 +52,8 @@ class AmazonSpider(Spider):
         for site in sites:
             request = Request(url=self.url_head + site,
                               callback=self.view_page)
-            yield request
+            if request.url.endswith("?ie=UTF8&node=658810051"):
+                yield request
 
     def view_page(self, response):  # 翻页
         selector = Selector(response)

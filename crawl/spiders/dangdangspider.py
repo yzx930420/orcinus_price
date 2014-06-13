@@ -50,7 +50,8 @@ class DangdangSpider(Spider):
         for site in sites:
             request = Request(url=self.url_head + site,
                               callback=self.open_categories)
-            yield request
+            if request.url.startswith("http://category.dangdang.com/cp01.54.00.00.00.00.html"):
+                yield request
 
     def open_categories(self, response):
         selector = Selector(response)
