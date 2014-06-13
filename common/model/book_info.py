@@ -13,6 +13,42 @@ class BookInfo:
         self.cover = ''
         self.goods_list = []
 
+    def __setitem__(self, key, value):
+        if "isbn" == key:
+           self.isbn = value
+        elif "price" == key:
+            self.price = value
+        elif "title" == key:
+            self.title = value
+        elif "author" == key:
+            self.author = value
+        elif "press" == key:
+            self.press = value
+        elif "description" == key:
+            self.description = value
+        elif "cover" == key:
+            self.cover = value
+        elif "goods_list" == key:
+            self.goods_list = value
+
+    def __getitem__(self, item):
+        if "isbn" == item:
+            return self.isbn
+        elif "price" == item:
+            return self.price
+        elif "title" == item:
+            return self.title
+        elif "author" == item:
+            return  self.author
+        elif "press" == item:
+            return self.press
+        elif "description" == item:
+            return self.desciption
+        elif "cover" == item:
+            return self.cover
+        elif "goods_list" == item:
+            return self.goods_list
+
     def to_dir(self):
         result = {}
         result['isbn'] = self.isbn

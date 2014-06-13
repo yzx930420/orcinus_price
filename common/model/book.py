@@ -17,6 +17,55 @@ class Book(object):
         self.instant_price = ''
         self.crawling_time = 0
 
+    def __getitem__(self, item):
+        if "isbn" == item:
+            return self.isbn
+        elif "price" == item:
+            return self.price
+        elif "title" == item:
+            return self.title
+        elif "author" == item:
+            return self.author
+        elif "press" == item:
+            return self.press
+        elif "description" == item:
+            return self.description
+        elif "cover" == item:
+            return self.cover
+        elif "link" == item:
+            return self.link
+        elif "platform" == item:
+            return self.platform
+        elif "instant_price'" == item:
+            return self.instant_price
+        elif "crawling_time'" == item:
+            return self.crawling_time
+
+
+    def __setitem__(self, item, value):
+        if "isbn" == item:
+            self.isbn = value
+        elif "price" == item:
+            self.price = value
+        elif "title" == item:
+            self.title = value
+        elif "author" == item:
+            self.author = value
+        elif "press" == item:
+            self.press = value
+        elif "description" == item:
+            self.description = value
+        elif "cover" == item:
+            self.cover = value
+        elif "link" == item:
+            self.link = value
+        elif "platform" == item:
+            self.platform =value
+        elif "instant_price'" == item:
+            self.instant_price = value
+        elif "crawling_time'" == item:
+            self.crawling_time = value
+
     def set_all(self, list):
         self.isbn = list[0]
         self.price = list[1]
