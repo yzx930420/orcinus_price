@@ -5,11 +5,13 @@ __author__ = 'nothi'
 from os.path import join
 from tornado.web import RequestHandler
 from web.service.book_service import BookService
+from web.service.comment_service import CommentService
 from web.settings import *
 
 class BookDetailController(RequestHandler):
     def initialize(self):
         self.service = BookService()
+        self.comment_service = CommentService()
 
     def get(self, isbn):
         result = self.service.query_by_pair_any({"isbn":isbn})[0]
@@ -21,7 +23,8 @@ class BookDetailController(RequestHandler):
             elif goods_info.platform == 2:
                 goods_info.platform = '亚马逊'
 
-        self.render(os.path.join(template_dir, "bookdetail.html"), book=result)
+        comments = self.comment_service.get_comment(isbn)
+        self.render(os.path.join(template_dir, "bookdetail.html"), book=result,comments=comments)
 
     def post(self, isbn):
         self.get()

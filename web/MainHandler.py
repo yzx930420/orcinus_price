@@ -15,6 +15,7 @@ from web.controller import book_detail_controller,index_controller,result_set_co
 from web.controller.json import comment_detail_controller as json_comment
 from web.controller.json import result_set_controller as json_result
 from web.controller.json import book_detail_controller as json_book
+from web.controller.json import book_instant_price_controller as json_price
 
 def main():
     print workdir
@@ -24,6 +25,7 @@ def main():
                                (r"/bookdetail/(.*)", book_detail_controller.BookDetailController),
                                (r"/json/comment/(.*)", json_comment.CommentDetailController),
                                (r"/json/book/(.*)", json_book.BookDetailController),
+                               (r"/json/price/(.*)", json_price.BookInstantPriceController),
                                (r"/json/resultset", json_result.ResultSetController),
                                (r"/static/(.*)", StaticFileHandler, dict(path=settings["static_path"])),])
     application.listen(settings["listen_port"])

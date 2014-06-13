@@ -30,7 +30,7 @@ $(function () {
             tickPixelInterval: 120,
             labels: {
                 formatter: function () {
-                    return  Highcharts.dateFormat('%m-%d', this.value);
+                    return Highcharts.dateFormat('%m-%d', this.value);
                 }
             }
         },
@@ -65,25 +65,24 @@ $(function () {
 
 function getData() {
     var charts = $('#price_trend').highcharts();
-    var series = charts.series;
-    var i;
-    while (series.length > 0) {
-        series[0].remove();
-    }
-    var arr = ["京东商城", "当当网"];
-    for (i = 0; i < 2; i++) {
-        charts.addSeries({
-            name: arr[i],
-            data: (function () {
-                var data = [], i;
+    isbn = $("#isbn").attr("isbn")
+    $.post(
+       "/json/price/"+isbn,{},function(ret){
 
-                for (i = 1; i <= 30; i++) {
-                    data.push(Math.random() * 50 + 30);
-                }
-                return data;
-            })(),
-            pointStart: new Date().setMonth(new Date().getMonth() - 1),
-            pointInterval: 24 * 3600 * 1000
-        }, true, false);
-    }
+            for(var i = 0; i < ret.length; i++){
+                charts.addSeries({
+                    name:ret[i].name,
+                    data:(function () {
+                        var data = [];
+                        for(var j = 0; j < ret[i].data.length; j++){
+                            data.push(ret[i].data[j].price);
+                        }
+                        return data;
+                    })(),
+                    pointStart: new Date().setMonth(new Date().getMonth() - 1),
+                    pointInterval: 24 * 3600 * 1000
+                }, true, false);
+            }
+        },"json"
+    )
 }

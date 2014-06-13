@@ -1,9 +1,9 @@
-.result_list{
+.result_list {
     margin-top: 10px;
     padding-left: 70px;
 }
 
-.result_item{
+.result_item {
     margin-bottom: 20px;
 }
 
@@ -11,7 +11,7 @@
     width: 150px;
     height: 150px;
     border: 2px solid #e0e0e0;
-    float:left;
+    float: left;
 }
 
 .cover img {
@@ -19,7 +19,7 @@
     height: 100%;
 }
 
-.book_info{
+.book_info {
     margin-left: 170px;
     width: 600px;
     height: 160px;
@@ -30,7 +30,7 @@
     margin-bottom: 5px;
 }
 
-.book_title{
+.book_title {
     width: 100%;
     font-size: 20px;
     text-overflow: ellipsis;
@@ -38,11 +38,11 @@
     overflow: hidden;;
 }
 
-.book_title a{
+.book_title a {
     color: #131313;
 }
 
-.book_title a:hover{
+.book_title a:hover {
     color: #196ea9;
 }
 
@@ -52,7 +52,36 @@
     font-weight: 700;
 }
 
-.book_prop{
+.book_prop {
     color: #575555;
     font-size: 18px;
+}
+
+#pager ul.pages {
+    height: 32px;
+}
+
+#pager ul.pages li {
+    float: left;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin: 0 5px 0 0;
+    padding: 5px 8px;
+}
+
+#pager ul.pages li:hover {
+    border: 1px solid #45bbec;
+    background: rgba(66, 225, 255, 0.05);
+}
+
+#pager ul.pages li.pgEmpty {
+    border: 1px solid #eee;
+    color: #999;
+}
+
+#pager ul.pages li.pgCurrent {
+    border: 1px solid #45bbec;
+    color: #555;
+    font-weight: 700;
+    background-color: rgba(66, 225, 255, 0.05);
 }

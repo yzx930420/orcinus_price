@@ -8,7 +8,17 @@ from common.model.book_goods_info import BookGoodsInfo
 
 class BookService(object):
     def quey_by_keyword(self, action,  keyword, index, size):
-        pass
+        #TODO
+        print action
+        if action == None or action == "any":
+           result = self.query_by_pair_any({'title'.encode('utf-8'):keyword.encode('utf-8')})
+        else:
+            result = self.query_by_pair_any({action.encode('utf-8'):keyword.encode('utf-8')})
+        return result
+
+    def get_page_size(self, action, keyword):
+        #TODO, to implement
+        return 100;
 
     def query_by_pair_perfectly(self, pair):
         book_info_list = book_dao.query_perfectly_matched(pair)
