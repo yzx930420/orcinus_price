@@ -47,7 +47,7 @@ class JingdongSpider(Spider):
             request = Request(url=site,
                               callback=self.catch_item)
             yield request
-        sites = selector.xpath('//div[@class="pagin pagin-m"]/a/@href').extract()
+        sites = selector.xpath('//div[@class="pagin pagin-m"]/a[@class="next"]/@href').extract()
         if sites:
             request = Request(url=sites[0],
                               callback=self.view_page)
