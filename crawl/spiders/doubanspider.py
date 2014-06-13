@@ -40,7 +40,7 @@ class DoubanSpider(Spider):
         for site in sites:
             request = Request(url=self.replace_url(site),
                               callback=self.view_page)
-            if request.url == 'http://book.douban.com/tag/%E7%BC%96%E7%A8%8B':
+            if request.url.startswith("http://book.douban.com/tag/%E7%BC%96%E7%A8%8B"):
                 yield request
 
     def view_page(self, response):  # 翻页

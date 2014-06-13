@@ -49,7 +49,7 @@ class AmazonSpider(Spider):
         for site in sites:
             request = Request(url=self.url_head + site,
                               callback=self.view_page)
-            if request.url == 'http://www.amazon.cn/b/ref=bsm14_7_2_2?ie=UTF8&node=658810051':
+            if request.url.startswith("http://www.amazon.cn/b?ie=UTF8&node=658810051"):
                 yield request
 
     def view_page(self, response):  # 翻页
