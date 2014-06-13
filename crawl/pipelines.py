@@ -11,7 +11,7 @@ from common.dao.comment_dao import comment_dao
 class BookPipeline(object):
 
     @staticmethod
-    def process_item(self, item, spider):
+    def process_item(item, spider):
         if item['platform'] == -1:      # not a book, drop it
             return item
         if not item['ISBN']:            # not a book, drop it
@@ -46,7 +46,7 @@ class BookPipeline(object):
 class DetailPipeline(object):
 
     @staticmethod
-    def process_item(self, item, spider):
+    def process_item(item, spider):
 
         if item['platform'] != 3:
             return item
