@@ -8,10 +8,6 @@ import common.dao.settings
 from common.model.book import Book
 from common.model.book_goods_info import BookGoodsInfo as GoodsPO
 from common.model.book_info import BookInfo as  BookPO
-import sys
-#reload(sys);
-# using exec to set the encoding, to avoid error in IDE.
-#exec("sys.setdefaultencoding('utf-8')");
 
 
 class BookDAO():
@@ -64,10 +60,10 @@ class BookDAO():
         """
         attrs = ["isbn", "price", "title", "author", "press","description","cover" ]
         quey_sql = 'select isbn, price, title, author, press, description, cover ' \
-                   'from book_info' \
+                   'from book_info ' \
                    'where isbn = %s'%isbn
         self.cursor.execute(quey_sql)
-        bookInfos = self.cursor.fetchall()
+        bookInfos = self.cursor.fetchall()[0]
         result = BookPO()
         i = 0
         for item in bookInfos:
@@ -77,24 +73,30 @@ class BookDAO():
 
 
     def quey_by_isbn_for_goods(self, isbn):
+        """
+            查找每个平台最新的,目前只实现查找出所有的isbn相同的goods
+        """
         attrs = ["isbn","link","platform","instant_price", "crawling_time"]
         quey_sql = 'select isbn, link, platform, instant_price, crawling_time ' \
-                   'from book_info' \
+                   'from book_goods_info ' \
                    'where isbn = %s order by crawling_time desc'%isbn
         self.cursor.execute(quey_sql)
-        bookInfos = self.cursor.fetchall()
-        result = GoodsPO()
-        i = 0
-        for item in bookInfos:
-            result[attrs[i]] = item
-            i = i + 1
-        return result
+        result_list = []
+        bookInfos_list = self.cursor.fetchall()
+        for bookInfos in bookInfos_list:
+            result = GoodsPO()
+            i = 0
+            for item in bookInfos:
+                result[attrs[i]] = item
+                i = i + 1
+            result_list.append(result)
+        print len(result_list)
+        return result_list
 
     def quey_by_isbn_with_time(self, isbn, begin, end):
-        #TODO
         attrs = ["isbn","link","platform","instant_price", "crawling_time"]
         quey_sql = 'select isbn, link, platform, instant_price, crawling_time ' \
-                   'from book_info' \
+                   'from book_info ' \
                    'where isbn = %s and crawling_time between %s and %s'%(isbn, begin, end)
         self.cursor.execute(quey_sql)
         result_list = []
@@ -281,7 +283,20 @@ def test_insert_chinese():
     book.isbn = 'saxsax'
     book_dao.insert(book)
 
+def test_query_by_isbn():
+    a = book_dao.quey_by_isbn("9787509611876")
+    print a.isbn
+    print a.author
+    print a.title
+
+def test_query_by_isbn_for_goods():
+
+    goodses = book_dao.quey_by_isbn_for_goods("9787516301166")
+    for a in goodses:
+        print a.isbn
+        print a.platform
+        print a.instant_price
+
 if __name__=="__main__":
-    test_insert_chinese()
-    print "okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-    test_query()
+    #test_query_by_isbn()
+    test_query_by_isbn_for_goods()
