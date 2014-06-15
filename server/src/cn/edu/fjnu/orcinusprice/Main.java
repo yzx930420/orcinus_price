@@ -17,7 +17,9 @@ public class Main {
             public void run() {
                 while (true) {
                     LuceneHelper lh = new LuceneHelper();
+                    System.out.println("run updateIndex...");
                     lh.UpdateIndex();
+                    System.out.println("Index has been updated!");
                     try {
                         Thread.sleep(sleep_ms);
                     } catch (InterruptedException e) {
@@ -26,7 +28,7 @@ public class Main {
                 }
             }
 
-        });
+        });//.start();
 
         server = new Server();
         server.runServer();

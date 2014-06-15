@@ -12,6 +12,8 @@ public class Request {
     public Request() {
     }
 
+
+
     public Request(String action, String keyword, int index, int size) {
         this.action = action;
         this.keyword = keyword;
@@ -49,5 +51,15 @@ public class Request {
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    @Override
+    public String toString() {
+        return "Request{" +
+                "action='" + action + '\'' +
+                ", keyword='" + keyword + '\'' +
+                ", index=" + index +
+                ", size=" + size +
+                '}';
     }
 }
