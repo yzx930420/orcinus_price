@@ -18,7 +18,6 @@ class BookPipeline(object):
         if item['platform'] == 3:       # if item is comments return to detail_pipeline
             return item
 
-        print item['ISBN']
         db_data = {"ISBN": "", "name": "", "price": "", "author": "",
                    "press": "", "instant": "", "img": "", "description": ""}
         if item['name']:
