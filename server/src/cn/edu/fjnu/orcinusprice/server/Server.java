@@ -2,6 +2,9 @@ package cn.edu.fjnu.orcinusprice.server;
 
 import cn.edu.fjnu.orcinusprice.lucene.LuceneHelper;
 import cn.edu.fjnu.orcinusprice.model.Request;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.sun.org.apache.xpath.internal.SourceTree;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -18,7 +21,10 @@ public class Server {
 
     public static void runServer() {
         try {
-            server = new ServerSocket(port);
+            if (server == null) {
+                server = new ServerSocket(port);
+                System.out.println("Server is running!");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -29,7 +35,14 @@ public class Server {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
+                        System.out.println(socket.getInetAddress());
                         handle(socket);
+                        try {
+                            System.out.println(socket.getInetAddress() + " close!");
+                            socket.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }).start();
             } catch (IOException e) {
@@ -45,16 +58,21 @@ public class Server {
             StringBuilder sb = new StringBuilder();
             String line = null;
             while((line = br.readLine()) != null) {
+                System.out.println("recv: " + line);
+                if (line.equals("end"))
+                    break;
                 sb.append(line);
             }
-            br.close();
+
             //FIXME
-            System.out.println(sb.toString());
+            System.out.println("===" + sb.toString());
             Request request = parserJson(sb.toString());
+            System.out.println("request: " + request);
 
             LuceneHelper lh = new LuceneHelper();
-            List<String> result = lh.search(request.getAction(), request.getKeyword(),
-                    request.getIndex() + request.getSize());
+            System.out.println("search begin!");
+            List<String> result = lh.search(request.getAction(), request.getKeyword());
+            System.out.println("search end!");
             List<String> subResult = null;
             int start = request.getIndex();
             int end = request.getIndex() + request.getSize();
@@ -64,10 +82,18 @@ public class Server {
             } else {
                 subResult = new ArrayList<String>();
             }
+            System.out.println("start: " + start + " end: " + end);
+            System.out.println("subResult: " + subResult);
+            subResult.add(Integer.toString(result.size()));
 
             String resultJson = toJson(subResult);
+            System.out.println("hehe");
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+            System.out.println("haha");
             bw.write(resultJson);
+            System.out.println("result json: " + resultJson);
+
+            //br.close();
             bw.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -89,11 +115,16 @@ public class Server {
             }
     }
 
-    private static Request parserJson(String json) {
-        return null;
+    public static Request parserJson(String json) {
+        Gson gson = new Gson();
+        Request request = gson.fromJson(json,Request.class);
+        return request;
     }
 
-    private static String toJson(List<String> l){
-        return null;
+    public static String toJson(List<String> l){
+        Gson gson = new Gson();
+        System.out.println("isbn list=   "+l);
+        String json = gson.toJson(l);
+        return json;
     }
 }

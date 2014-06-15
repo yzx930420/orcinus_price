@@ -1,5 +1,6 @@
 package cn.edu.fjnu.orcinusprice.lucene;
 
+import cn.edu.fjnu.orcinusprice.Setting;
 import cn.edu.fjnu.orcinusprice.model.BookIndex;
 import cn.edu.fjnu.orcinusprice.utils.MysqlHelper;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -26,7 +27,7 @@ import java.util.List;
 public class LuceneHelper {
     private static IndexReader reader = null;
     private static Directory dir = null;
-    private static String path = "/home/frank93/Temp/orcinus_price_index";
+    private static String path = Setting.INDEX_PATH;
     private static MysqlHelper mysqlHelper = null;
     private static final int QueryNum = 100;
 
@@ -100,11 +101,14 @@ public class LuceneHelper {
 
     }
 
-    public List<String> search(String key, String value, int num) {
+    public List<String> search(String key, String value) {
         IndexSearcher searcher = null;
         searcher = new IndexSearcher(getReader());
-        if (searcher == null)
+        int num = getReader().maxDoc();
+        if (searcher == null) {
+            System.out.println("searcher is null!");
             return null;
+        }
         TermQuery query = new TermQuery(new Term(key, value));
         List<String> isbnList = new ArrayList<String>();
         try {
