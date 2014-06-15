@@ -31,10 +31,11 @@ public class Main {
         server = new Server();
         server.runServer();
     }
+
     private static void update() {
-                    LuceneHelper lh = new LuceneHelper();
-                    System.out.println("run updateIndex...");
-                    lh.UpdateIndex();
-                    System.out.println("Index has been updated!");
+        LuceneHelper lh = new LuceneHelper();
+        System.out.println("run updateIndex...");
+        lh.UpdateIndex();
+        System.out.println("Index has been updated!");
     }
 }
