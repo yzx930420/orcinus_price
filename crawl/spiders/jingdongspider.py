@@ -35,10 +35,10 @@ class JingdongSpider(Spider):
         selector = Selector(response)
         sites = selector.xpath('//*[@id="booksort"]/div[2]/dl/dd/em/a/@href').extract()
         for site in sites:
-            print site
             request = Request(url=site,
                               callback=self.view_page)
-            yield request
+            if request.url.startswith("http://list.jd.com/1713-3287-3797.html"):
+                yield request
 
     def view_page(self, response):  # 翻页
         selector = Selector(response)
@@ -47,7 +47,7 @@ class JingdongSpider(Spider):
             request = Request(url=site,
                               callback=self.catch_item)
             yield request
-        sites = selector.xpath('//div[@class="pagin pagin-m"]/a/@href').extract()
+        sites = selector.xpath('//div[@class="pagin pagin-m"]/a[@class="next"]/@href').extract()
         if sites:
             request = Request(url=sites[0],
                               callback=self.view_page)

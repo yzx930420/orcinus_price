@@ -1,0 +1,3 @@
+#!/usr/bin/python
+from web.MainHandler import main
+main()

@@ -8,10 +8,6 @@ import common.dao.settings
 from common.model.book import Book
 from common.model.book_goods_info import BookGoodsInfo as GoodsPO
 from common.model.book_info import BookInfo as  BookPO
-import sys
-#reload(sys);
-# using exec to set the encoding, to avoid error in IDE.
-#exec("sys.setdefaultencoding('utf-8')");
 
 
 class BookDAO():
@@ -29,42 +25,90 @@ class BookDAO():
         #把Book转化为两个PO实体
         #steop1 : book->goods
         goods = GoodsPO()
-        goods.isbn = book.isbn
-        goods.instant_price = book.instant_price
-        goods.link = book.link
-        goods.platform = book.platform
-        goods.crawling_time= book.crawling_time
+        goods_attrs = ['isbn', 'instant_price', 'link', 'platform', 'crawling_time']
+        for attr in goods_attrs:
+            goods[attr] = book[attr]
 
         #step2 : book->bookpo
+        bookpo_attrs = ['description', 'author', 'isbn', 'press', 'title','price','cover']
         bookpo = BookPO()
-        bookpo.description = book.description
-        bookpo.author = book.author
-        bookpo.isbn = book.isbn
-        bookpo.press = book.press
-        bookpo.title = book.title
-        bookpo.price = book.price
-        bookpo.cover = book.cover
+        for attr in bookpo_attrs:
+            bookpo[attr] = book[attr]
+
         return (goods, bookpo)
 
     def __parse_po_to_book(self, bookpo, goodspo):
         book = Book()
 
-        # bookpo->book
-        book.isbn = bookpo.isbn
-        book.price = bookpo.price
-        book.title = bookpo.title
-        book.author = bookpo.author
-        book.press = bookpo.press
-        book.description = bookpo.description
-        book.cover = bookpo.cover
-
         #goodspo->book
-        book.link = goodspo.link
-        book.platform = goodspo.platform
-        book.instant_price = goodspo.instant_price
-        book.crawling_time = goodspo.crawling_time
+        goods_attrs = ['isbn', 'instant_price', 'link', 'platform', 'crawling_time']
+        for attr in goods_attrs:
+            book[attr] = goodspo[attr]
+
+        # bookpo->book
+        bookpo_attrs = ['description', 'author', 'isbn', 'press', 'title','price','cover']
+        for attr in bookpo_attrs:
+            book[attr] = bookpo[attr]
 
         return book
+
+    def quey_by_isbn(self, isbn):
+        """
+            通过isbn查找图书，返回图书的信息，结果唯一
+            @parms isbn 要查找书的ISBN
+            @return BookInfo类型
+        """
+        attrs = ["isbn", "price", "title", "author", "press","description","cover" ]
+        quey_sql = 'select isbn, price, title, author, press, description, cover ' \
+                   'from book_info ' \
+                   'where isbn = %s'%isbn
+        self.cursor.execute(quey_sql)
+        bookInfos = self.cursor.fetchall()[0]
+        result = BookPO()
+        i = 0
+        for item in bookInfos:
+            result[attrs[i]] = item
+            i = i + 1
+        return result
+
+
+    def quey_by_isbn_for_goods(self, isbn):
+        """
+            查找每个平台最新的,目前只实现查找出所有的isbn相同的goods
+        """
+        attrs = ["isbn","link","platform","instant_price", "crawling_time"]
+        quey_sql = 'select isbn, link, platform, instant_price, crawling_time ' \
+                   'from book_goods_info ' \
+                   'where isbn = %s order by crawling_time desc'%isbn
+        self.cursor.execute(quey_sql)
+        result_list = []
+        bookInfos_list = self.cursor.fetchall()
+        for bookInfos in bookInfos_list:
+            result = GoodsPO()
+            i = 0
+            for item in bookInfos:
+                result[attrs[i]] = item
+                i = i + 1
+            result_list.append(result)
+        print len(result_list)
+        return result_list
+
+    def quey_by_isbn_with_time(self, isbn, begin, end):
+        attrs = ["isbn","link","platform","instant_price", "crawling_time"]
+        quey_sql = 'select isbn, link, platform, instant_price, crawling_time ' \
+                   'from book_info ' \
+                   'where isbn = %s and crawling_time between %s and %s'%(isbn, begin, end)
+        self.cursor.execute(quey_sql)
+        result_list = []
+        bookInfos_list = self.cursor.fetchall()
+        for bookInfos in bookInfos_list:
+            result = GoodsPO()
+            i = 0
+            for item in bookInfos:
+                result[attrs[i]] = item
+                i = i + 1
+            result_list.append(result)
+        return result_list
 
     # 插入book
     def insert(self, book):
@@ -239,7 +283,20 @@ def test_insert_chinese():
     book.isbn = 'saxsax'
     book_dao.insert(book)
 
+def test_query_by_isbn():
+    a = book_dao.quey_by_isbn("9787509611876")
+    print a.isbn
+    print a.author
+    print a.title
+
+def test_query_by_isbn_for_goods():
+
+    goodses = book_dao.quey_by_isbn_for_goods("9787516301166")
+    for a in goodses:
+        print a.isbn
+        print a.platform
+        print a.instant_price
+
 if __name__=="__main__":
-    test_insert_chinese()
-    print "okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-    test_query()
+    #test_query_by_isbn()
+    test_query_by_isbn_for_goods()

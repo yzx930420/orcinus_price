@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>最强买手</title>
+
     <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="/static/css/template.css" rel="stylesheet" type="text/css"/>
     <link href="/static/css/bookdetail.css" rel="stylesheet" type="text/css"/>
@@ -12,6 +13,7 @@
     <script src="/static/js/exporting.js" type="text/javascript"></script>
     <script src="/static/js/template.js" type="text/javascript"></script>
     <script src="/static/js/bookdetail.js" type="text/javascript"></script>
+
 </head>
 <body>
 <div class="top_bar">
@@ -72,7 +74,7 @@
             <tr>
                 <!--<td>页数: 197</td>-->
                 <td>定价: {{ book.price }}元</td>
-                <td>ISBN: {{ book.isbn }}</td>
+                <td id="isbn" isbn="{{ book.isbn }}" >ISBN: {{ book.isbn }}</td>
             </tr>
             <!--<tr>-->
                 <!--<td>装帧: 平装</td>-->
@@ -87,44 +89,23 @@
     <div class="attr_panel">
         <div class="attr_title comment_padding">产品评论</div>
         <div class="comments">
+            {% for comment in comments %}
             <div class="comment">
-                <img src="/static/image/dangdang.png">
+                <img src="/static/image/douban.png">
 
                 <div class="content">
-                    <div class="comment_author">代码兔&nbsp;&nbsp;来自当当网的评论</div>
+                    <div class="comment_author">{{ comment.author }}&nbsp;&nbsp;来自豆瓣的评论</div>
                     <div class="comment_body">
-                        必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！
+                        {{ comment.detail }}
                     </div>
-                    <div class="comment_date">2014年04月17日</div>
+                    <div class="comment_date">{{ comment.comment_time }}</div>
                 </div>
                 <div class="fixclear"></div>
             </div>
-            <div class="comment">
-                <img src="/static/image/dangdang.png">
-
-                <div class="content">
-                    <div class="comment_author">代码兔&nbsp;&nbsp;来自当当网的评论</div>
-                    <div class="comment_body">
-                        必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！
-                    </div>
-                    <div class="comment_date">2014年04月17日</div>
-                </div>
-                <div class="fixclear"></div>
-            </div>
-            <div class="comment">
-                <img src="/static/image/dangdang.png">
-
-                <div class="content">
-                    <div class="comment_author">代码兔&nbsp;&nbsp;来自当当网的评论</div>
-                    <div class="comment_body">
-                        必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！必须差评啊！我还以为是菜谱呢！！！
-                    </div>
-                    <div class="comment_date">2014年04月17日</div>
-                </div>
-                <div class="fixclear"></div>
-            </div>
+            {% end %}
         </div>
     </div>
 </div>
+
 </body>
 </html>

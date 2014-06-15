@@ -2,8 +2,6 @@
 __author__ = 'Dazdingo'
 
 from scrapy.exceptions import DropItem
-from crawl.items import BookItem
-from crawl.items import DetailItem
 from common.dao.book_dao import book_dao
 from common.model.book import Book
 from common.model.comment import Comment
@@ -11,9 +9,14 @@ from common.dao.comment_dao import comment_dao
 
 
 class BookPipeline(object):
-    def process_item(self, item, spider):
-        if not item['ISBN']:            # if item  do not have isbn then drop it
-            raise DropItem('Duplicate item found: %s' % item)
+
+    @staticmethod
+    def process_item(item, spider):
+        if item['platform'] == -1:      # not a book, drop it
+            return item
+        if not item['ISBN']:            # not a book, drop it
+            item['platform'] = -1
+            return item
         if item['platform'] == 3:       # if item is comments return to detail_pipeline
             return item
 
@@ -38,33 +41,26 @@ class BookPipeline(object):
         #new_book.time = ?
         new_book.platform = item['platform']
         book_dao.insert(new_book)
+        return item
 
 
 class DetailPipeline(object):
-    """
-    def __init__(self):
-        self.ids_seen = set()
-    """
 
-    def process_item(self, item, spider):
+    @staticmethod
+    def process_item(item, spider):
 
         if item['platform'] != 3:
             return item
 
         if not item['ISBN']:
             raise DropItem('item no isbn')
-        """
-        if item['ISBN'] in self.ids_seen:
-            raise DropItem('Duplicate item found: %s' % item['ISBN'])
-        else:
-        """
 
         new_comment = Comment()
 
         if item['ISBN']:
             new_comment['isbn'] = item['ISBN']
         if item['author']:
-            new_comment['author'] = item['author'][0]
+            new_comment['author'] = item['author']
         if item['detail']:
             new_comment['detail'] = item['detail'][0]
         if item['comment_time']:
