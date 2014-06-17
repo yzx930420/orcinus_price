@@ -40,24 +40,12 @@ class BookService(object):
             return 1
 
     def quey_by_isbn(self,isbn):
-        result = self.__query_by_pair_any({"isbn":isbn})
-        return result[0] if result else None
+        book = book_dao.quey_by_isbn(isbn)
+        book.goods_list = book_dao.quey_by_isbn_for_goods(isbn)
+        return book
 
     def quey_by_isbn_with_time(self, start, end):
         pass
-
-    def query_by_pair_any_page(self, pair, page):
-        """
-           @pair :关键字
-           @page: 页数
-        """
-        return self.__query_by_pair_any(pair)[page * 10 : page * 10 + 10]
-
-    def query_by_pair_size(self, pair):
-        """
-            返回有多少页
-        """
-        return len(self.__query_by_pair_any(pair));
 
 
     def __query_by_pair_perfectly(self, pair):

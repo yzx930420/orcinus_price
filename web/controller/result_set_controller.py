@@ -11,15 +11,24 @@ class ResultSetController(RequestHandler):
     def initialize(self):
         self.service = BookService()
 
-    def get(self):
-        action = self.get_argument("action")
+    @staticmethod
+    def __handler_action(action):
         if not action in ("any","title", "author", "isbn", "press"):
-            action = any
+            return 'title'
+        else:
+            return action
+
+    def get(self):
+        #处理参数action
+        action = self.get_argument("action")
         keyword = self.get_argument("keyword")
         index = int(self.get_argument("index",default=1))
-        result = self.service.quey_by_keyword(action,keyword,(index  - 1) * ITEM_PER_PAGE,ITEM_PER_PAGE)
-        item = result[0].goods_list if result else []
+        action = self.__handler_action(action)
 
+        #查询
+        result = self.service.quey_by_keyword(action,keyword,(index  - 1) * ITEM_PER_PAGE,ITEM_PER_PAGE)
+
+        #扩展模板
         if result == None or len(result) == 0:
             self.render(os.path.join(template_dir, "notfind.html"), sentence="哈哈，书没找到")
         else:
