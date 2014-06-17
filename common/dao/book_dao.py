@@ -63,7 +63,10 @@ class BookDAO():
                    'from book_info ' \
                    'where isbn = %s'%isbn
         self.cursor.execute(quey_sql)
-        bookInfos = self.cursor.fetchall()[0]
+        list = self.cursor.fetchall()
+        if not list:
+            return None
+        bookInfos = list[0]
         result = BookPO()
         i = 0
         for item in bookInfos:

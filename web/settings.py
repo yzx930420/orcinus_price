@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'nothi'
 
 
@@ -15,3 +16,6 @@ settings = {
     "xsrf_cookies": False,
 
 }
+
+#分页
+ITEM_PER_PAGE = 15

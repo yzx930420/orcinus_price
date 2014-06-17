@@ -12,6 +12,7 @@ class LucenceDAO:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect( (settings.LUCENCE_URL, settings.LUCENCE_PORT) )
         sock.sendall(data + '\n' + "end\n")
+        sock.shutdown(1)
         recv_data = ""
         while True:
             try:
