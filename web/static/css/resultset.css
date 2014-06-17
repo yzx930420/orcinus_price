@@ -1,10 +1,12 @@
 .result_list {
     margin-top: 10px;
-    padding-left: 70px;
+    padding-left: 170px;
 }
 
 .result_item {
+    width: 900px;
     margin-bottom: 20px;
+    border-bottom: 1px dotted #ddd;
 }
 
 .cover {
