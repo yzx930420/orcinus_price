@@ -67,7 +67,7 @@
 
   $("div.result")
   .click(function() {
-    window.open($("div.book_title a", this).attr("href"));
+    window.open($("div.book_title a", this).attr("href"), "_self");
   })
   .mouseover(function() {
     $(this).css("background", "#f7f7f7");
