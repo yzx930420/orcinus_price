@@ -1,19 +1,77 @@
-.result_list {
-    margin-top: 10px;
-    padding-left: 170px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.result_item {
-    width: 900px;
-    margin-bottom: 20px;
-    border-bottom: 1px dotted #ddd;
+body {
+  background-color: #fff;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  color: #383838;
+  display: block;
+  width: 100%;
+  height: 74px;
+  padding: 7px 0 7px 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+
+.logo {
+  float: left;
+  width: 94px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  margin-left: 17px;
+}
+
+#search_bar {
+  margin: auto;
+  margin-left: 94px;
+  width: 633px;
+  height: 60px;
+  padding: 7px 0 7px 0;
+}
+
+#search-keyword {
+  background-color: #f7f7f7;
+  width: 633px;
+  height: 46px;
+}
+
+#search-button {
+  width: 46px;
+  height: 46px;
+}
+
+.results {
+  width: 634px;
+  margin-top: 10px;
+  padding-left: 94px;
+}
+
+.result {
+  width: 900px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .cover {
-    width: 150px;
-    height: 150px;
-    border: 2px solid #e0e0e0;
-    float: left;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  float: left;
 }
 
 .cover img {
@@ -21,11 +79,11 @@
     height: 100%;
 }
 
-.book_info {
+.result_body {
     margin-left: 170px;
-    width: 600px;
-    height: 160px;
-    padding-top: 5px;
+    width: 634px;
+    height: 150px;
+    padding: 0;
 }
 
 .book_info_row {
@@ -46,10 +104,11 @@
 
 .book_title a:hover {
     color: #196ea9;
+    text-decoration: none;
 }
 
 .book_price {
-    color: #2dcc70;
+    color: #c9481c;
     font-size: 25px;
     font-weight: 700;
 }

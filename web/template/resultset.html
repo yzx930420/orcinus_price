@@ -1,67 +1,81 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="zh-cn">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>最强买手</title>
-    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="/static/css/template.css" rel="stylesheet" type="text/css"/>
-    <link href="/static/css/resultset.css" rel="stylesheet" type="text/css"/>
-    <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="/static/js/jquery.pager.js" type="text/javascript"></script>
-    <script src="/static/js/bootstrap.js" type="text/javascript"></script>
-    <script src="/static/js/template.js" type="text/javascript"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ keyword }}@BestBuyer</title>
+  <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+  <link href="/static/css/template.css" rel="stylesheet" type="text/css"/>
+  <link href="/static/css/resultset.css" rel="stylesheet" type="text/css"/>
+
 </head>
 <body>
-<div class="top_bar">
-    <img src="/static/img/title.png" alt="请输入 书名、作者、ISBN" class="title"/>
-
-    <form action="/resultset" method="get">
-        <div class="input-group">
-            <div class="input-group-btn">
-                <button id="search_type" type="button" class="btn btn-default dropdown-toggle"
-                        data-toggle="dropdown">全部<span
-                        class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a class="search_option" href="#" action="isbn">ISBN</a></li>
-                    <li><a class="search_option" href="#" action="title">书名</a></li>
-                    <li><a class="search_option" href="#" action="author">作者</a></li>
-                    <li><a class="search_option" href="#" action="any">全部</a></li>
-                </ul>
-            </div>
-            <input id="key_word" type="text" name="keyword" class="form-control">
-            <input id="action" type="hidden" name="action" value="any">
-            <input type="submit" id="search_btn" value=""/>
-        </div>
-    </form>
-</div>
-<div class="result_list">
-    {% for result_item in items %}
-    <div class="result_item">
-        <div class="cover">
-            <!--<img src="/static/image/cover.jpg" alt="封面">-->
-            <img src="{{ result_item.cover }}" alt="封面">
-        </div>
-        <div class="book_info">
-            <div class="book_title book_info_row">
-                <a href="/bookdetail/{{ result_item.isbn }}" title="{{ result_item.title }}"> {{ result_item.title }}</a>
-            </div>
-            <div class="book_price book_info_row">￥ {{ result_item.price }} </div>
-            <div class="book_prop book_info_row">作&nbsp;&nbsp;者:&nbsp;&nbsp;{{ result_item.author }}</div>
-            <div class="book_prop book_info_row">出版社:&nbsp;&nbsp;{{ result_item.press }}</div>
-        </div>
+<div class="container">
+  <div class="header">
+    <div class="logo">
+      <img src="/static/img/logo_no_brand.png" alt="BestBuyer Logo"/>
     </div>
-    {% end %}
-    <div id="pager"></div>
+    <div id="search_bar">
+      <form action="/resultset" method="get">
+        <div class="input-group">
+          <input id="search-keyword" type="text" class="form-control" name="keyword" placeholder="书名、作者、ISBN">
+          <input id="action" type="hidden" name="action" value="any">
+            <span class="input-group-btn">
+              <button id="search-button" class="btn btn-default" type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="results">
+      {% for result_item in items %}
+      <div class="result">
+        <div class="cover">
+          <img src="{{ result_item.cover }}" alt="cover">
+        </div>
+        <div class="result_body">
+          <div class="book_title book_info_row">
+            <a href="/bookdetail/{{ result_item.isbn }}" onclick="return false;" title="{{ result_item.title }}"> {{ result_item.title }}</a>
+          </div>
+          <div class="book_price book_info_row">￥ {{ result_item.price }}</div>
+          <div class="book_prop book_info_row">作&nbsp;&nbsp;&nbsp;者:&nbsp;&nbsp;{{ result_item.author }}</div>
+          <div class="book_prop book_info_row">出版社:&nbsp;&nbsp;{{ result_item.press }}</div>
+        </div>
+      </div>
+      {% end %}
+      <div id="pager"></div>
+    </div>
+  </div>
 </div>
-<script type="text/javascript">
-    pageClick = function (pageclickednumber) {
-        window.location.href = "/resultset?keyword={{ keyword }}&action={{ action }}&index=" + pageclickednumber ;
-    }
-    $("#pager").pager({
-        pagenumber: {{ index }},
-        pagecount:{{ pagecount }},
-        buttonClickCallback:pageClick
-    });
-</script>
+
+  <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/static/js/jquery.pager.js" type="text/javascript"></script>
+  <script src="/static/js/bootstrap.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  pageClick = function (pageclickednumber) {
+    window.location.href = "/resultset?keyword={{ keyword }}&action={{ action }}&index=" + pageclickednumber ;
+  }
+  $("#pager").pager({
+    pagenumber: {{ index }},
+    pagecount:{{ pagecount }},
+    buttonClickCallback:pageClick
+  });
+
+  $("div.result")
+  .click(function() {
+    window.open($("div.book_title a", this).attr("href"));
+  })
+  .mouseover(function() {
+    $(this).css("background", "#f7f7f7");
+    $(this).css("cursor", "pointer");
+  })
+  .mouseout(function() {
+    $(this).css("background", "#fff");
+  });
+  </script>
 </body>
 </html>
