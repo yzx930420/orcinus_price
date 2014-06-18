@@ -1,36 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+  background-color: #f7f7f7;
 }
 
-body {
-    background-color: #fcfcfc;
-    min-width: 1200px;
-    font-family: '微软雅黑';
+.container {
+  padding-top: 7em;
+  padding-bottom: 2em;
+  margin: auto;
+}
+
+#logo {
+  margin: auto;
+  width: 250px;
+  height: 200px;
+  margin-bottom: 40px;
 }
 
 #search_bar {
-    margin-top: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 450px;
+  margin: auto;
+  width: 633px;
+  height: 46px;
 }
 
-#key_word_area {
-    width: 100%;
-    margin-top: 20px;
+#search-keyword {
+  margin: auto;
+  width: 633px;
+  height: 46px;
 }
 
-.search_title {
-    margin-left: 29px;
-}
-
-#search_btn {
-    position: relative;
-    top: 20px;
-    left: 192px;
-    width: 70px;
-    height: 68px;
-    background: transparent url("/static/image/search.png") 0 0 no-repeat;
-    border-color: transparent;
+#search-button {
+  width: 46px;
+  height: 46px;
 }
