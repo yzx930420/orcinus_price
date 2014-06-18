@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'nothi'
 
-LOCAL_HOST = 1
+LOCAL_HOST = 0
 
 if LOCAL_HOST == 1:
     MYSQL_URL = "127.0.0.1"

@@ -6,7 +6,6 @@ from tornado.web import  RequestHandler
 from web.service.book_service import BookService
 from web.settings import *
 
-ITEM_PER_PAGE = 15
 class ResultSetController(RequestHandler):
     def initialize(self):
         self.service = BookService()
@@ -35,6 +34,7 @@ class ResultSetController(RequestHandler):
             self.render(os.path.join(template_dir, "resultset.html"),
                         keyword=keyword, action=action,
                         index=index,items=result, pagecount=self.service.get_page_size(action,keyword))
+        print self.service.get_page_size(action,keyword)
 
     def post(self):
         self.get()
