@@ -16,7 +16,7 @@ class DoubanSpider(Spider):
 
     info_path = '//div[@class="indent subject-info"]/div'
     ISBN_path = re.compile(u'isbn.</span>.(.*?)<br>')
-    author_path = re.compile(u'作者:</span>(.*?)<br>')
+    author_path = '//span[@property"v:reviewer"]/@text()'
     comment_time_path = '//span[@class="mn"]/@content'
     detail_path = '//span[@property="v:description"]/text()'
 
@@ -28,7 +28,7 @@ class DoubanSpider(Spider):
         item['url'] = response.url
         info_div = selector.xpath(self.info_path).extract()
         item['ISBN'] = self.ISBN_path.findall(info_div[0])[0].replace(u' ', '')
-        item['author'] = self.author_path.findall(info_div[0])[0].replace(u' ', '')
+        item['author'] = selector.xpath(self.author_path).extract()
         item['comment_time'] = selector.xpath(self.comment_time_path).extract()
         item['detail'] = selector.xpath(self.detail_path).extract()
         item['platform'] = self.platform_code
@@ -40,8 +40,7 @@ class DoubanSpider(Spider):
         for site in sites:
             request = Request(url=self.replace_url(site),
                               callback=self.view_page)
-            if request.url.startswith("http://book.douban.com/tag/%E7%BC%96%E7%A8%8B"):
-                yield request
+            yield request
 
     def view_page(self, response):  # 翻页
         selector = Selector(response)
@@ -63,7 +62,6 @@ class DoubanSpider(Spider):
             request = Request(url=site,
                               callback=self.catch_item)
             yield request
-
 
     def replace_url(self, a_string):
         return a_string.replace(u'.', self.url_head + '/tag')
