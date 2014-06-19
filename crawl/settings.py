@@ -18,7 +18,7 @@ USER_AGENT = ['Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Geck
               'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)',
               'Mozilla/4.0 (compatible; MSIE 5.0; Windows NT)',
               'Mozilla/5.0 (Windows; U; Windows NT 5.1) Gecko/20070309 Firefox/2.0.0.3']
-COOKIE_ENABLED = True
+COOKIE_ENABLED = False
 #LOG_FILE = 'C:/Users/Administrator/Source/Repos/orcinus_price/crawl/error.txt'
 LOG_FILE = 'log/error.txt'
 LOG_ENABLED = False
