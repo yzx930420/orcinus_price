@@ -1,40 +1,96 @@
-.main {
-    background-color: #e7e6e6;
-    height: 300px;
-    margin-top: 100px;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  color: #383838;
+  display: block;
+  width: 100%;
+  height: 74px;
+  padding: 7px 0 7px 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+
+.logo {
+  float: left;
+  width: 94px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  margin-left: 17px;
+}
+
+#search_bar {
+  margin: auto;
+  margin-left: 94px;
+  width: 633px;
+  height: 60px;
+  padding: 7px 0 7px 0;
+}
+
+#search-keyword {
+  background-color: #f7f7f7;
+  width: 633px;
+  height: 46px;
+}
+
+#search-button {
+  width: 46px;
+  height: 46px;
 }
 
 .content {
-    width: 700px;
-    height: 100%;
-    margin: 0 auto;
+  background-color: #e7e6e6;
+  height: 300px;
+  margin-top: 100px;
+  padding: 30px;
 }
 
-.content img {
-    height: 100%;
-    float: left;
+.main {
+  width: 700px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.main img {
+  height: 100%;
+  float: left;
 }
 
 .desc {
-    margin-left: 280px;
-    position: relative;
+  margin-left: 280px;
+  position: relative;
 }
 
 .desc h1 {
-    font-family: '微软雅黑';
-    position: relative;
-    top:100px;
-    color: #2dcc70;
-    font-size: 30px;
+  font-family: '微软雅黑';
+  position: relative;
+  top:100px;
+  color: #c9481c;
+  font-size: 30px;
 }
 
 .desc a {
-    display: block;
-    position: absolute;
-    top:200px;
-    left: 250px;
+  display: block;
+  position: absolute;
+  top:200px;
+  left: 250px;
 }
 
 .desc a img {
-    width: 120px;
+  width: 120px;
 }
