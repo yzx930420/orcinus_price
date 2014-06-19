@@ -21,8 +21,13 @@ class ResultSetController(RequestHandler):
         #处理参数action
         action = self.get_argument("action")
         keyword = self.get_argument("keyword")
-        index = int(self.get_argument("index",default=1))
+        index = self.get_argument("index",default=1)
         action = self.__handler_action(action)
+
+        try:
+            index = int(index)
+        except Exception, e:
+            index = 1
 
         #查询
         result = self.service.quey_by_keyword(action,keyword,(index  - 1) * ITEM_PER_PAGE,ITEM_PER_PAGE)
