@@ -1,33 +1,29 @@
-body {
-  background-color: #f7f7f7;
-}
+body { background-color: #f7f7f7; }
 
 .container {
   padding-top: 7em;
   padding-bottom: 2em;
-  margin: auto;
 }
 
-#logo {
+.homepage-logo {
   margin: auto;
+  margin-bottom: 40px;
   width: 250px;
   height: 200px;
-  margin-bottom: 40px;
 }
 
-#search_bar {
+.homepage-search-bar {
   margin: auto;
   width: 633px;
   height: 46px;
 }
 
-#search-keyword {
-  margin: auto;
+.homepage-search-keyword {
   width: 633px;
   height: 46px;
 }
 
-#search-button {
+.homepage-search-button {
   width: 46px;
   height: 46px;
 }
