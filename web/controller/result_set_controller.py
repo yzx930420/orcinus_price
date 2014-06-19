@@ -30,7 +30,7 @@ class ResultSetController(RequestHandler):
             index = 1
 
         #查询
-        result = self.service.quey_by_keyword(action,keyword,(index  - 1) * ITEM_PER_PAGE,ITEM_PER_PAGE)
+        result = self.service.query_by_keyword(action,keyword,(index  - 1) * ITEM_PER_PAGE,ITEM_PER_PAGE)
 
         #扩展模板
         if result == None or len(result) == 0:

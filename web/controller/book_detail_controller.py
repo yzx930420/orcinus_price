@@ -23,7 +23,7 @@ class BookDetailController(RequestHandler):
         return platfom_name[platform]
 
     def get(self, isbn):
-        result = self.service.quey_by_isbn(isbn)
+        result = self.service.query_by_isbn(isbn)
 
         if  result:
             for goods_info in result.goods_list:

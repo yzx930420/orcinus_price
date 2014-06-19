@@ -32,17 +32,17 @@ class BookDAO():
         self.cursor.execute("set names utf8")
         self.conn.commit();
 
-    def quey_by_isbn(self, isbn):
+    def query_by_isbn(self, isbn):
         """
             通过isbn查找图书，返回图书的信息，结果唯一
             @parms isbn 要查找书的ISBN
             @return BookInfo类型
         """
         attrs = ["isbn", "price", "title", "author", "press","description","cover" ]
-        quey_sql = 'select isbn, price, title, author, press, description, cover ' \
+        query_sql = 'select isbn, price, title, author, press, description, cover ' \
                    'from book_info ' \
                    'where isbn = "%s" '%isbn
-        self.cursor.execute(quey_sql)
+        self.cursor.execute(query_sql)
         list = self.cursor.fetchall()
         if not list:
             return None
@@ -55,7 +55,7 @@ class BookDAO():
         return result
 
 
-    def quey_by_isbn_for_goods(self, isbn):
+    def query_by_isbn_for_goods(self, isbn):
         """
             查找每个平台最新的,相同平台的只有最新的
         """
@@ -77,7 +77,7 @@ class BookDAO():
         result_list = all.values()
         return result_list
 
-    def quey_by_isbn_with_time(self, isbn, begin, end):
+    def query_by_isbn_with_time(self, isbn, begin, end):
         attrs = ["isbn","link","platform","instant_price", "crawling_time"]
         quey_sql = 'select isbn, link, platform, instant_price, crawling_time ' \
                    'from book_info ' \
@@ -199,14 +199,14 @@ def test_insert_chinese():
     book_dao.insert(book)
 
 def test_query_by_isbn():
-    a = book_dao.quey_by_isbn("9787509611876")
+    a = book_dao.query_by_isbn("9787509611876")
     print a.isbn
     print a.author
     print a.title
 
 def test_query_by_isbn_for_goods():
 
-    goodses = book_dao.quey_by_isbn_for_goods("9787516301166")
+    goodses = book_dao.query_by_isbn_for_goods("9787516301166")
     for a in goodses:
         print a.isbn
         print a.platform

@@ -49,7 +49,7 @@ class BookDetailController(RequestHandler):
         self.service = BookService()
 
     def get(self,isbn):
-        obj = self.service.quey_by_isbn(isbn)
+        obj = self.service.query_by_isbn(isbn)
         if not obj:
             self.write("")
         else:

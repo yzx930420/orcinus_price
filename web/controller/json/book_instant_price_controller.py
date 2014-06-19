@@ -26,7 +26,7 @@ class BookInstantPriceController(RequestHandler):
               {"name":"京东商城","data":[{"date":"2012/12/14", "price":30}, {"date":"2013/12/18", "price":40}]}
         ]
         """
-        bookinfo = self.service.quey_by_isbn(isbn)
+        bookinfo = self.service.query_by_isbn(isbn)
         a = []
         for goods in bookinfo.goods_list:
             item = {

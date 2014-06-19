@@ -28,7 +28,7 @@ class ResultSetController(RequestHandler):
     def get(self):
         action = self.get_argument("action", default="any")
         keyword = self.get_argument("keyword")
-        books = self.service.quey_by_keyword(action, keyword, 1, settings.MAX_SIZE_EACH_SIZE)
+        books = self.service.query_by_keyword(action, keyword, 1, settings.MAX_SIZE_EACH_SIZE)
         jsons = []
         for book in books:
             jsons.append(bookInfoToDict(book))

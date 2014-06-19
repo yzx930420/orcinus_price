@@ -9,7 +9,7 @@ from common.model.book_info import BookInfo
 from common.model.book_goods_info import BookGoodsInfo
 
 class BookService(object):
-    def quey_by_keyword(self, action,  keyword, index, size):
+    def query_by_keyword(self, action,  keyword, index, size):
         """
             通过关键字和关键字的类型查询
             @parms: action:查询的类型有四种，(title, isbn, author, any)
@@ -29,7 +29,7 @@ class BookService(object):
         #step 3: 获取book_info
         books = []
         for isbn in isbns:
-            book = book_dao.quey_by_isbn(isbn)
+            book = book_dao.query_by_isbn(isbn)
             if book:
                 books.append(book)
         return books
@@ -46,10 +46,10 @@ class BookService(object):
         page_count = (page_count + settings.ITEM_PER_PAGE - 1) /settings.ITEM_PER_PAGE
         return page_count
 
-    def quey_by_isbn(self,isbn):
-        book = book_dao.quey_by_isbn(isbn)
+    def query_by_isbn(self,isbn):
+        book = book_dao.query_by_isbn(isbn)
         if book:
-            book.goods_list = book_dao.quey_by_isbn_for_goods(isbn)
+            book.goods_list = book_dao.query_by_isbn_for_goods(isbn)
         return book
 
     def quey_by_isbn_with_time(self, start, end):
