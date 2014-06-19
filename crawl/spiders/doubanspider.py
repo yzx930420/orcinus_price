@@ -15,7 +15,7 @@ class DoubanSpider(Spider):
     url_head = "http://book.douban.com"
 
     info_path = '//div[@class="indent subject-info"]/div'
-    ISBN_path = re.compile(u'isbn.</span>.(\d*)<br>')
+    ISBN_path = re.compile(u'isbn.</span>.(.*?)<br>')
     author_path = re.compile(u'作者:</span>(.*?)<br>')
     comment_time_path = '//span[@class="mn"]/@content'
     detail_path = '//span[@property="v:description"]/text()'
