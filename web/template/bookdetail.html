@@ -1,111 +1,117 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>最强买手</title>
-
-    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-    <link href="/static/css/template.css" rel="stylesheet" type="text/css"/>
-    <link href="/static/css/bookdetail.css" rel="stylesheet" type="text/css"/>
-    <script src="/static/js/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script src="/static/js/bootstrap.js" type="text/javascript"></script>
-    <script src="/static/js/highcharts.js" type="text/javascript"></script>
-    <script src="/static/js/exporting.js" type="text/javascript"></script>
-    <script src="/static/js/template.js" type="text/javascript"></script>
-    <script src="/static/js/bookdetail.js" type="text/javascript"></script>
-
-</head>
-<body>
-<div class="top_bar">
-    <img src="/static/image/title.png" alt="请输入 书名、作者、ISBN" class="title"/>
-
-    <form action="/resultset" method="get">
-        <div class="input-group">
-            <div class="input-group-btn">
-                <button id="search_type" type="button" class="btn btn-default dropdown-toggle"
-                        data-toggle="dropdown">全部<span
-                        class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a class="search_option" href="#" action="isbn">ISBN</a></li>
-                    <li><a class="search_option" href="#" action="title">书名</a></li>
-                    <li><a class="search_option" href="#" action="author">作者</a></li>
-                    <li><a class="search_option" href="#" action="any">全部</a></li>
-                </ul>
-            </div>
-            <input id="key_word" type="text" name="keyword" class="form-control">
-            <input id="action" type="hidden" name="action" value="any">
-            <input type="submit" id="search_btn" value=""/>
+<html lang="zh-cn">
+  <head>
+    <title>{{ book.title }}@最强买手</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <link href="/static/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/static/css/template.css" rel="stylesheet"/>
+    <link href="/static/css/bookdetail.css" rel="stylesheet"/>
+  </head>
+  <body>
+    {% include "../template/navbar.html" %}
+    <div class="content">
+      <div class="book-info">
+        <div class="book-cover">
+          <img src="{{ book.cover }}" alt="封面">
         </div>
-    </form>
-</div>
-<div class="book_detail_info">
-    <h1 class="book_title">{{ book.title }}&nbsp;&nbsp;{{ book.author }}著</h1>
-
-    <div>
-        <div class="cover">
-            <img src="{{ book.cover }}" alt="封面">
-        </div>
-        <div class="price">
-            <table class="shops">
+        <div class="book-detail">
+          <h1 class="book_title" title="{{ book.title }}">
+            {{ book.title }}
+            <span class="glyphicon glyphicon-star-empty star"></span>
+            <br>
+            <small>{{ book.author }} 著</small>
+          </h1>
+          <div>
+            <div class="price">
+              <table class="shops">
                 {% for goods_info in book.goods_list %}
                 <tr>
-                    <td class="shop_name">{{ goods_info.platform}}:</td>
-                    <td class="shop_price">￥ {{goods_info.instant_price}}</td>
-                    <td class="shop_link"><a href="{{ goods_info.link}}"><img src="/static/image/buy.png"></a></td>
+                  <td class="shop_name">{{ goods_info.platform}}:</td>
+                  <td class="shop_price">￥{{goods_info.instant_price}}</td>
+                  <td class="shop_link"><a href="{{ goods_info.link}}"><span class="glyphicon glyphicon-share-alt"></span></a></td>
                 </tr>
                 {% end %}
-                <!--<tr>-->
-                    <!--<td class="shop_name">当当网:</td>-->
-                    <!--<td class="shop_price">￥ 60.20</td>-->
-                    <!--<td class="shop_link"><a href="#"><img src="/static/image/buy.png"></a></td>-->
-                <!--</tr>-->
-            </table>
+              </table>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="fixclear"></div>
-    <div class="attr_panel">
-        <div class="attr_title">产品参数</div>
-        <table class="book_attr">
+        <div class="fixclear"></div>
+        <div class="attr_panel">
+          <div class="attr_title"><h2>产品参数</h2></div>
+          <table class="book_attr">
             <tr>
-                <td>作者: {{ book.author }}</td>
-                <td>出版社: {{ book.press }}</td>
-                <!--<td>出版年月: 2010-9</td>-->
+              <td>作者: {{ book.author }}</td>
+              <td>出版社: {{ book.press }}</td>
             </tr>
             <tr>
-                <!--<td>页数: 197</td>-->
-                <td>定价: {{ book.price }}元</td>
-                <td id="isbn" isbn="{{ book.isbn }}" >ISBN: {{ book.isbn }}</td>
+              <td>定价: {{ book.price }}元</td>
+              <td id="isbn" isbn="{{ book.isbn }}">ISBN: {{ book.isbn }}</td>
             </tr>
-            <!--<tr>-->
-                <!--<td>装帧: 平装</td>-->
-                <!--<td>开本: 16开</td>-->
-            <!--</tr>-->
-        </table>
-    </div>
-    <div class="attr_panel">
-        <div class="attr_title trend_padding">价格走势</div>
-        <div id="price_trend"></div>
-    </div>
-    <div class="attr_panel">
-        <div class="attr_title comment_padding">产品评论</div>
-        <div class="comments">
+          </table>
+        </div>
+        <div class="attr_panel">
+          <div class="attr_title trend_padding"><h2>价格走势</h2></div>
+          <div id="price_trend"></div>
+        </div>
+        {% if len(comments) > 0 %}
+        <div class="attr_panel">
+          <div class="attr_title comment_padding"><h2>产品评论</h2></div>
+          <div class="comments">
             {% for comment in comments %}
             <div class="comment">
-                <img src="/static/image/douban.png">
-
-                <div class="content">
-                    <div class="comment_author">{{ comment.author }}&nbsp;&nbsp;来自豆瓣的评论</div>
-                    <div class="comment_body">
-                        {{ comment.detail }}
-                    </div>
-                    <div class="comment_date">{{ comment.comment_time }}</div>
-                </div>
-                <div class="fixclear"></div>
+              <img src="/static/img/douban.png">
+              <div class="comment-content">
+                <div class="comment_source">{{ comment.author }}&nbsp;&nbsp;来自豆瓣的评论&nbsp;&nbsp;{{ comment.comment_time }}</div>
+                <div class="comment_body">{{ comment.detail }}</div>
+              </div>
+              <div class="fixclear"></div>
             </div>
             {% end %}
+          </div>
         </div>
+        {% end %}
+      </div>
     </div>
-</div>
 
-</body>
+    <script src="/static/js/jquery-1.9.1.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/highcharts.js"></script>
+    <script src="/static/js/exporting.js"></script>
+    <script src="/static/js/bookdetail.js"></script>
+    <script type="text/javascript">
+    var clicked = false;
+    $(".star")
+    .click(function() {
+      clicked = true;
+    })
+    .mouseenter(function() {
+      if ($(this).hasClass("glyphicon-star-empty")) {
+        $(this).addClass("glyphicon-star");
+        $(this).removeClass("glyphicon-star-empty");
+      } else {
+        $(this).addClass("glyphicon-star-empty");
+        $(this).removeClass("glyphicon-star");
+      }
+    })
+    .mouseleave(function() {
+      if (clicked) {
+        clicked = false;
+      } else {
+        if ($(this).hasClass("glyphicon-star-empty")) {
+          $(this).addClass("glyphicon-star");
+          $(this).removeClass("glyphicon-star-empty");
+        } else {
+          $(this).addClass("glyphicon-star-empty");
+          $(this).removeClass("glyphicon-star");
+        }
+      }
+    });
+    </script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </body>
 </html>

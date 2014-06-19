@@ -1,17 +1,38 @@
-.result_list {
-    margin-top: 10px;
-    padding-left: 70px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.result_item {
-    margin-bottom: 20px;
+body {
+  background-color: #fff;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.results {
+  width: 634px;
+  margin-top: 10px;
+  padding-left: 94px;
+}
+
+.result {
+  width: 900px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .cover {
-    width: 150px;
-    height: 150px;
-    border: 2px solid #e0e0e0;
-    float: left;
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  float: left;
 }
 
 .cover img {
@@ -19,11 +40,11 @@
     height: 100%;
 }
 
-.book_info {
+.result_body {
     margin-left: 170px;
-    width: 600px;
-    height: 160px;
-    padding-top: 5px;
+    width: 634px;
+    height: 150px;
+    padding: 0;
 }
 
 .book_info_row {
@@ -44,10 +65,11 @@
 
 .book_title a:hover {
     color: #196ea9;
+    text-decoration: none;
 }
 
 .book_price {
-    color: #2dcc70;
+    color: #c9481c;
     font-size: 25px;
     font-weight: 700;
 }

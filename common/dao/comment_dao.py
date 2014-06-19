@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'nothi'
 
+import re
 import MySQLdb
 import common.dao.settings
 from common.model.comment import Comment
@@ -8,6 +9,18 @@ from common.model.comment import Comment
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
+
+def number_or_letter(a):
+    return re.match('^[0-9a-z]+$',a)
+
+def check_isbn(isbn):
+    if not isbn:
+        return ""
+    result = ""
+    for i in isbn:
+        if number_or_letter(i):
+            result = result + i
+    return result
 
 class CommentDAO:
     def __init__(self):
@@ -21,7 +34,6 @@ class CommentDAO:
         self.conn.commit();
 
     def insert(self, comment):
-        #print comment.isbn
         statement = 'insert into comment(isbn, author, comment_time, detail,link) ' \
                     'values(%s, %s, %s, %s, %s)'
         self.cursor.execute(statement, [comment.isbn,
@@ -33,6 +45,7 @@ class CommentDAO:
         self.conn.commit()
 
     def query(self, isbn, max_size):
+        isbn = check_isbn(isbn)
         sql = 'select isbn, author, comment_time, detail, link ' \
               'from comment ' \
               'where isbn="%s" limit %d; ' %(isbn,max_size)

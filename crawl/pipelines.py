@@ -55,7 +55,6 @@ class DetailPipeline(object):
             db_data['author'] = item['author']
         if item['detail']:
             db_data['detail'] = item['detail'][0]
-        if item['comment_time']:
-            db_data['comment_time'] = item['comment_time'][0]
-        db.booklist.insert(db_data)
+
+        db.comment.insert(db_data)
         return item

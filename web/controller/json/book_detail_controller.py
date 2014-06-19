@@ -2,6 +2,7 @@
 __author__ = 'nothi'
 
 import json
+from web import settings
 from tornado.web import RequestHandler
 from common.model.book_info import BookInfo
 from common.model.book_goods_info import BookGoodsInfo
@@ -13,13 +14,22 @@ def getJDPrice(book):
     for goods in  book.goods_list:
         if goods.platform == 1:
             return goods.instant_price
-    return 10
+    return -1
 
 def getDDPrice(book):
     for goods in  book.goods_list:
         if goods.platform == 0:
             return goods.instant_price
     return -1
+
+def filter(price,book):
+    if price != -1:
+        return price
+    price1 = getJDPrice(book)
+    price2 = getDDPrice(book)
+    price = price1 if price1 != -1 else price2
+    return price
+
 
 def bookInfoToDict(book):
     result = {
@@ -29,8 +39,8 @@ def bookInfoToDict(book):
         "isbn":book.isbn,
         "press":book.press,
         "coverUrl":book.cover,
-        "jdPrice":float( getJDPrice(book) ),
-        "ddPrice":float( getDDPrice(book) )
+        "jdPrice":float( filter(getJDPrice(book), book) ),
+        "ddPrice":float( filter(getDDPrice(book), book) )
     }
     return result
 
@@ -39,11 +49,11 @@ class BookDetailController(RequestHandler):
         self.service = BookService()
 
     def get(self,isbn):
-        obj = self.service.__query_by_pair_any({"isbn":isbn})
+        obj = self.service.query_by_isbn(isbn)
         if not obj:
             self.write("")
         else:
-            result = bookInfoToDict(obj[0]);
+            result = bookInfoToDict(obj);
             msg = json.dumps(result,ensure_ascii=False, encoding="utf-8")
             self.write(msg)
 

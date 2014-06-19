@@ -1,0 +1,71 @@
+<style>
+.navbar-brand { padding: 0 17px 0 17px; }
+
+.navbar-brand img {
+  height: 34px;
+  margin: 8px 17px 8px 17px;
+}
+
+.navbar-nav > li > a {
+  margin: 8px;
+  padding: 6px 0 6px 0;
+}
+
+.navbar-searchbar { width: 633px; }
+</style>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="/index"><img src="/static/img/brand.png" alt="BestBuyer brand"/><span>最强买手</span></a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <form class="navbar-form navbar-left" role="search" action="/resultset" method="get">
+      <div class="form-group navbar-searchbar">
+        <div class="input-group">
+          <input type="text" class="form-control" name="keyword" placeholder="书名、作者、ISBN">
+          <input id="action" type="hidden" name="action" value="any">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+    </form>
+    <!--ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="#" title="用户">
+          <span class="glyphicon glyphicon-user"></span>
+          吴永兴
+        </a>
+      </li>
+      <li>
+        <a href="#" title="购物车">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+          购物车
+        </a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="账户设置">
+          <span class="glyphicon glyphicon-cog"></span>
+          账户设置
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" title="注销">
+          <span class="glyphicon glyphicon-log-out"></span>
+          注销
+        </a>
+      </li>
+    </ul-->
+  </div>
+</nav>

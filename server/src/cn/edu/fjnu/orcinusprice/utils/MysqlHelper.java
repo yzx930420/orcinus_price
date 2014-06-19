@@ -1,5 +1,6 @@
 package cn.edu.fjnu.orcinusprice.utils;
 
+import cn.edu.fjnu.orcinusprice.Setting;
 import cn.edu.fjnu.orcinusprice.model.BookIndex;
 
 import java.sql.*;
@@ -13,10 +14,10 @@ import java.util.List;
 public class MysqlHelper {
 
     //private static final String URL = "jdbc:mysql://127.0.0.1:3306/test";
-    private static final String URL = "jdbc:mysql://121.199.50.11:3306/scrapy";
-    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private static String USER_NAME = "orca";
-    private static String PASSWORD = "orcamysql";
+    private static final String URL = Setting.MYSQL_URL;
+    private static final String JDBC_DRIVER = Setting.JDBC_DRIVER;
+    private static String USER_NAME = Setting.MYSQL_USER_NAME;
+    private static String PASSWORD = Setting.MYSQL_PASSWORD;
 
     static {
         try {
@@ -34,6 +35,27 @@ public class MysqlHelper {
             e.printStackTrace();
         }
         return conn;
+    }
+
+
+    public static List<BookIndex> queryByIsbn(String isbn) {
+        Connection conn = getConnection();
+
+        try {
+            List<BookIndex> bil = new ArrayList<BookIndex>();
+            PreparedStatement ps = conn.prepareStatement("select title from book_info where isbn = " + isbn);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                String title = rs.getString("title");
+                System.out.println("isbn: " + isbn + " title: " + title);
+            }
+            free(rs, ps, conn);
+            return bil;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
     }
 
     public static List<BookIndex> queryAll() {

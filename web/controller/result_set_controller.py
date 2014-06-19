@@ -6,26 +6,40 @@ from tornado.web import  RequestHandler
 from web.service.book_service import BookService
 from web.settings import *
 
-ITEM_PER_PAGE = 15
 class ResultSetController(RequestHandler):
     def initialize(self):
         self.service = BookService()
 
-    def get(self):
-        action = self.get_argument("action")
+    @staticmethod
+    def __handler_action(action):
         if not action in ("any","title", "author", "isbn", "press"):
-            action = any
-        keyword = self.get_argument("keyword")
-        index = int(self.get_argument("index",default=1))
-        result = self.service.quey_by_keyword(action,keyword,(index  - 1) * ITEM_PER_PAGE,ITEM_PER_PAGE)
-        item = result[0].goods_list if result else []
+            return 'title'
+        else:
+            return action
 
+    def get(self):
+        #处理参数action
+        action = self.get_argument("action")
+        keyword = self.get_argument("keyword")
+        index = self.get_argument("index",default=1)
+        action = self.__handler_action(action)
+
+        try:
+            index = int(index)
+        except Exception, e:
+            index = 1
+
+        #查询
+        result = self.service.query_by_keyword(action,keyword,(index  - 1) * ITEM_PER_PAGE,ITEM_PER_PAGE)
+
+        #扩展模板
         if result == None or len(result) == 0:
-            self.render(os.path.join(template_dir, "notfind.html"), sentence="哈哈，书没找到")
+            self.render(os.path.join(template_dir, "notfind.html"), keyword=keyword, sentence="哈哈，书没找到")
         else:
             self.render(os.path.join(template_dir, "resultset.html"),
                         keyword=keyword, action=action,
                         index=index,items=result, pagecount=self.service.get_page_size(action,keyword))
+        print self.service.get_page_size(action,keyword)
 
     def post(self):
         self.get()

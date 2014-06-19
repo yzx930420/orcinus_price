@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 __author__ = 'nothi'
 
 
@@ -15,3 +16,9 @@ settings = {
     "xsrf_cookies": False,
 
 }
+
+#分页
+ITEM_PER_PAGE = 10
+
+#手机端相关常量
+MAX_SIZE_EACH_SIZE = 30

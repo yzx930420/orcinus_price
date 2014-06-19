@@ -16,6 +16,6 @@ create table comment(isbn char(13),
                      author varchar(50),
                      comment_time varchar(20),
                      detail varchar(200),
-                     link varchar(500)
+                     link varchar(500))
 )
 

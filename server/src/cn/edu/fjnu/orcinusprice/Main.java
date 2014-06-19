@@ -12,23 +12,30 @@ public class Main {
 
 
     public static void main(String[] args) {
+        update();
         new Thread(new Runnable() {
             @Override
             public void run() {
                 while (true) {
-                    LuceneHelper lh = new LuceneHelper();
-                    lh.UpdateIndex();
                     try {
                         Thread.sleep(sleep_ms);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                    update();
                 }
             }
 
-        });
+        }).start();
 
         server = new Server();
         server.runServer();
+    }
+
+    private static void update() {
+        LuceneHelper lh = new LuceneHelper();
+        System.out.println("run updateIndex...");
+        lh.UpdateIndex();
+        System.out.println("Index has been updated!");
     }
 }

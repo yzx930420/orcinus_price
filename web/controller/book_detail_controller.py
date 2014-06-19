@@ -13,17 +13,21 @@ class BookDetailController(RequestHandler):
         self.service = BookService()
         self.comment_service = CommentService()
 
+    @staticmethod
+    def get_platfrom_name(platform):
+        platfom_name = {
+            0:"当当网",
+            1:"京东商城",
+            2:"亚马逊"
+        }
+        return platfom_name[platform]
+
     def get(self, isbn):
-        result = self.service.quey_by_isbn(isbn)
+        result = self.service.query_by_isbn(isbn)
+
         if  result:
             for goods_info in result.goods_list:
-                if goods_info.platform == 0:
-                    goods_info.platform = '当当网'
-                elif goods_info.platform == 1:
-                    goods_info.platform = '京东商城'
-                elif goods_info.platform == 2:
-                    goods_info.platform = '亚马逊'
-
+                goods_info.platform = self.get_platfrom_name(goods_info.platform)
             comments = self.comment_service.get_comment(isbn)
             self.render(os.path.join(template_dir, "bookdetail.html"), book=result,comments=comments)
         else:
