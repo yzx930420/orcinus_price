@@ -37,6 +37,27 @@ public class MysqlHelper {
         return conn;
     }
 
+
+    public static List<BookIndex> queryByIsbn(String isbn) {
+        Connection conn = getConnection();
+
+        try {
+            List<BookIndex> bil = new ArrayList<BookIndex>();
+            PreparedStatement ps = conn.prepareStatement("select title from book_info where isbn = " + isbn);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                String title = rs.getString("title");
+                System.out.println("isbn: " + isbn + " title: " + title);
+            }
+            free(rs, ps, conn);
+            return bil;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
     public static List<BookIndex> queryAll() {
         Connection conn = getConnection();
 

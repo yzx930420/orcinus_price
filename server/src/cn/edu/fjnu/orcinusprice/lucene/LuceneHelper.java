@@ -101,6 +101,22 @@ public class LuceneHelper {
     }
 
     public List<String> search(String key, String value) {
+        if (key == null) {
+            System.out.println("key is null");
+            return new ArrayList<String>();
+        }
+        if (value == null) {
+            System.out.println("value is null");
+            return new ArrayList<String>();
+        }
+        if (key.length() == 0) {
+            System.out.println("length of key is 0");
+            return new ArrayList<String>();
+        }
+        if (value.length() == 0) {
+            System.out.println("length of value is 0");
+            return new ArrayList<String>();
+        }
         IndexSearcher searcher = null;
         searcher = new IndexSearcher(getReader());
         int num = getReader().maxDoc();
