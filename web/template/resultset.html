@@ -7,31 +7,10 @@
   <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css"/>
   <link href="/static/css/template.css" rel="stylesheet" type="text/css"/>
   <link href="/static/css/resultset.css" rel="stylesheet" type="text/css"/>
-
 </head>
 <body>
 <div class="container">
-  <div class="header">
-    <div class="logo">
-      <a href="/index">
-        <img src="/static/img/logo_no_brand.png" alt="BestBuyer Logo"/>
-      </a>
-    </div>
-    <div id="search_bar">
-      <form action="/resultset" method="get">
-        <div class="input-group">
-          <input id="search-keyword" type="text" class="form-control" name="keyword" placeholder="书名、作者、ISBN"
-                 value="{{ keyword }}">
-          <input id="action" type="hidden" name="action" value="any">
-            <span class="input-group-btn">
-              <button id="search-button" class="btn btn-default" type="submit">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
-        </div>
-      </form>
-    </div>
-  </div>
+  {% include "../template/header.html" %}
 
   <div class="content">
     <div class="results">

@@ -6,24 +6,6 @@ body {
   background-color: #fff;
 }
 
-.navbar-brand {
-  padding: 0 17px 0 17px;
-}
-
-.navbar-brand img {
-  height: 34px;
-  margin: 8px 17px 8px 17px;
-}
-
-.navbar-nav > li > a {
-  margin: 8px;
-  padding: 6px 0 6px 0;
-}
-
-.navbar-searchbar {
-  width: 633px;
-}
-
 .content {
   margin: auto;
   margin-top: 50px;

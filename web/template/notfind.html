@@ -9,30 +9,10 @@
 </head>
 <body>
 <div class="container">
-  <div class="header">
-    <div class="logo">
-      <a href="/index">
-        <img src="/static/img/logo_no_brand.png" alt="BestBuyer Logo"/>
-      </a>
-    </div>
-    <div id="search_bar">
-      <form action="/resultset" method="get">
-        <div class="input-group">
-          <input id="search-keyword" type="text" class="form-control" name="keyword" placeholder="书名、作者、ISBN">
-          <input id="action" type="hidden" name="action" value="any">
-            <span class="input-group-btn">
-              <button id="search-button" class="btn btn-default" type="submit">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
-        </div>
-      </form>
-    </div>
-  </div>
+  {% include "../template/header.html" %}
   <div class="content">
     <div class="main">
       <img src="/static/img/thief.png">
-
       <div class="desc">
         <h1>这个页面被小贼偷走了。。。</h1>
         <a href="/index"><img src="/static/img/return_home.png"></a>
