@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'yzx930420'
 
+from web import settings
 from common.model.book import Book
 from common.dao.book_dao import book_dao
 from common.dao.lucence_dao import lucence_dao
@@ -34,47 +35,25 @@ class BookService(object):
         return books
 
     def get_page_size(self, action, keyword):
+        """
+            返回页数
+        """
+        if action == 'any':
+            action = 'title'
+        page_count = 1;
         if action in ['title', 'isbn', 'author']:
-            lucence_dao.get_page_size(action,keyword)
-        else:
-            return 1
+            page_count = lucence_dao.get_page_size(action,keyword)
+        page_count = (page_count + settings.ITEM_PER_PAGE - 1) /settings.ITEM_PER_PAGE
+        return page_count
 
     def quey_by_isbn(self,isbn):
         book = book_dao.quey_by_isbn(isbn)
-        book.goods_list = book_dao.quey_by_isbn_for_goods(isbn)
+        if book:
+            book.goods_list = book_dao.quey_by_isbn_for_goods(isbn)
         return book
 
     def quey_by_isbn_with_time(self, start, end):
         pass
-
-
-    def __query_by_pair_perfectly(self, pair):
-        book_info_list = book_dao.query_perfectly_matched(pair)
-        for book_info in book_info_list:
-            book_info.goods_list = book_dao.query_to_get_book_goods_info_by_isbn(book_info.isbn)
-        return book_info_list
-
-
-    def __query_by_pair_any(self, pair):
-        book_info_list = book_dao.query_any_matched(pair)
-        for book_info in book_info_list:
-            book_info.goods_list = book_dao.query_to_get_book_goods_info_by_isbn(book_info.isbn)
-        return book_info_list
-
-    def __query_by_pair_front(self, pair):
-        book_info_list = book_dao.query_front_matched(pair)
-        for book_info in book_info_list:
-            book_info.goods_list = book_dao.query_to_get_book_goods_info_by_isbn(book_info.isbn)
-        return book_info_list
-
-    def __query_by_pair_tail(self, pair):
-        book_info_list = book_dao.query_tail_matched(pair)
-        for book_info in book_info_list:
-            book_info.goods_list = book_dao.query_to_get_book_goods_info_by_isbn(book_info.isbn)
-        return book_info_list
-
-    def __query_for_period_by_isbn(self, isbn, start_time, end_time):
-        return book_dao.query_by_time(isbn, start_time, end_time)
 
 # 测试
 if __name__ == '__main__':

@@ -22,7 +22,9 @@ def getDDPrice(book):
             return goods.instant_price
     return -1
 
-def filter(book):
+def filter(price,book):
+    if price != -1:
+        return price
     price1 = getJDPrice(book)
     price2 = getDDPrice(book)
     price = price1 if price1 != -1 else price2
@@ -37,8 +39,8 @@ def bookInfoToDict(book):
         "isbn":book.isbn,
         "press":book.press,
         "coverUrl":book.cover,
-        "jdPrice":float( filter(getJDPrice(book)) ),
-        "ddPrice":float( filter(getDDPrice(book)) )
+        "jdPrice":float( filter(getJDPrice(book), book) ),
+        "ddPrice":float( filter(getDDPrice(book), book) )
     }
     return result
 
@@ -51,7 +53,7 @@ class BookDetailController(RequestHandler):
         if not obj:
             self.write("")
         else:
-            result = bookInfoToDict(obj[0]);
+            result = bookInfoToDict(obj);
             msg = json.dumps(result,ensure_ascii=False, encoding="utf-8")
             self.write(msg)
 
