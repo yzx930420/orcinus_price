@@ -34,7 +34,7 @@ class ResultSetController(RequestHandler):
 
         #扩展模板
         if result == None or len(result) == 0:
-            self.render(os.path.join(template_dir, "notfind.html"), sentence="哈哈，书没找到")
+            self.render(os.path.join(template_dir, "notfind.html"), keyword=keyword, sentence="哈哈，书没找到")
         else:
             self.render(os.path.join(template_dir, "resultset.html"),
                         keyword=keyword, action=action,
