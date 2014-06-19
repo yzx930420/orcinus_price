@@ -64,5 +64,6 @@ class DoubanSpider(Spider):
                               callback=self.catch_item)
             yield request
 
+
     def replace_url(self, a_string):
         return a_string.replace(u'.', self.url_head + '/tag')
