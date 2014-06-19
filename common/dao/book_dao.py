@@ -14,6 +14,8 @@ def number_or_letter(a):
     return re.match('^[0-9a-z]+$',a)
 
 def check_isbn(isbn):
+    if not isbn:
+        return ""
     result = ""
     for i in isbn:
         if number_or_letter(i):
@@ -38,6 +40,7 @@ class BookDAO():
             @parms isbn 要查找书的ISBN
             @return BookInfo类型
         """
+        isbn = check_isbn(isbn)
         attrs = ["isbn", "price", "title", "author", "press","description","cover" ]
         query_sql = 'select isbn, price, title, author, press, description, cover ' \
                    'from book_info ' \
@@ -59,6 +62,7 @@ class BookDAO():
         """
             查找每个平台最新的,相同平台的只有最新的
         """
+        isbn = check_isbn(isbn)
         attrs = ["isbn","link","platform","instant_price", "crawling_time"]
         quey_sql = 'select isbn, link, platform, instant_price, crawling_time ' \
                    'from book_goods_info ' \
@@ -78,6 +82,7 @@ class BookDAO():
         return result_list
 
     def query_by_isbn_with_time(self, isbn, begin, end):
+        isbn = check_isbn(isbn)
         attrs = ["isbn","link","platform","instant_price", "crawling_time"]
         quey_sql = 'select isbn, link, platform, instant_price, crawling_time ' \
                    'from book_info ' \
