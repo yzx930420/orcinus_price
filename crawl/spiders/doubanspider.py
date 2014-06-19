@@ -32,6 +32,8 @@ class DoubanSpider(Spider):
         item['comment_time'] = selector.xpath(self.comment_time_path).extract()
         item['detail'] = selector.xpath(self.detail_path).extract()
         item['platform'] = self.platform_code
+        if response.url == 'http://book.douban.com/review/1319527/':
+            print item['ISBN']
         return item
 
     def parse(self, response):  # 入口
@@ -58,7 +60,7 @@ class DoubanSpider(Spider):
 
     def click_comment(self, response):  # click_comment
         selector = Selector(response)
-        sites = selector.xpath('///div[@class="ctsh"]/div/div/h3/a/@href').extract()
+        sites = selector.xpath('//div[@class="rr"]/a/@href').extract()
         for site in sites:
             request = Request(url=site,
                               callback=self.catch_item)
