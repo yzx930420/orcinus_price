@@ -3,11 +3,22 @@
 __author__ = 'yzx930420'
 
 
+import re
 import MySQLdb
 from common.dao import settings
 from common.model.book import Book
 from common.model.book_goods_info import BookGoodsInfo as GoodsPO
 from common.model.book_info import BookInfo as  BookPO
+
+def number_or_letter(a):
+    return re.match('^[0-9a-z]+$',a)
+
+def check_isbn(isbn):
+    result = ""
+    for i in isbn:
+        if number_or_letter(i):
+            result = result + i
+    return result
 
 
 class BookDAO():

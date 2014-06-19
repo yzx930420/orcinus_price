@@ -66,6 +66,7 @@ class DetailPipeline(object):
         if item['comment_time']:
             new_comment['comment_time'] = item['comment_time'][0]
 
+
         comment_dao.insert(new_comment)
 
         return item
