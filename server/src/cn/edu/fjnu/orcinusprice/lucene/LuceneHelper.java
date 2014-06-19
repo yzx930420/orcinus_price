@@ -7,10 +7,9 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.index.*;
-import org.apache.lucene.search.IndexSearcher;
-import org.apache.lucene.search.ScoreDoc;
-import org.apache.lucene.search.TermQuery;
-import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.queryParser.QueryParser;
+import org.apache.lucene.search.*;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
@@ -109,8 +108,20 @@ public class LuceneHelper {
             System.out.println("searcher is null!");
             return null;
         }
-        TermQuery query = new TermQuery(new Term(key, value));
+        QueryParser parser = new QueryParser(Version.LUCENE_35, key, new IKAnalyzer());
+        Query query = null;
+        try {
+            query = parser.parse(value);
+            System.out.println("query: " + query.toString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
         List<String> isbnList = new ArrayList<String>();
+        if (query == null) {
+            System.out.println("query is null");
+            return isbnList;
+        }
         try {
             TopDocs tds = searcher.search(query, num);
 
